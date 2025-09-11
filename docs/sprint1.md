@@ -122,3 +122,141 @@ git commit -m "Add contact form with validation. Fixes #12"
 - ⏳ Urgent  
 - ⭐ Millora  
 
+## C3. Configuració de l’entorn de treball (local i al núvol)
+
+### 1️⃣ Objectiu
+Preparar un **entorn de desenvolupament comú** per a tots els equips, que siga fàcilment replicable i que minimitze els errors entre l’entorn local i el servidor remot.
+
+---
+
+### 2️⃣ Entorn local
+- Cada alumne utilitzarà el seu **ordinador personal** amb:
+    - **Editor/IDE** (Visual Studio Code recomanat, o PhpStorm).
+    - **Control de versions** amb Git.
+- L’entorn de programació i base de dades es **simularà amb Docker**.
+    - Cada equip haurà de definir i documentar el seu propi **`docker-compose.yml`**, amb contenidors per al servidor web, PHP i la base de dades.
+    - L’objectiu és que **tot el grup treballe amb la mateixa configuració**, evitant “funciona al meu ordinador però al teu no”.
+- Altres **ferramentes útils**:
+    - *Node.js* + *npm* per a frontend (Vue, build tools).
+    - *Postman* per provar APIs.
+---
+
+### 3️⃣ Entorn remot (núvol)
+- **Repositori GitHub** com a punt central del projecte.
+- **Servidor de proves**: hosting compartit o VPS amb accés SSH.
+- **Bases de dades remotes**: còpies sincronitzades amb l’entorn local.
+- **CI/CD (si cal)**: GitHub Actions per desplegar automàticament.
+---
+
+### 4️⃣ Bones pràctiques
+- Mantindre la configuració de Docker i els scripts documentats al repositori.
+- No versionar fitxers sensibles (`.env`).
+- Fer còpies periòdiques de la base de dades.
+- Evitar “funciona en el meu ordinador” → documentar la configuració.
+- Definir al `README.md` o `INSTALL.md` els passos mínims per posar en marxa l’entorn.
+  - Passos d’instal·lació de l’entorn.
+  - Requisits de versions (PHP, MySQL, Node, etc.).
+  - Com executar el projecte en local.
+  - Notes per al desplegament remot.
+---
+
+### 5️⃣ Exemple mínim d’entorn
+Els contenidors bàsics que haurien d’aparéixer són:
+- **Servidor web** (Nginx o Apache).
+- **PHP** (versió estable, amb les extensions necessàries).
+- **Base de dades** (MySQL o MariaDB).
+
+A partir d’aquest esquelet, cada equip ampliarà i personalitzarà la seua configuració.
+
+---
+
+## C4. Introducció a GanttProject (cronograma inicial)
+
+### 1️⃣ Objectiu
+Planificar el projecte amb un **cronograma visual** que mostre les tasques, la seua duració i dependències.  
+El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del projecte.
+
+---
+
+### 2️⃣ Eina
+- **GanttProject**: eina senzilla i gratuïta per crear cronogrames.
+- Exporta a diferents formats (PDF, PNG) per poder compartir amb el professorat o incloure en la documentació.
+
+---
+
+### 3️⃣ Elements bàsics del diagrama
+- **Tasques**: accions a realitzar (*configurar entorn, crear formulari...*).
+- **Duració**: hores o dies que ocuparà cada tasca.
+- **Dependències**: algunes tasques no poden començar fins que altres acaben.
+- **Fites (milestones)**: punts clau del projecte (p. ex. “Primera entrega”).
+
+---
+
+### 4️⃣ Procediment inicial
+1. Crear un **projecte nou** en GanttProject.
+2. Afegir les **tasques principals** de l’Iteració 1:
+    - Configuració d’entorn (local i remot).
+    - Tauler Kanban i repositori GitHub.
+    - Cronograma inicial i assignació de rols.
+    - Maquetació pàgina inicial.
+    - Formulari de contacte.
+    - Pla de riscos laborals.
+3. Assignar la **duració estimada** de cada tasca.
+4. Definir les **dependències** (p. ex. no es pot maquetar fins configurar l’entorn).
+5. Exportar i guardar el cronograma en el repositori.
+
+---
+
+### 5️⃣ Bones pràctiques
+- Mantindre el cronograma **actualitzat** a mesura que avança el projecte.
+- Revisar-lo en cada **punt de control d’iteració**.
+- Usar-lo com a eina de comunicació amb el client i el professorat.
+
+---
+
+👉 El cronograma és una **planificació inicial**, no un document rígid: es pot modificar segons les necessitats del projecte.
+
+## C5. Assignació de rols i tasques
+
+### 1️⃣ Objectiu
+Repartir el treball de manera clara dins de cada equip, definint **responsabilitats** i **tasques concretes** per a cada alumne.  
+Això evita confusions i facilita el seguiment del projecte.
+
+---
+
+### 2️⃣ Rols bàsics en un equip reduït (2 persones)
+- **Scrum Master**
+    - Organitza i coordina el treball.
+    - Dinamitza les reunions de seguiment.
+    - Vetla per l’ús correcte de la metodologia i les eines (Kanban, GitHub).
+
+- **Developer**
+    - S’encarrega principalment de la implementació tècnica (frontend, backend).
+    - Participa en les revisions de codi.
+
+- **Documentador** (a repartir entre els dos membres)
+    - Manté al dia el **README.md**, el pla de riscos i altres documents.
+    - Assegura que el repositori continga sempre instruccions clares d’instal·lació i ús.
+
+> ⚠️ Encara que hi haja rols, **tots els membres han de conéixer totes les parts** del projecte i poder defensar-les.
+
+---
+
+### 3️⃣ Procediment
+1. Decidir els rols inicials dins de l’equip.
+2. Crear les **tasques en el tauler Kanban** i assignar-les a un responsable.
+3. Revisar periòdicament que el repartiment siga equilibrat.
+4. Documentar els rols i responsabilitats en el repositori (README o document específic).
+
+---
+
+### 4️⃣ Bones pràctiques
+- Repartir les tasques per **funcionalitats completes**, no per línies de codi.  
+  (Exemple: *“Formulari de contacte”* → inclou maquetació, validació i documentació).
+- Fer **code reviews creuades**: el company revisa el codi abans de fer *merge*.
+- Rotar rols en diferents iteracions per aprendre de totes les parts del projecte.
+
+---
+
+👉 L’assignació de rols i tasques és flexible i pot canviar al llarg del projecte, però sempre ha de quedar registrada i actualitzada.
+
