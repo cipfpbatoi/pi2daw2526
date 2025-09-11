@@ -8,8 +8,57 @@
 
     | Resultat d'aprenentatge | Criteris d'avaluació|
     | -------                 | -------             |
-    | 1. Planifica l'execució del projecte, determinant el pla d'intervenció i la documentació associada| necessitats d' execució.| b) S'han determinat els recursos i la logística necessaris per a cada activitat. <br/> c) S'han identificat les necessitats de permisos i autoritzacions per dur a terme les activitats. <br/>  d) S' han determinat els procediments d' actuació o execució de les activitats.|
+    | 1. Planifica l'execució del projecte, determinant el pla d'intervenció i la documentació associada |a) S'han seqüenciat les activitats ordenant-les en funció de les necessitats d' execució.<br/> b) S'han determinat els recursos i la logística necessaris per a cada activitat. <br/> c) S'han identificat les necessitats de permisos i autoritzacions per dur a terme les activitats. <br/>  d) S' han determinat els procediments d' actuació o execució de les activitats.|
 
+## C1. Introducció al mòdul: estructura i metodologia
+
+### 1️⃣ Objectiu
+Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia de treball que seguirem durant el curs.
+
+---
+
+### 2️⃣ Estructura del mòdul
+- **Projecte únic**: desenvolupament d’una aplicació web de comerç electrònic (*E-commerce*).
+- **Duració**: tot el curs (99 hores → 3h setmanals).
+- **Treball en equips de 2 persones**.
+- **Iteracions (sprints)**: el projecte es divideix en 6 fases consecutives:
+    1. Entorn, aparador i contacte.
+    2. Autenticació i gestió de productes.
+    3. Disseny responsiu i backend Laravel.
+    4. Client SPA amb Vue i control de rols.
+    5. Integracions externes i processos asíncrons.
+    6. Desplegament final i lliurament del producte.
+
+---
+
+### 3️⃣ Metodologia de treball
+- **Àgil** (Scrum/Kanban).
+- Cada sprint inclou:
+    - Planificació inicial (tasques i cronograma).
+    - Execució i documentació.
+    - Revisió i validació del que s’ha fet.
+- **Gestió de tasques**: tauler Kanban (GitHub Projects / Trello).
+- **Control de versions**: Git + GitHub (branques, commits, PRs).
+- **Revisions periòdiques**: punts de control al final de cada iteració.
+
+---
+
+### 4️⃣ Responsabilitat individual
+- Encara que es treballa en equip, cada alumne ha de ser capaç de:
+    - Explicar i defensar les parts en què ha treballat.
+    - Mostrar coneixement de totes les fases del projecte.
+- Les presentacions i validacions finals són **individuals**.
+
+---
+
+### 5️⃣ Resultat esperat
+- Desenvolupar una aplicació web **funcional i documentada**.
+- Aprendre a treballar en equip amb metodologies àgils.
+- Integrar coneixements de diferents mòduls (DWES, DIW, DWEC, IAW, etc.).
+
+---
+
+👉 En resum: aquest mòdul és un **entrenament pràctic en condicions reals de projecte**, amb entregues iteratives, treball en equip i responsabilitat compartida.
 
 
 ## C2. GitHub Projects / Trello (Gestió àgil del projecte)
