@@ -34,7 +34,9 @@ Un tauler típic té 3 columnes principals:
 ---
 
 ### 3️⃣ Creació de targetes/tasques
+
 Cada tasca conté:
+
 - **Títol** → acció concreta (*“Crear formulari de contacte”*).
 - **Descripció** → detalls tècnics, passos a seguir.
 - **Assignació** → responsable de la tasca.
@@ -46,6 +48,7 @@ Cada tasca conté:
 
 ### 4️⃣ Enllaç amb GitHub
 En GitHub Projects es poden:
+
 - Vincular **issues** (incidències) amb una targeta.
 - Relacionar un **commit o pull request** amb una tasca → quan es fa *merge*, la tasca pot tancar-se automàticament.
 - Exemple: al missatge de commit escriure:
@@ -80,6 +83,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 ### 📌 Exemple pràctic (Iteració 1 – E-commerce)
 
 #### 🟦 To Do
+
 - Configurar entorn local (IDE + PHP + Git)  
 - Crear repositori GitHub i `.gitignore`  
 - Preparar servidor remot de proves  
@@ -91,18 +95,23 @@ git commit -m "Add contact form with validation. Fixes #12"
 - Crear cronograma inicial en GanttProject  
 
 #### 🟨 In Progress
+
 - Maquetació pàgina inicial  
 - Validació de formulari al client  
 - Configuració cronograma Gantt  
 - Documentació inicial en Markdown  
 
 #### 🟩 Done
+
 - ✅ Reunió inicial d’equip → metodologia escollida (Scrum + Kanban)  
 - ✅ Creació del tauler GitHub Projects / Trello  
 - ✅ Creació del repositori remot i invitació als col·laboradors  
 
- [d837dfa6-b7b4-4945-80ce-15275925e7a1.png](imagenes%2F01%2Fd837dfa6-b7b4-4945-80ce-15275925e7a1.png) " />
- 
+<figure>
+  <img src="imagenes/01/d837dfa6-b7b4-4945-80ce-15275925e7a1.png" />
+  <figcaption>Exemple Kanban</figcaption>
+</figure>
+  
 ---
 
 ### 🏷️ Exemple d’etiquetes
