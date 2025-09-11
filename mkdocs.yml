@@ -1,23 +1,10 @@
 site_name: Desenvolupament web en entorn de Servidor
-site_url: https://cipfpbatoi.github.io/dwes2223/
+site_url: https://cipfpbatoi.github.io/pi2daw2526/
 use_directory_urls: false
 
 nav:
   - "Inicio": "index.md"
-  - "1.- Arquitectures Web": "01arquitecturas.md"
-  - "2.- El llenguatge PHP": "02php.md"
-  - "3.- PHP Orientat a Objectes": "03phpoo.md"
-  - "4.- Programació Web": "04web.md"
-  - "5.- Ferramentes Web": "05herramientas.md"
-  - "6.- Accès a Dades": "06accesoDatos.md"
-  - "7.- Framework Laravel": "07frameworks.md"
-  - "7.1- Rutes i vistes": "07laravelRutesVistes.md"
-  - "7.2- Controladors": "07laravelControladors.md"
-  - "7.3- Models i Dades": "07laravelModelsDades.md"
-  - "7.4- Validació i Autenticació": "07laravelValidacioAutenticacio.md"
-  - "8.- Serveis REST": "08rest.md"
-  - "9.- Projecte Integrador": "09mailLaravel.md"
-  - "10.- Recuperacio": "10recuperacio.md"
+
 
 theme:
   language: ca
@@ -54,7 +41,7 @@ extra:
     - icon: material/twitter
       link: https://twitter.com/aitormedrano
     - icon: material/email-edit
-      link: mailto:<a.medrano@edu.gva.es>
+      link: mailto:<i.gomismullor@edu.gva.es>
   analytics:
     provider: google
     property: G-X6D0LR7TC8
@@ -87,4 +74,4 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-copyright: 2021-2023 Aitor Medrano, Luis Alemañ, Ignasi Gomis - Licencia CC BY-NC-SA
+copyright: 2025-2026  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
