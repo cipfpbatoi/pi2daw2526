@@ -1,111 +1,79 @@
-# Desenvolupament Web en Entorn Servidor
+# Projecte Intermodular de Desenvolupament d’Aplicacions Web (Segon)
 
-Ací pots trobar les anotacions del mòdul de *Desenvolupament web en entorn servidor*, que s'imparteix en el segon curs del cicle formatiu de grau superior de Desenvolupament d'Aplicacions Web.
+Ací pots trobar les anotacions del mòdul de *Projecte Integrador*, que s'imparteix en el segon curs del cicle formatiu de grau superior de Desenvolupament d'Aplicacions Web.
 
-La duració del mòdul és de 160 hores lectives, a raó de **8 hores setmanals**, i es desenvolupa al llarg dels **dos primers trimestres** del curs. S'ha [planificat](planning.md) basant-se en 3 sessions de 3,3 i 2 hores lectives per setmana.
+La duració del mòdul és de **99 hores lectives**, a raó de **3 hores setmanals**, i es desenvolupa al llarg del **segon curs complet** del cicle. S'ha [planificat](planning.md) basant-se en les diferents iteracions (*sprints*) del projecte d’E-commerce.
 
 ## Què aprendré?
 
-* A desenvolupar aplicacions web dinàmiques, que obtenen la informació a partir d'una base de dades.
-* Analitzar l'estructura d'una aplicació client/servidor, separant el codi de presentació de la lògica de negoci
-* Obtindre informació a partir de les dades emmagatzemades, així com modificar-los.
+* A **planificar i executar un projecte real** de desenvolupament web en equip.
+* A treballar amb **metodologies àgils** (Scrum/Kanban) i eines de gestió de projectes.
+* A **documentar, provar i desplegar** aplicacions web.
+* A identificar i prevenir **riscos laborals i tècnics** durant el procés.
 
 ## Resultats d'aprenentatge
 
-1. Selecciona les arquitectures i tecnologies de programació Web en entorn servidor, analitzant les seues capacitats i característiques pròpies.
-2. Escriu sentències executables per un servidor Web reconeixent i aplicant procediments d'integració del codi en llenguatges de marques.
-3. Escriu blocs de sentències embeguts en llenguatges de marques, seleccionant i utilitzant les estructures de programació.
-4. Desenvolupa aplicacions Web embegudes en llenguatges de marques analitzant i incorporant funcionalitats segons especificacions.
-5. Desenvolupa aplicacions Web identificant i aplicant mecanismes per a separar el codi de presentació de la lògica de negoci.
-6. Desenvolupa aplicacions d'accés a magatzems de dades, aplicant mesures per a mantindre la seguretat i la integritat de la informació.
-7. Desenvolupa serveis Web analitzant el seu funcionament i implantant l'estructura dels seus components.
-8. Genera pàgines Web dinàmiques analitzant i utilitzant tecnologies del servidor Web que afigen codi al llenguatge de marques.
-9. Desenvolupa aplicacions Web híbrides seleccionant i utilitzant llibreries de codi i repositoris heterogenis d'informació.
+1. **Planifica l’execució del projecte**, determinant el pla d’intervenció i la documentació associada.
+2. **Defineix els procediments de seguiment i control**, seleccionant les variables i instruments adequats.
 
-## Unitats didàctiques / Temporalització
+## Iteracions / Temporalització
 
-A continuació es mostren les unitats didàctiques i una [estimació temporal](planning.md) de cadascuna d'elles.
-La primera avaluació contindria les unitats compreses entre la 1 i 6. Així doncs, des de la meitat de la unitat 6 a la unitat 9 es veuran en la segona avaluació.
+El projecte es desenvolupa en 6 iteracions, alineades amb els continguts del curs.
 
+### Iteració 1: Entorn, aparador i contacte (18h)
 
-### Primera avaluació
+* Configuració d’entorns (local i remot).
+* Tauler de projectes (GitHub Projects / Trello).
+* Cronograma inicial amb GanttProject.
+* Assignació de rols i tasques.
+* Pla de riscos laborals i prevenció.
+* Pàgina inicial amb formulari de contacte validat.
 
-Duració estimada: 80 hores
+### Iteració 2: Autenticació i gestió de productes (15h)
 
-1. [Arquitectures Web](01arquitecturas.md) (2h)
+* Importació inicial de productes.
+* Sistema de registre i login d’usuaris.
+* Comentaris i valoracions.
+* Còpies de seguretat i desplegament remot.
 
-     * Client/Servidor. 
-     * MVC.
+### Iteració 3: Backend Laravel + disseny responsiu (15h)
 
-2. [El llenguatge PHP](02php.md) (24h)
-   
-     * Condicions i bucles.
-     * Arrays.
+* Reimplementació del servidor amb Laravel (MVC).
+* API REST per a productes i usuaris.
+* Adaptació responsiva de la interfície.
+* Proves i documentació del backend.
 
-3. [Orientació a objectes amb PHP](03phpoo.md) (19h)
+### Iteració 4: Frontend amb Vue + rols (15h)
 
-     * Classes i objectes 
-     * Namespaces
-     * Excepcions
-   
-4. [Programació Web](04web.md) (14h)
+* Creació d’una SPA amb Vue.js.
+* Gestió d’autenticació via API i sessions.
+* Gestió de rols i permisos.
+* Documentació i guia d’usuari inicial.
 
-     * Formularis.
-     * Cookies i sessió.
+### Iteració 5: Integracions externes i processos asíncrons (18h)
 
-5. [Eines Web](05herramientas.md) (21h)
+* Integració amb API externa (OAuth2).
+* Documentació de l’API pròpia amb Swagger.
+* Processos asíncrons amb cues de treball.
+* Dockerització i CI/CD bàsic.
 
-       * *Composer*.
-       * Ús de logs amb *Monolog*.
-       * *Webscraping*.
-       * Documentació amb *phpDocumentor*.
-       * Proves amb *PhpUnit*.
+### Iteració 6: Desplegament final i lliurament (18h)
 
-### Segona avaluació
-
-Duració estimada: 80 hores
-
-6. [Accés a dades](06accesoDatos.md) (14h)
-
-     * SQL
-     * PDO
-     * Fitxers CSV i PDF.
-
-   
-7. [Frameworks PHP. Laravel.](07frameworks.md) (26h)
-   
-     * [Rutes i vistes](07laravelRutesVistes.md)
-     * [Controladors](07laravelControladors.md)
-     * [Models i dades](07laravelModelsDades.md)
-     * [Validacio i Autenticacio](07laravelValidacioAutenticacio.md)
-     
-
-8. [Serveis REST](08laravelRestFull.md) (13h)
-
-    * Producció i consum.
-    * *AJAX* amb *JSON*.
-   
-
-9. [Projecte Integrador](09mailLaravel.md)
-
-10. [Recuperació](10recuperacion.md)
+* Desplegament en producció amb Docker.
+* Connexió segura HTTPS.
+* Documentació tècnica i manual d’usuari.
+* Validació final amb el client i presentació.
 
 ## Instruments de qualificació
 
 La nota del curs es calcula mitjançant:
 
-  * 20% Treball en Classe / Activitats
-    * S'avaluen totes les activitats realitzades en classe i a casa. 
-      * Les activitats s'avaluen mitjançant tasques de *Aules* amb qualificacions compreses entre 0 i 3 punts:
-      
-         * 0: No entregada.
-         * 1: Entregada però solució errònia o incompleta.
-         * 2: Entregada i solució acceptable, encara que té algun apartat incomplet.
-         * 3: Entregada i solució correcta.
-    
-  * 20% Projectes (1 per avaluació). Es faran per parelles.
-  * 10% Projecte Integrador (Final de curs)
+* **50% Planificació del projecte (RA3)**
+    * Cronogrames, documentació i planificació de recursos.
+* **50% Seguiment i control (RA4)**
+    * Control de versions, gestió de tasques, qualitat del producte i avaluació final.
 
-  * 50% Activitats d'avaluació (Fan mitja a partir de 4)
-     * Tres proves escrites.
-
+Avaluació contínua amb:
+- **Projectes i entregues d’iteració.**
+- **Revisions de codi i documentació.**
+- **Presentació i defensa final del producte.**  
