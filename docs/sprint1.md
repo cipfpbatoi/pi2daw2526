@@ -171,6 +171,12 @@ git commit -m "Add contact form with validation. Fixes #12"
 - ⏳ Urgent  
 - ⭐ Millora  
 
+<figure>
+  <img src="imagenes/01/githubProjects.png" />
+  <figcaption>Resumen Github Projects</figcaption>
+</figure>
+
+
 ## C3. Configuració de l’entorn de treball (local i al núvol)
 
 ### 1️⃣ Objectiu
