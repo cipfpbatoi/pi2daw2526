@@ -3,7 +3,8 @@ site_url: https://cipfpbatoi.github.io/pi2daw2526/
 use_directory_urls: false
 
 nav:
-  - "Inicio": "index.md"
+  - "Inici": "index.md"
+  - "Iteració: Entorn, aparador i contacte": "sprint1.md"
 
 theme:
   language: ca
