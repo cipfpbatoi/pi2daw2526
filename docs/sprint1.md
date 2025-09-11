@@ -69,7 +69,16 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 
 ---
 
-### 2️⃣ Organització bàsica (Kanban)
+#### 2️⃣ Crear un projecte
+
+1. Entrar al repositori de github
+2. Pestanya Projects -> New Project
+3. Escollir Plantilla: Board (Kanban)
+4. Agefir Columnes: (To Do, In Progress,Done )
+5. Labels: categories(frontend,backend,bug,urgent...)
+6. Deadline: data limit
+
+### 3️⃣  Organització bàsica (Kanban)
 Un tauler típic té 3 columnes principals:
 
 | Columna       | Funció                                       |
@@ -82,7 +91,7 @@ Un tauler típic té 3 columnes principals:
 
 ---
 
-### 3️⃣ Creació de targetes/tasques
+### 4️⃣ Creació de targetes/tasques
 
 Cada tasca conté:
 
@@ -95,7 +104,7 @@ Cada tasca conté:
 
 ---
 
-### 4️⃣ Enllaç amb GitHub
+### 5️⃣ Enllaç amb GitHub
 En GitHub Projects es poden:
 
 - Vincular **issues** (incidències) amb una targeta.
@@ -110,7 +119,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ---
 
-### 5️⃣ Bones pràctiques
+### 6️⃣⃣ Bones pràctiques
 - Mantindre el tauler **actualitzat diàriament**.  
 - Crear tasques **curtes i clares** (no massa generals, millor dividir-les).  
 - Revisar tasques en les **reunions de seguiment** (dailies o setmanals).  
@@ -119,7 +128,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ---
 
-### 6️⃣ Comparativa ràpida GitHub Projects vs Trello
+###  Comparativa ràpida GitHub Projects vs Trello
 | Aspecte              | GitHub Projects                        | Trello                          |
 |-----------------------|----------------------------------------|---------------------------------|
 | **Integració amb codi** | ✅ Molt alta (commits, PR, issues)      | ❌ Limitada (extensions externes) |
@@ -130,7 +139,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 ---
 
 ### 📌 Exemple pràctic (Iteració 1 – E-commerce)
-
+ 
 #### 🟦 To Do
 
 - Configurar entorn local (IDE + PHP + Git)  
