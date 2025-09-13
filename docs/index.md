@@ -68,12 +68,13 @@ El projecte es desenvolupa en 6 iteracions, alineades amb els continguts del cur
 
 La nota del curs es calcula mitjançant:
 
-* **50% Planificació del projecte (RA3)**
+- **50% Planificació del projecte (RA3)**
     * Cronogrames, documentació i planificació de recursos.
-* **50% Seguiment i control (RA4)**
+- **50% Seguiment i control (RA4)**
     * Control de versions, gestió de tasques, qualitat del producte i avaluació final.
 
 Avaluació contínua amb:
+
 - **Projectes i entregues d’iteració.**
 - **Revisions de codi i documentació.**
 - **Presentació i defensa final del producte.**  
