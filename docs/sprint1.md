@@ -10,7 +10,7 @@
     | -------                 | -------             |
     | 1. Planifica l'execució del projecte, determinant el pla d'intervenció i la documentació associada |a) S'han seqüenciat les activitats ordenant-les en funció de les necessitats d' execució.<br/> b) S'han determinat els recursos i la logística necessaris per a cada activitat. <br/> c) S'han identificat les necessitats de permisos i autoritzacions per dur a terme les activitats. <br/>  d) S' han determinat els procediments d' actuació o execució de les activitats.|
 
-## C1. Introducció al mòdul: estructura i metodologia
+## 📚 C1. Introducció al mòdul: estructura i metodologia
 
 ### 1️⃣ Objectiu
 Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia de treball que seguirem durant el curs.
@@ -61,7 +61,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 👉 En resum: aquest mòdul és un **entrenament pràctic en condicions reals de projecte**, amb entregues iteratives, treball en equip i responsabilitat compartida.
 
 
-## C2. GitHub Projects / Trello (Gestió àgil del projecte)
+## 🧰 C2. GitHub Projects / Trello (Gestió àgil del projecte)
 
 ### 1️⃣ Què són?
 - **GitHub Projects** → Integrat en GitHub, permet gestionar tasques amb **tauler Kanban** i vincular-les directament amb el codi (issues, commits, PRs).
@@ -183,7 +183,7 @@ git commit -m "Add contact form with validation. Fixes #12"
  
 
 
-## C3. Configuració de l’entorn de treball (local i al núvol)
+## 🌐 C3. Configuració de l’entorn de treball (local i al núvol)
 
 ### 1️⃣ Objectiu
 Preparar un **entorn de desenvolupament comú** per a tots els equips, que siga fàcilment replicable i que minimitze els errors entre l’entorn local i el servidor remot.
@@ -231,7 +231,7 @@ A partir d’aquest esquelet, cada equip ampliarà i personalitzarà la seua con
 
 ---
 
-## C4. Introducció a GanttProject (cronograma inicial)
+##  📊 C4. Introducció a GanttProject (cronograma inicial)
 
 ### 1️⃣ Objectiu
 Planificar el projecte amb un **cronograma visual** que mostre les tasques, la seua duració i dependències.  
@@ -277,7 +277,7 @@ El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del p
 
 👉 El cronograma és una **planificació inicial**, no un document rígid: es pot modificar segons les necessitats del projecte.
 
-## C5. Assignació de rols i tasques
+## 👥 C5. Assignació de rols i tasques
 
 ### 1️⃣ Objectiu
 Repartir el treball de manera clara dins de cada equip, definint **responsabilitats** i **tasques concretes** per a cada alumne.  
@@ -320,4 +320,286 @@ Això evita confusions i facilita el seguiment del projecte.
 ---
 
 👉 L’assignació de rols i tasques és flexible i pot canviar al llarg del projecte, però sempre ha de quedar registrada i actualitzada.
+
+## 🖥️ C6. Control de versions amb Git i GitHub
+
+### 1️⃣ Explicació
+Quan treballem en equip sobre un projecte de programació, necessitem una eina que ens permeta guardar els canvis, tornar arrere si ens equivoquem i col·laborar sense fouca de codi.
+Eixa eina és **Git**, i GitHub és la plataforma on podem pujar els repositoris per compartir-los i treballar en línia.
+
+### 2️⃣ Objectiu
+Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb comandes bàsiques.
+
+### 3️⃣ Passos guiats
+1. 🖥️ Obrir Visual Studio Code i el terminal integrat (`Ctrl+ñ`).
+2. 📦 Comprovar que Git està instal·lat:
+
+    ```bash
+    git --version
+    ```
+
+3. 👤 Configurar Git amb el vostre nom i correu institucional:
+
+    ```bash
+    git config --global user.name "Nom Cognoms"
+    git config --global user.email "el_teu_correu@edu.gva.es"
+    ```
+
+4. 🌐 Crear un repositori nou a GitHub:
+
+   * Nom: Ecommerce-PI
+   * Visibilitat: Privat
+   * Afegir README.md
+
+5. 📥 Tornar a VS Code i clonar el repositori:
+
+    ```bash
+    git clone https://github.com/<usuari>/Ecommerce-PI.git
+    cd Ecommerce-PI
+    ```
+
+6. 📝 Crear un fitxer nou presentacio.md amb una breu descripció del vostre equip.
+
+7. 📤 Guardar i enviar els canvis:
+
+    ```bash
+    git add presentacio.md
+    git commit -m "feat: afegit document de presentació"
+    git push origin main
+    
+    ```
+
+### 4️⃣ 📝 Activitat
+ 
+  - Cada alumne crea un fitxer propi dins del repositori (alumne1.md, alumne2.md) i fa un commit.
+  - Pujar-ho a GitHub i comprovar que apareix.
+
+## C7. Identificació de riscos laborals
+
+  El desenvolupament de programari no sols implica escriure codi. També passarem moltes hores davant l’ordinador i això pot generar problemes físics (vista, esquena), ambientals (llum, soroll) i psicosocials (estrès, pressió).És important identificar-los per prevenir problemes de salut.
+
+### 1️⃣ Objectiu
+
+  Reconéixer quins riscos té el treball davant l’ordinador i reflexionar sobre el vostre propi entorn.
+
+### 2️⃣ Passos guiats
+
+1. 👀 Penseu en com treballeu normalment: postura, cadira, llum, pauses…
+
+2. 📝 Anoteu en un full o en un document 3 riscos personals que patiu o que podríeu patir.
+
+3. 📊 Classifiqueu-los en:
+
+- 👀Físics (vista, esquena, canells…)
+- 🔊Ambientals (llum, soroll, temperatura)
+- 😰Psicosocials (estrès, pressió, cansament)
+
+### 3️⃣ Activitat
+
+* Crear dins docs/ un fitxer riscos_individuals.md.
+
+* Escriure:
+
+-  3 riscos que heu detectat
+- Què podríeu fer per millorar-los
+-  📤 Fer commit i pujar-ho a GitHub.
+
+## C8. Pla de riscos i prevenció bàsica
+
+Una vegada identificats els riscos, cal crear un pla de prevenció. Aquest document ajuda a:
+
+- 📊Saber quins riscos existeixen
+- 💥Mesurar la seua probabilitat i impacte
+- 📝Decidir quines mesures prendre i qui és responsable de revisar-les
+
+### 1️⃣ Objectiu
+
+Aprendre a crear un document senzill de pla de prevenció que puga revisar-se en cada sprint.
+
+### 2️⃣ 📋Passos guiats
+
+📂 Crear un fitxer nou RISKS.md dins docs/.
+
+Copiar la plantilla següent:
+
+
+| Risc                | Probabilitat | Impacte | Mesura preventiva         | Responsable | Seguiment |
+|----------------------|--------------|---------|---------------------------|-------------|-----------|
+| Fatiga visual        |              |         |                           |             |           |
+| Dolor d’esquena      |              |         |                           |             |           |
+| Estrès per deadlines |              |         |                           |             |           |
+
+
+
+### 3️⃣ Activitat
+
+- Omplir almenys 3 riscos amb les seues mesures preventives.
+- Completar la taula i pujar el fitxer RISKS.md.
+- 🔄 Revisar-lo i actualitzar-lo en cada sprint.
+
+## C9. Eines de documentació: Markdown + repositori Git
+
+En un projecte real, no n’hi ha prou amb el codi. Cal documentar-lo perquè altres persones puguen instal·lar-lo, entendre’l i mantenir-lo.
+Per això farem servir Markdown, un llenguatge senzill per escriure documents que GitHub mostra de forma clara i atractiva.
+
+### 1️⃣ℹ️ Objectiu
+
+Aprendre a escriure documentació clara i senzilla amb Markdown i guardar-la en GitHub.
+
+### 2️⃣📋 Passos guiats
+
+Crear un fitxer README.md a l’arrel del projecte.
+
+Escriure:
+```
+# 🛒 Ecommerce-PI
+
+## 👤 Autors
+- Nom alumne 1
+- Nom alumne 2
+
+## 🎯 Objectiu del projecte
+Desenvolupar una aplicació web de comerç electrònic com a projecte final de DAW.
+
+## 📂 Estructura
+- frontend/: HTML, CSS i JS
+- backend/: API o servidor
+- database/: scripts SQL
+- docs/: documentació
+
+## 📊 Estat actual
+- [ ] Configuració d’entorn
+- [ ] Formulari de contacte
+- [ ] Pla de riscos
+```
+
+📤 Fer commit i pujar-ho a GitHub.
+
+### 3️⃣📝 Activitat
+
+- Afegir almenys una secció extra al README.md (p. ex. 🛠️ Tecnologies que farem servir).
+- Comprovar a GitHub que es veu bé.
+
+##🚀 Pràctica final: Git + GitHub + VS Code + Formulari Web
+###🎯 Objectiu
+
+- 🖥️ Gestionar un projecte amb Git i GitHub des de VS Code.
+- 💻 Crear un formulari senzill amb HTML5 + JavaScript.
+- 🔀 Treballar amb branques i practicar el merge.
+- 📚 Documentar el procés amb Markdown.
+
+###🛠️ Part 1 – Configuració inicial
+
+- 🌐 Crear repositori Ecommerce-PI en GitHub.
+- 📥 Clonar-lo i obrir-lo en VS Code:
+
+```
+git clone https://github.com/<usuari>/Ecommerce-PI.git
+cd Ecommerce-PI
+code .
+```
+- 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/.
+- 📤 Fer commit inicial i pujar-lo a main.
+
+## 💻 Part 2 – Formulari bàsic amb HTML5 + JS
+
+**index.html**
+```
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulari de contacte</title>
+</head>
+<body>
+  <h1>Contacta amb nosaltres</h1>
+  <form id="formContacte">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required minlength="3"><br><br>
+
+    <label for="email">Correu:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="edat">Edat:</label>
+    <input type="number" id="edat" name="edat" min="18" max="99"><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="validacio.js"></script>
+</body>
+</html>
+```
+**validacio.js**
+```
+document.getElementById("formContacte").addEventListener("submit", function(event) {
+  const nom = document.getElementById("nom").value;
+  const email = document.getElementById("email").value;
+
+  if (nom.length < 3) {
+    alert("El nom ha de tindre almenys 3 caràcters.");
+    event.preventDefault();
+  }
+
+  if (!email.includes("@")) {
+    alert("El correu ha de contindre un '@'.");
+    event.preventDefault();
+  }
+});
+```
+- 📦 Fer commit i pujar els canvis a la branca.
+
+##📱 Part 3 – Millora del formulari amb telèfon (merge)
+
+- 🔀 Crear branca develop i pujar-la:
+
+```
+git checkout -b develop
+git push origin develop
+```
+- 🔀 Crear branca feature/formulari-telefon:
+
+```
+git checkout -b feature/formulari-telefon
+```
+
+-📱 Afegir al formulari el camp telèfon a index.html:
+
+```
+<label for="telefon">Telèfon:</label>
+<input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="Ex: 600123456" required><br><br>
+```
+
+- ⚙️ Afegir la validació en validacio.js:
+
+```
+const telefon = document.getElementById("telefon").value;
+const regexTelefon = /^[0-9]{9}$/;
+
+if (!regexTelefon.test(telefon)) {
+  alert("El telèfon ha de tindre exactament 9 dígits numèrics.");
+  event.preventDefault();
+}
+```
+- 📦 Fer commit i pujar els canvis a la branca.
+
+- 🔀 Tornar a develop i fer merge:
+
+```
+git checkout develop
+git merge feature/formulari-telefon
+git push origin develop
+```
+- 📥 Obrir Pull Request per integrar develop → main.
+
+### ✅ Lliurable
+
+Repositori amb:
+
+- 💻 index.html i validacio.js funcionals.
+- 🔀 Branca main, develop i almenys una feature.
+- 🔀 Un merge realitzat (amb el camp telèfon afegit).
+- 📚 Fitxers de documentació (README.md, RISKS.md, riscos_individuals.md).
+
+
 
