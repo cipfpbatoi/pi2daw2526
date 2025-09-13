@@ -324,6 +324,7 @@ Això evita confusions i facilita el seguiment del projecte.
 ## 🖥️ C6. Control de versions amb Git i GitHub
 
 ### 1️⃣ Explicació
+
 Quan treballem en equip sobre un projecte de programació, necessitem una eina que ens permeta guardar els canvis, tornar arrere si ens equivoquem i col·laborar sense fouca de codi.
 Eixa eina és **Git**, i GitHub és la plataforma on podem pujar els repositoris per compartir-los i treballar en línia.
 
@@ -331,6 +332,7 @@ Eixa eina és **Git**, i GitHub és la plataforma on podem pujar els repositoris
 Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb comandes bàsiques.
 
 ### 3️⃣ Passos guiats
+
 1. 🖥️ Obrir Visual Studio Code i el terminal integrat (`Ctrl+ñ`).
 2. 📦 Comprovar que Git està instal·lat:
 
@@ -347,9 +349,9 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
 
 4. 🌐 Crear un repositori nou a GitHub:
 
-   * Nom: Ecommerce-PI
-   * Visibilitat: Privat
-   * Afegir README.md
+- Nom: Ecommerce-PI
+- Visibilitat: Privat
+- Afegir README.md
 
 5. 📥 Tornar a VS Code i clonar el repositori:
 
@@ -390,9 +392,9 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
 
 3. 📊 Classifiqueu-los en:
 
-- 👀Físics (vista, esquena, canells…)
-- 🔊Ambientals (llum, soroll, temperatura)
-- 😰Psicosocials (estrès, pressió, cansament)
+   - 👀Físics (vista, esquena, canells…)
+   - 🔊Ambientals (llum, soroll, temperatura)
+   - 😰Psicosocials (estrès, pressió, cansament)
 
 ### 3️⃣ Activitat
 
@@ -488,7 +490,7 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 - 🔀 Treballar amb branques i practicar el merge.
 - 📚 Documentar el procés amb Markdown.
 
-###🛠️ Part 1 – Configuració inicial
+#### 🛠️ Part 1 – Configuració inicial
 
 - 🌐 Crear repositori Ecommerce-PI en GitHub.
 - 📥 Clonar-lo i obrir-lo en VS Code:
@@ -501,7 +503,7 @@ code .
 - 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/.
 - 📤 Fer commit inicial i pujar-lo a main.
 
-## 💻 Part 2 – Formulari bàsic amb HTML5 + JS
+#### 💻 Part 2 – Formulari bàsic amb HTML5 + JS
 
 **index.html**
 ```
@@ -549,7 +551,7 @@ document.getElementById("formContacte").addEventListener("submit", function(even
 ```
 - 📦 Fer commit i pujar els canvis a la branca.
 
-##📱 Part 3 – Millora del formulari amb telèfon (merge)
+#### 📱 Part 3 – Millora del formulari amb telèfon (merge)
 
 - 🔀 Crear branca develop i pujar-la:
 
