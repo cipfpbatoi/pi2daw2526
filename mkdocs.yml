@@ -4,6 +4,7 @@ use_directory_urls: false
 
 nav:
   - "Inici": "index.md"
+  - "Enunciat": "projecte.md"
   - "Iteració: Entorn, aparador i contacte": "sprint1.md"
 
 theme:
