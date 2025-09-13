@@ -453,7 +453,8 @@ Aprendre a escriure documentació clara i senzilla amb Markdown i guardar-la en 
 Crear un fitxer README.md a l’arrel del projecte.
 
 Escriure:
-```
+
+```md
 # 🛒 Ecommerce-PI
 
 ## 👤 Autors
@@ -482,10 +483,14 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 - Afegir almenys una secció extra al README.md (p. ex. 🛠️ Tecnologies que farem servir).
 - Comprovar a GitHub que es veu bé.
 
-##🚀 Pràctica final: Git + GitHub + VS Code + Formulari Web
-###🎯 Objectiu
+## 🚀 Pràctica final: Git + GitHub + VS Code + Formulari Web
+
+#### 🎯 Objectiu
 
 - 🖥️ Gestionar un projecte amb Git i GitHub des de VS Code.
+- 📊 Assignar rols i justificar-los al README o en document específic (C5).
+- 📅 Elaborar i exportar un cronograma Gantt bàsic amb dependències (C4).
+- 🗂️ Vincular commits i issues/targetes del tauler (GitHub Projects/Trello) per a la traçabilitat (C2).
 - 💻 Crear un formulari senzill amb HTML5 + JavaScript.
 - 🔀 Treballar amb branques i practicar el merge.
 - 📚 Documentar el procés amb Markdown.
@@ -500,12 +505,27 @@ git clone https://github.com/<usuari>/Ecommerce-PI.git
 cd Ecommerce-PI
 code .
 ```
-- 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/.
+- 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/ ,.gitignore, README, docker-compose.yml 
 - 📤 Fer commit inicial i pujar-lo a main.
 
-##### 💻 Part 2 – Formulari bàsic amb HTML5 + JS
+##### 📅 Part 2 – Organització del projecte (Gantt + Rols + Kanban)
 
-**index.html**
+- Crear tauler Kanban (GitHub Projects/Trello) amb etiquetes i deadlines.
+- Crear cronograma inicial en GanttProject amb duració i dependències bàsiques.
+- Exportar-lo a docs/gantt-SA1.png i enllaçar-lo al README.
+- Definir rols inicials (Scrum Master / Developer) i documentar-los en docs/rols.md.
+- Relacionar almenys un commit amb una targeta de projecte (Fixes #id o Closes #id).
+
+##### 💻 Part 3 – Desenvolupament inicial(Formulari bàsic amb HTML5 + JS)
+
+- 🔀 Crea branca develop:
+
+```
+git checkout -b develop
+git push origin develop
+```
+
+**frontend/index.html**
 ```
 <!DOCTYPE html>
 <html lang="ca">
@@ -532,7 +552,7 @@ code .
 </body>
 </html>
 ```
-**validacio.js**
+**frontend/validacio.js**
 ```
 document.getElementById("formContacte").addEventListener("submit", function(event) {
   const nom = document.getElementById("nom").value;
@@ -551,15 +571,10 @@ document.getElementById("formContacte").addEventListener("submit", function(even
 ```
 - 📦 Fer commit i pujar els canvis a la branca.
 
-##### 📱 Part 3 – Millora del formulari amb telèfon (merge)
+##### 📱 Part 4 – Millora i integració  (merge)
 
-- 🔀 Crear branca develop i pujar-la:
 
-```
-git checkout -b develop
-git push origin develop
-```
-- 🔀 Crear branca feature/formulari-telefon:
+- 🔀 Crea branca feature/formulari-telefon:
 
 ```
 git checkout -b feature/formulari-telefon
@@ -594,6 +609,7 @@ git push origin develop
 ```
 - 📥 Obrir Pull Request per integrar develop → main.
 
+
 #### ✅ Lliurable
 
 Repositori amb:
@@ -602,6 +618,7 @@ Repositori amb:
 - 🔀 Branca main, develop i almenys una feature.
 - 🔀 Un merge realitzat (amb el camp telèfon afegit).
 - 📚 Fitxers de documentació (README.md, RISKS.md, riscos_individuals.md).
-
+- 📅 Gantt inicial exportat a docs/.
+- 🗂️ Captura del tauler Kanban amb tasques vinculades a commits/issues.
 
 
