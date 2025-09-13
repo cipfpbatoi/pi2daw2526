@@ -12,12 +12,12 @@
 
 ## 📚 C1. Introducció al mòdul: estructura i metodologia
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia de treball que seguirem durant el curs.
 
 ---
 
-### 2️⃣ Estructura del mòdul
+#### 2️⃣ Estructura del mòdul
 - **Projecte únic**: desenvolupament d’una aplicació web de comerç electrònic (*E-commerce*).
 - **Duració**: tot el curs (99 hores → 3h setmanals).
 - **Treball en equips de 2 persones**.
@@ -31,7 +31,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 
 ---
 
-### 3️⃣ Metodologia de treball
+#### 3️⃣ Metodologia de treball
 - **Àgil** (Scrum/Kanban).
 - Cada sprint inclou:
     - Planificació inicial (tasques i cronograma).
@@ -43,7 +43,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 
 ---
 
-### 4️⃣ Responsabilitat individual
+#### 4️⃣ Responsabilitat individual
 - Encara que es treballa en equip, cada alumne ha de ser capaç de:
     - Explicar i defensar les parts en què ha treballat.
     - Mostrar coneixement de totes les fases del projecte.
@@ -51,7 +51,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 
 ---
 
-### 5️⃣ Resultat esperat
+#### 5️⃣ Resultat esperat
 - Desenvolupar una aplicació web **funcional i documentada**.
 - Aprendre a treballar en equip amb metodologies àgils.
 - Integrar coneixements de diferents mòduls (DWES, DIW, DWEC, IAW, etc.).
@@ -63,7 +63,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 
 ## 🧰 C2. GitHub Projects / Trello (Gestió àgil del projecte)
 
-### 1️⃣ Què són?
+#### 1️⃣ Què són?
 - **GitHub Projects** → Integrat en GitHub, permet gestionar tasques amb **tauler Kanban** i vincular-les directament amb el codi (issues, commits, PRs).
 - **Trello** → Eina independent però molt visual, basada també en el sistema **Kanban** (*targetes* en columnes).
 
@@ -78,7 +78,7 @@ Conéixer l’estructura del **Projecte Integrador de 2n DAW** i la metodologia 
 5. Labels: categories(frontend,backend,bug,urgent...)
 6. Deadline: data limit
 
-### 3️⃣  Organització bàsica (Kanban)
+#### 3️⃣  Organització bàsica (Kanban)
 Un tauler típic té 3 columnes principals:
 
 | Columna       | Funció                                       |
@@ -91,7 +91,7 @@ Un tauler típic té 3 columnes principals:
 
 ---
 
-### 4️⃣ Creació de targetes/tasques
+#### 4️⃣ Creació de targetes/tasques
 
 Cada tasca conté:
 
@@ -104,7 +104,7 @@ Cada tasca conté:
 
 ---
 
-### 5️⃣ Enllaç amb GitHub
+#### 5️⃣ Enllaç amb GitHub
 En GitHub Projects es poden:
 
 - Vincular **issues** (incidències) amb una targeta.
@@ -119,7 +119,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ---
 
-### 6️⃣⃣ Bones pràctiques
+#### 6️⃣⃣ Bones pràctiques
 - Mantindre el tauler **actualitzat diàriament**.  
 - Crear tasques **curtes i clares** (no massa generals, millor dividir-les).  
 - Revisar tasques en les **reunions de seguiment** (dailies o setmanals).  
@@ -128,7 +128,7 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ---
 
-###  Comparativa ràpida GitHub Projects vs Trello
+####  Comparativa ràpida GitHub Projects vs Trello
 | Aspecte              | GitHub Projects                        | Trello                          |
 |-----------------------|----------------------------------------|---------------------------------|
 | **Integració amb codi** | ✅ Molt alta (commits, PR, issues)      | ❌ Limitada (extensions externes) |
@@ -138,9 +138,9 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ---
 
-### 📌 Exemple pràctic (Iteració 1 – E-commerce)
+#### 📌 Exemple pràctic (Iteració 1 – E-commerce)
  
-#### 🟦 To Do
+##### 🟦 To Do
 
 - Configurar entorn local (IDE + PHP + Git)  
 - Crear repositori GitHub i `.gitignore`  
@@ -152,14 +152,14 @@ git commit -m "Add contact form with validation. Fixes #12"
 - Definir rols i assignar tasques  
 - Crear cronograma inicial en GanttProject  
 
-#### 🟨 In Progress
+##### 🟨 In Progress
 
 - Maquetació pàgina inicial  
 - Validació de formulari al client  
 - Configuració cronograma Gantt  
 - Documentació inicial en Markdown  
 
-#### 🟩 Done
+##### 🟩 Done
 
 - ✅ Reunió inicial d’equip → metodologia escollida (Scrum + Kanban)  
 - ✅ Creació del tauler GitHub Projects / Trello  
@@ -172,7 +172,7 @@ git commit -m "Add contact form with validation. Fixes #12"
   
 ---
 
-### 🏷️ Exemple d’etiquetes
+#### 🏷️ Exemple d’etiquetes
 - 🖥️ Backend  
 - 🎨 Frontend  
 - 📄 Documentació  
@@ -185,12 +185,12 @@ git commit -m "Add contact form with validation. Fixes #12"
 
 ## 🌐 C3. Configuració de l’entorn de treball (local i al núvol)
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 Preparar un **entorn de desenvolupament comú** per a tots els equips, que siga fàcilment replicable i que minimitze els errors entre l’entorn local i el servidor remot.
 
 ---
 
-### 2️⃣ Entorn local
+#### 2️⃣ Entorn local
 - Cada alumne utilitzarà el seu **ordinador personal** amb:
     - **Editor/IDE** (Visual Studio Code recomanat, o PhpStorm).
     - **Control de versions** amb Git.
@@ -202,14 +202,14 @@ Preparar un **entorn de desenvolupament comú** per a tots els equips, que siga 
     - *Postman* per provar APIs.
 ---
 
-### 3️⃣ Entorn remot (núvol)
+#### 3️⃣ Entorn remot (núvol)
 - **Repositori GitHub** com a punt central del projecte.
 - **Servidor de proves**: hosting compartit o VPS amb accés SSH.
 - **Bases de dades remotes**: còpies sincronitzades amb l’entorn local.
 - **CI/CD (si cal)**: GitHub Actions per desplegar automàticament.
 ---
 
-### 4️⃣ Bones pràctiques
+#### 4️⃣ Bones pràctiques
 - Mantindre la configuració de Docker i els scripts documentats al repositori.
 - No versionar fitxers sensibles (`.env`).
 - Fer còpies periòdiques de la base de dades.
@@ -221,7 +221,7 @@ Preparar un **entorn de desenvolupament comú** per a tots els equips, que siga 
   - Notes per al desplegament remot.
 ---
 
-### 5️⃣ Exemple mínim d’entorn
+#### 5️⃣ Exemple mínim d’entorn
 Els contenidors bàsics que haurien d’aparéixer són:
 - **Servidor web** (Nginx o Apache).
 - **PHP** (versió estable, amb les extensions necessàries).
@@ -233,19 +233,19 @@ A partir d’aquest esquelet, cada equip ampliarà i personalitzarà la seua con
 
 ##  📊 C4. Introducció a GanttProject (cronograma inicial)
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 Planificar el projecte amb un **cronograma visual** que mostre les tasques, la seua duració i dependències.  
 El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del projecte.
 
 ---
 
-### 2️⃣ Eina
+#### 2️⃣ Eina
 - **GanttProject**: eina senzilla i gratuïta per crear cronogrames.
 - Exporta a diferents formats (PDF, PNG) per poder compartir amb el professorat o incloure en la documentació.
 
 ---
 
-### 3️⃣ Elements bàsics del diagrama
+#### 3️⃣ Elements bàsics del diagrama
 - **Tasques**: accions a realitzar (*configurar entorn, crear formulari...*).
 - **Duració**: hores o dies que ocuparà cada tasca.
 - **Dependències**: algunes tasques no poden començar fins que altres acaben.
@@ -253,7 +253,7 @@ El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del p
 
 ---
 
-### 4️⃣ Procediment inicial
+#### 4️⃣ Procediment inicial
 1. Crear un **projecte nou** en GanttProject.
 2. Afegir les **tasques principals** de l’Iteració 1:
     - Configuració d’entorn (local i remot).
@@ -268,7 +268,7 @@ El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del p
 
 ---
 
-### 5️⃣ Bones pràctiques
+#### 5️⃣ Bones pràctiques
 - Mantindre el cronograma **actualitzat** a mesura que avança el projecte.
 - Revisar-lo en cada **punt de control d’iteració**.
 - Usar-lo com a eina de comunicació amb el client i el professorat.
@@ -279,13 +279,13 @@ El resultat serà un **diagrama de Gantt** que servirà com a guia inicial del p
 
 ## 👥 C5. Assignació de rols i tasques
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 Repartir el treball de manera clara dins de cada equip, definint **responsabilitats** i **tasques concretes** per a cada alumne.  
 Això evita confusions i facilita el seguiment del projecte.
 
 ---
 
-### 2️⃣ Rols bàsics en un equip reduït (2 persones)
+#### 2️⃣ Rols bàsics en un equip reduït (2 persones)
 - **Scrum Master**
     - Organitza i coordina el treball.
     - Dinamitza les reunions de seguiment.
@@ -303,7 +303,7 @@ Això evita confusions i facilita el seguiment del projecte.
 
 ---
 
-### 3️⃣ Procediment
+#### 3️⃣ Procediment
 1. Decidir els rols inicials dins de l’equip.
 2. Crear les **tasques en el tauler Kanban** i assignar-les a un responsable.
 3. Revisar periòdicament que el repartiment siga equilibrat.
@@ -311,7 +311,7 @@ Això evita confusions i facilita el seguiment del projecte.
 
 ---
 
-### 4️⃣ Bones pràctiques
+#### 4️⃣ Bones pràctiques
 - Repartir les tasques per **funcionalitats completes**, no per línies de codi.  
   (Exemple: *“Formulari de contacte”* → inclou maquetació, validació i documentació).
 - Fer **code reviews creuades**: el company revisa el codi abans de fer *merge*.
@@ -323,15 +323,15 @@ Això evita confusions i facilita el seguiment del projecte.
 
 ## 🖥️ C6. Control de versions amb Git i GitHub
 
-### 1️⃣ Explicació
+#### 1️⃣ Explicació
 
 Quan treballem en equip sobre un projecte de programació, necessitem una eina que ens permeta guardar els canvis, tornar arrere si ens equivoquem i col·laborar sense fouca de codi.
 Eixa eina és **Git**, i GitHub és la plataforma on podem pujar els repositoris per compartir-los i treballar en línia.
 
-### 2️⃣ Objectiu
+#### 2️⃣ Objectiu
 Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb comandes bàsiques.
 
-### 3️⃣ Passos guiats
+#### 3️⃣ Passos guiats
 
 1. 🖥️ Obrir Visual Studio Code i el terminal integrat (`Ctrl+ñ`).
 2. 📦 Comprovar que Git està instal·lat:
@@ -371,7 +371,7 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
     
     ```
 
-### 4️⃣ 📝 Activitat
+#### 4️⃣ 📝 Activitat
  
   - Cada alumne crea un fitxer propi dins del repositori (alumne1.md, alumne2.md) i fa un commit.
   - Pujar-ho a GitHub i comprovar que apareix.
@@ -380,11 +380,11 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
 
   El desenvolupament de programari no sols implica escriure codi. També passarem moltes hores davant l’ordinador i això pot generar problemes físics (vista, esquena), ambientals (llum, soroll) i psicosocials (estrès, pressió).És important identificar-los per prevenir problemes de salut.
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 
   Reconéixer quins riscos té el treball davant l’ordinador i reflexionar sobre el vostre propi entorn.
 
-### 2️⃣ Passos guiats
+#### 2️⃣ Passos guiats
 
 1. 👀 Penseu en com treballeu normalment: postura, cadira, llum, pauses…
 
@@ -396,7 +396,7 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
    - 🔊Ambientals (llum, soroll, temperatura)
    - 😰Psicosocials (estrès, pressió, cansament)
 
-### 3️⃣ Activitat
+#### 3️⃣ Activitat
 
 * Crear dins docs/ un fitxer riscos_individuals.md.
 
@@ -414,11 +414,11 @@ Una vegada identificats els riscos, cal crear un pla de prevenció. Aquest docum
 - 💥Mesurar la seua probabilitat i impacte
 - 📝Decidir quines mesures prendre i qui és responsable de revisar-les
 
-### 1️⃣ Objectiu
+#### 1️⃣ Objectiu
 
 Aprendre a crear un document senzill de pla de prevenció que puga revisar-se en cada sprint.
 
-### 2️⃣ 📋Passos guiats
+#### 2️⃣ 📋Passos guiats
 
 📂 Crear un fitxer nou RISKS.md dins docs/.
 
@@ -433,7 +433,7 @@ Copiar la plantilla següent:
 
 
 
-### 3️⃣ Activitat
+#### 3️⃣ Activitat
 
 - Omplir almenys 3 riscos amb les seues mesures preventives.
 - Completar la taula i pujar el fitxer RISKS.md.
@@ -444,11 +444,11 @@ Copiar la plantilla següent:
 En un projecte real, no n’hi ha prou amb el codi. Cal documentar-lo perquè altres persones puguen instal·lar-lo, entendre’l i mantenir-lo.
 Per això farem servir Markdown, un llenguatge senzill per escriure documents que GitHub mostra de forma clara i atractiva.
 
-### 1️⃣ℹ️ Objectiu
+#### 1️⃣ℹ️ Objectiu
 
 Aprendre a escriure documentació clara i senzilla amb Markdown i guardar-la en GitHub.
 
-### 2️⃣📋 Passos guiats
+#### 2️⃣📋 Passos guiats
 
 Crear un fitxer README.md a l’arrel del projecte.
 
@@ -477,7 +477,7 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 
 📤 Fer commit i pujar-ho a GitHub.
 
-### 3️⃣📝 Activitat
+#### 3️⃣📝 Activitat
 
 - Afegir almenys una secció extra al README.md (p. ex. 🛠️ Tecnologies que farem servir).
 - Comprovar a GitHub que es veu bé.
@@ -490,7 +490,7 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 - 🔀 Treballar amb branques i practicar el merge.
 - 📚 Documentar el procés amb Markdown.
 
-#### 🛠️ Part 1 – Configuració inicial
+##### 🛠️ Part 1 – Configuració inicial
 
 - 🌐 Crear repositori Ecommerce-PI en GitHub.
 - 📥 Clonar-lo i obrir-lo en VS Code:
@@ -503,7 +503,7 @@ code .
 - 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/.
 - 📤 Fer commit inicial i pujar-lo a main.
 
-#### 💻 Part 2 – Formulari bàsic amb HTML5 + JS
+##### 💻 Part 2 – Formulari bàsic amb HTML5 + JS
 
 **index.html**
 ```
@@ -551,7 +551,7 @@ document.getElementById("formContacte").addEventListener("submit", function(even
 ```
 - 📦 Fer commit i pujar els canvis a la branca.
 
-#### 📱 Part 3 – Millora del formulari amb telèfon (merge)
+##### 📱 Part 3 – Millora del formulari amb telèfon (merge)
 
 - 🔀 Crear branca develop i pujar-la:
 
@@ -594,7 +594,7 @@ git push origin develop
 ```
 - 📥 Obrir Pull Request per integrar develop → main.
 
-### ✅ Lliurable
+#### ✅ Lliurable
 
 Repositori amb:
 
