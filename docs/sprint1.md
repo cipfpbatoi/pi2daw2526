@@ -376,7 +376,7 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
   - Cada alumne crea un fitxer propi dins del repositori (alumne1.md, alumne2.md) i fa un commit.
   - Pujar-ho a GitHub i comprovar que apareix.
 
-## C7. Identificació de riscos laborals
+## ⚠️ C7. Identificació de riscos laborals
 
   El desenvolupament de programari no sols implica escriure codi. També passarem moltes hores davant l’ordinador i això pot generar problemes físics (vista, esquena), ambientals (llum, soroll) i psicosocials (estrès, pressió).És important identificar-los per prevenir problemes de salut.
 
@@ -406,7 +406,7 @@ Entendre què és Git i aprendre a crear i gestionar un repositori en GitHub amb
 - Què podríeu fer per millorar-los
 -  📤 Fer commit i pujar-ho a GitHub.
 
-## C8. Pla de riscos i prevenció bàsica
+## 🛡️C8. Pla de riscos i prevenció bàsica
 
 Una vegada identificats els riscos, cal crear un pla de prevenció. Aquest document ajuda a:
 
@@ -439,7 +439,7 @@ Copiar la plantilla següent:
 - Completar la taula i pujar el fitxer RISKS.md.
 - 🔄 Revisar-lo i actualitzar-lo en cada sprint.
 
-## C9. Eines de documentació: Markdown + repositori Git
+## 📄 C9. Eines de documentació: Markdown + repositori Git
 
 En un projecte real, no n’hi ha prou amb el codi. Cal documentar-lo perquè altres persones puguen instal·lar-lo, entendre’l i mantenir-lo.
 Per això farem servir Markdown, un llenguatge senzill per escriure documents que GitHub mostra de forma clara i atractiva.
