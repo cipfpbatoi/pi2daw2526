@@ -483,29 +483,45 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 - Afegir almenys una secció extra al README.md (p. ex. 🛠️ Tecnologies que farem servir).
 - Comprovar a GitHub que es veu bé.
 
-## Annexe: Què és la metologia àgil
+## 📊 Annexe: Què és la metologia àgil
  
 Una metodología ágil és una manera de gestionar i desenvolupar projectes —sobretot en l’àmbit del programari, però també aplicable en altres sectors— basada en la flexibilitat, la col·laboració i l’adaptació contínua.
+
 👉 En comptes de planificar-ho tot de principi a fi amb molt de detall (com passa amb les metodologies tradicionals, tipus “en cascada”), les metodologies àgils parteixen d’aquests principis:
-- Iteracions curtes: el treball es divideix en cicles curts (sprints) on s’entrega una part funcional del producte.
-- Feedback continu: es busca la retroalimentació constant del client o usuari per ajustar el producte a les seues necessitats reals.
-- Flexibilitat: es poden redefinir prioritats i objectius durant el projecte sense haver de començar de zero.
-- Treball en equip: es fomenta la comunicació oberta i la col·laboració entre tots els membres de l’equip.
-- Millora contínua: en acabar cada iteració es revisa el procés i es busquen maneres de millorar-lo.
 
-Metodologia en cascada (tradicional)
------------------------------------
+  - Iteracions curtes: el treball es divideix en cicles curts (sprints) on s’entrega una part funcional del producte.
+  - Feedback continu: es busca la retroalimentació constant del client o usuari per ajustar el producte a les seues necessitats reals.
+  - Flexibilitat: es poden redefinir prioritats i objectius durant el projecte sense haver de començar de zero.
+  - Treball en equip: es fomenta la comunicació oberta i la col·laboració entre tots els membres de l’equip.
+  - Millora contínua: en acabar cada iteració es revisa el procés i es busquen maneres de millorar-lo.
+
+### 📊 Comparació visual: Metodologia en cascada vs Metodologia àgil
+
+#### 🔹 Metodologia en cascada (tradicional)
+
 [ Requisits ] ---> [ Disseny ] ---> [ Desenvolupament ] ---> [ Proves ] ---> [ Lliurament ]
-          (Tot seqüencial, si falla alguna cosa toca tornar enrere i costa molt adaptar-se)
 
+*(Tot seqüencial: si falla alguna cosa, cal tornar enrere i costa molt adaptar-se.)*
 
-Metodologia àgil (Scrum, Kanban, etc.)
---------------------------------------
+---
+
+#### 🔹 Metodologia àgil (Scrum, Kanban, etc.)
+
 Iteracions curtes (Sprints de 1-3 setmanes)
-[ Planificació ] -> [ Desenvolupament ] -> [ Proves ] -> [ Feedback ] -> [ Entrega parcial ]
-       ^                                                                         |
-       |-------------------------------------------------------------------------|
- (El cicle es repeteix fins aconseguir el producte final, adaptant-se a canvis)
+
+[ Planificació ] -> [ Desenvolupament ] -> [ Proves ] -> [ Feedback ] -> [ Entrega parcial ]  
+↑                                                                                       ↓  
+└──────────────────────────────────────────────────────────────────────────────────────┘  
+
+*(Cicle repetitiu fins aconseguir el producte final, adaptant-se a canvis.)*
+
+---
+
+## 👉 Diferències clau
+
+- **Cascada**: només veus el producte al final, poc flexible davant de canvis.  
+- **Àgil**: veus resultats des del principi, reps feedback i adaptes constantment.  
+
 
 ### 📋 Tècniques àgils i tecnologies associades
 
