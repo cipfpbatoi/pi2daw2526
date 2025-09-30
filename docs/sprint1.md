@@ -483,6 +483,45 @@ Desenvolupar una aplicació web de comerç electrònic com a projecte final de D
 - Afegir almenys una secció extra al README.md (p. ex. 🛠️ Tecnologies que farem servir).
 - Comprovar a GitHub que es veu bé.
 
+## Annexe: Què és la metologia àgil
+ 
+Una metodología ágil és una manera de gestionar i desenvolupar projectes —sobretot en l’àmbit del programari, però també aplicable en altres sectors— basada en la flexibilitat, la col·laboració i l’adaptació contínua.
+👉 En comptes de planificar-ho tot de principi a fi amb molt de detall (com passa amb les metodologies tradicionals, tipus “en cascada”), les metodologies àgils parteixen d’aquests principis:
+- Iteracions curtes: el treball es divideix en cicles curts (sprints) on s’entrega una part funcional del producte.
+- Feedback continu: es busca la retroalimentació constant del client o usuari per ajustar el producte a les seues necessitats reals.
+- Flexibilitat: es poden redefinir prioritats i objectius durant el projecte sense haver de començar de zero.
+- Treball en equip: es fomenta la comunicació oberta i la col·laboració entre tots els membres de l’equip.
+- Millora contínua: en acabar cada iteració es revisa el procés i es busquen maneres de millorar-lo.
+
+Metodologia en cascada (tradicional)
+-----------------------------------
+[ Requisits ] ---> [ Disseny ] ---> [ Desenvolupament ] ---> [ Proves ] ---> [ Lliurament ]
+          (Tot seqüencial, si falla alguna cosa toca tornar enrere i costa molt adaptar-se)
+
+
+Metodologia àgil (Scrum, Kanban, etc.)
+--------------------------------------
+Iteracions curtes (Sprints de 1-3 setmanes)
+[ Planificació ] -> [ Desenvolupament ] -> [ Proves ] -> [ Feedback ] -> [ Entrega parcial ]
+       ^                                                                         |
+       |-------------------------------------------------------------------------|
+ (El cicle es repeteix fins aconseguir el producte final, adaptant-se a canvis)
+
+### 📋 Tècniques àgils i tecnologies associades
+
+| **Tècnica / Pràctica**         | **Objectiu**                                      | **Eines / Tecnologies habituals** |
+|--------------------------------|--------------------------------------------------|----------------------------------|
+| **User stories** (històries d’usuari) | Definir funcionalitats des del punt de vista de l’usuari | Jira, Trello, GitHub Issues, GitLab Issues |
+| **Product backlog**            | Llista prioritzada de tasques del projecte        | Jira, Trello, Asana, GitHub Projects |
+| **Sprint backlog**             | Tasques concretes d’un sprint                     | Jira (Scrum board), GitLab Boards |
+| **Daily stand-up**             | Reunió diària breu per coordinar l’equip          | Slack huddles, Microsoft Teams, Zoom, Discord |
+| **Retrospective**              | Revisar què ha funcionat i què millorar           | Miro, Mural, FunRetro, Notion |
+| **Kanban board**               | Visualitzar l’estat de les tasques (To Do → Doing → Done) | Trello, GitHub Projects, GitLab Boards, Jira |
+| **Continuous Integration / Delivery (CI/CD)** | Automatitzar proves i desplegaments | GitHub Actions, GitLab CI/CD, Jenkins |
+| **Testing automatitzat**       | Garantir la qualitat del codi                     | PHPUnit (PHP), Jest (JS), JUnit (Java), Cypress (E2E) |
+| **Documentació col·laborativa**| Escriure i compartir coneixement                  | Confluence, Notion, Google Docs, Wiki de GitHub |
+
+
 ## 🚀 Pràctica final: Git + GitHub + VS Code + Formulari Web
 
 #### 🎯 Objectiu
