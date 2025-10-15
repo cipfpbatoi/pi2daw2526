@@ -546,7 +546,10 @@ Iteracions curtes (Sprints de 1-3 setmanes)
 - 📊 Assignar rols i justificar-los al README o en document específic (C5).
 - 📅 Elaborar i exportar un cronograma Gantt bàsic amb dependències (C4).
 - 🗂️ Vincular commits i issues/targetes del tauler (GitHub Projects/Trello) per a la traçabilitat (C2).
+
+ 
 - 💻 Crear un formulari senzill amb HTML5 + JavaScript.
+- 💻 Validar el formulari en el servidor abans de procesar-lo. Podriem guardar en un fitxer de text. 
 - 🔀 Treballar amb branques i practicar el merge.
 - 📚 Documentar el procés amb Markdown.
 
@@ -554,13 +557,14 @@ Iteracions curtes (Sprints de 1-3 setmanes)
 
 - 🌐 Crear repositori Ecommerce-PI en GitHub.
 - 📥 Clonar-lo i obrir-lo en VS Code:
+- 📥 Hem de configurar el docker per poder executar codi php
 
 ```
 git clone https://github.com/<usuari>/Ecommerce-PI.git
 cd Ecommerce-PI
 code .
 ```
-- 📂 Afegir estructura bàsica: frontend/, backend/, database/, docs/ ,.gitignore, README, docker-compose.yml 
+- 📂 Afegir estructura bàsica (exemple): frontend/, backend/, database/, docs/ ,.gitignore, README, docker-compose.yml 
 - 📤 Fer commit inicial i pujar-lo a main.
 
 ##### 📅 Part 2 – Organització del projecte (Gantt + Rols + Kanban)
@@ -579,99 +583,19 @@ code .
 git checkout -b develop
 git push origin develop
 ```
-
-**frontend/index.html**
-```
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulari de contacte</title>
-</head>
-<body>
-  <h1>Contacta amb nosaltres</h1>
-  <form id="formContacte">
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="nom" required minlength="3"><br><br>
-
-    <label for="email">Correu:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="edat">Edat:</label>
-    <input type="number" id="edat" name="edat" min="18" max="99"><br><br>
-
-    <button type="submit">Enviar</button>
-  </form>
-
-  <script src="validacio.js"></script>
-</body>
-</html>
-```
-**frontend/validacio.js**
-```
-document.getElementById("formContacte").addEventListener("submit", function(event) {
-  const nom = document.getElementById("nom").value;
-  const email = document.getElementById("email").value;
-
-  if (nom.length < 3) {
-    alert("El nom ha de tindre almenys 3 caràcters.");
-    event.preventDefault();
-  }
-
-  if (!email.includes("@")) {
-    alert("El correu ha de contindre un '@'.");
-    event.preventDefault();
-  }
-});
-```
+L’HTML no ha de validar, validarem tots els camps mitjançant JavaScript. El formulari ha d’incloure com a mínim els següents camps validats: nom, correu, cicle formatiu (select), telèfon i un chekbox de consentiment de dades.
+ 
 - 📦 Fer commit i pujar els canvis a la branca.
-
-##### 📱 Part 4 – Millora i integració  (merge)
-
-
-- 🔀 Crea branca feature/formulari-telefon:
-
-```
-git checkout -b feature/formulari-telefon
-```
-
--📱 Afegir al formulari el camp telèfon a index.html:
-
-```
-<label for="telefon">Telèfon:</label>
-<input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="Ex: 600123456" required><br><br>
-```
-
-- ⚙️ Afegir la validació en validacio.js:
-
-```
-const telefon = document.getElementById("telefon").value;
-const regexTelefon = /^[0-9]{9}$/;
-
-if (!regexTelefon.test(telefon)) {
-  alert("El telèfon ha de tindre exactament 9 dígits numèrics.");
-  event.preventDefault();
-}
-```
-- 📦 Fer commit i pujar els canvis a la branca.
-
-- 🔀 Tornar a develop i fer merge:
-
-```
-git checkout develop
-git merge feature/formulari-telefon
-git push origin develop
-```
-- 📥 Obrir Pull Request per integrar develop → main.
-
+- 📦 Fer un altra branca per el formulari en el servidor
+- Fer el merge quan estiga totes dos completes 
 
 #### ✅ Lliurable
 
 Repositori amb:
 
-- 💻 index.html i validacio.js funcionals.
+- 💻 index.html i validacio.js, formulari.php funcionals.
 - 🔀 Branca main, develop i almenys una feature.
-- 🔀 Un merge realitzat (amb el camp telèfon afegit).
+- 🔀 Un merge realitzat.
 - 📚 Fitxers de documentació (README.md, RISKS.md, riscos_individuals.md).
 - 📅 Gantt inicial exportat a docs/.
 - 🗂️ Captura del tauler Kanban amb tasques vinculades a commits/issues.
