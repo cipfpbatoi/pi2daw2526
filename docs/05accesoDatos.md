@@ -33,9 +33,7 @@ Si tot ha eixit bé i el contenidor està en marxa, podrem visitar la pàgina de
 http://localhost:8000
 ```
 
-<div class="center img-medium">
-    <img src="imagenes/06/06-bbdd-phpMyAdmin-login.png">
-</div>
+ 
 
 Per a accedir hem d'utilitzar les següents credencials que venen configurades en el arxiu `docker-compose.yml`
 
@@ -84,10 +82,7 @@ Vegem-ho en un exemple real
     [*] Clau primària [^] Clave Forània
 </div>
 
-<div class="center img-large">
-    <img src="imagenes/06/06-bbdd-estructura.png">
-</div>
-
+ 
 ### SQL
 
 Aquest llenguatge de consulta estructurada (*Structured Query Language*) és el que utilitzarem per a realitzar les consultes a les nostres bases de dades per a mostrar el contingut en les diferents interfícies web que creem al llarg de la unitat. Si vols saber més detalls visita [Wiki SQL](https://es.wikipedia.org/wiki/sql)
@@ -110,18 +105,13 @@ Las sentencias SQL también las podemos usar dentro de nuestro código php, de t
 ```
 
 ### phpMyAdmin
-
-<div class="center img-medium">
-    <img src="imagenes/06/06-bbdd-phpMyAdmin-logo.png">
-</div>
+ 
 
 Aquest programari funciona sota Ngingx i PHP i és més que res una interfície web per a gestionar les bases de dades que tinguem disponibles en el nostre servidor local. Molts **hostings* ofereixen aquesta eina per defecte per a poder gestionar les BBDD que tinguem configurades sota el nostre compte.
 
 #### Creant una base de dades dins de phpMyAdmin
 
-<div class="center img-large">
-    <img src="imagenes/06/06-bbdd-phpMyAdmin.gif">
-</div>
+ 
 
 1.  Per a crear una nova base de dades hem d'entrar en *phpMyAdmin* com a *usuari root* i punxar en l'opció <span class="warning">*Nova*</span> del menú de l'esquerra.
 
@@ -379,9 +369,7 @@ Però hem de triar el tipus de dada que volem rebre entre els 3 que hi ha dispon
 - `PDO::FETCH_NUM:` array indexat que els seus keys són números.
 - `PDO::FETCH_BOTH:` valor per defecte. Retorna un array indexat que els seus keys són tant el nom de les columnes com números.
 
-<div class="center img-large">
-    <img src="imagenes/06/06-pdo-listado-fetch.png">
-</div>
+ 
 
 ``` php
 <?php
@@ -540,10 +528,7 @@ Per a utilitzar el comodí *LIKE* o altres comodins, hem d'associar-lo a la dada
 Teniu una llista d'exemples molt completa en la [documentació oficial](https://phpdelusions.net/pdo/objects).
 
 ## 4. Login & Password
-
-<div class="center img-medium">
-    <img src="imagenes/06/06-login-password.gif">
-</div>
+ 
 
 Per a manejar un sistema complet de login i password amb contrasenyes xifrades, necessitem un mètode que xifre aqueixos *strings* que l'usuari introdueix com a contrasenya; tant en el formulari de registre com en el del *login*, ja que en codificar una contrasenya, després hem de descodificar-la per a comprovar que totes dues *contrasenyes (la que introdueix l'usuari en el login i la que tenim en la base de dades) coincidisquen.
 
