@@ -587,7 +587,7 @@ L’HTML no ha de validar, validarem tots els camps mitjançant JavaScript. El f
  
 - 📦 Fer commit i pujar els canvis a la branca.
 - 📦 Fer un altra branca per el formulari en el servidor
-- Fer el merge quan estiga totes dos completes 
+- 🔀 Fer el merge quan estiga totes dos completes 
 
 #### ✅ Lliurable
 
