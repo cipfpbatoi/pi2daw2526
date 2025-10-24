@@ -266,18 +266,3 @@ deploy/
 
 ---
 
-### 6️⃣ Estat del desenvolupament  
-
-#### 🟦 To Do  
-- Configurar accés segur al servidor (SSH/SFTP).  
-- Crear scripts de desplegament i còpia de seguretat.  
-
-#### 🟨 In Progress  
-- Automatitzar tasques amb cron o GitHub Actions.  
-- Integrar còpies remotes amb el sistema de fitxers Docker.  
-
-#### 🟩 Done  
-- Sistema de còpies funcional i verificat.  
-- Desplegament remot segur i actualitzacions automàtiques.  
-- Restauració provada i validada amb èxit.  
-
