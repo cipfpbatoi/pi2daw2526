@@ -93,7 +93,7 @@ CREATE TABLE productes (
 
 🔹 **5. Importar a la base de dades**  
    - Inserir els productes utilitzant consultes preparades (PDO).  
-   - Evitar duplicats.  
+   - Evitar duplicats mitjançant un camp únic (`sku` o `nom`).  
 🔹 **6.Guardar el log de la importació**
 🔹 **7. Mostrar resultat final**  
    - Nombre total de productes importats.  
@@ -102,6 +102,27 @@ CREATE TABLE productes (
 
 ---
 
+### 5️⃣ Exemple de funcionament (Aquestes tasques les haureu de planificar vosaltres des de el tercer sprint)
+
+#### 🟦 To Do  
+- Configuració Docker
+- Crear la carpeta `/uploads` amb permisos adequats.  
+- Configurar la connexió a la base de dades.  
+- Preparar el formulari d’upload.  
+- Definir la taula `productes`.  
+
+#### 🟨 In Progress  
+- Lectura de l’arxiu Excel amb `PhpSpreadsheet`.  
+- Validació de dades (preu, estoc, formats).  
+- Creació del fitxer `products.json` de prova.  
+
+#### 🟩 Done  
+- ✅ Importació completada amb èxit.  
+- ✅ Productes visibles a la base de dades.  
+- ✅ Fitxer JSON generat correctament.  
+- ✅ Informe d’errors i resum final.  
+
+---
 
 ### 6️⃣ Bones pràctiques  
 
@@ -115,29 +136,89 @@ CREATE TABLE productes (
 
 ---
 
-## C2. 👥 Inici de sessió d’usuaris  
+## C2. 👥 Registre i inici de sessió d’usuaris  
 
 ### 1️⃣ Objectius  
 
-Implementar un sistema de identificació d’usuaris en PHP amb la finalitat de permetre als usuaris identificats  poder qualificar el productes. Consistirà en guardar en les cookies l'email de l'usuari. 
+Implementar un sistema d’autenticació d’usuaris en PHP que permeta registrar-se i iniciar sessió amb credencials segures (nom d’usuari i contrasenya).  
+Cada usuari disposarà d’un perfil personal bàsic, des d’on podrà consultar i actualitzar la seua informació.  
 
+L’objectiu és garantir que l’accés a les funcionalitats de comentaris i valoració de productes estiga protegit.
+Quabn l'usuari estiga loguejat guardarà una cookie amb la identifiació de l'usuari.  
 
 ---
 
 ### 2️⃣ Requisits previs  
 
 ✅ Configuració Docker amb serveis per a PHP, Nginx i MySQL  
-✅ Formulari HTML per a la identificació 
+✅ Taula `usuaris` creada a la base de dades  
+✅ Llibreria `password_hash()` i `password_verify()` de PHP per al xifrat de contrasenyes  
+✅ Sessions PHP activades (`session_start()`)  
+✅ Formularis HTML per al registre i login  
+✅ Validació del costat client i servidor  
 
+📦 **Estructura orientativa:**
+```
+public/
+├── auth/
+│   ├── register.php       'Formulari i procés de registre d’usuaris'
+│   ├── login.php          'Formulari i procés d’inici de sessió'
+│   ├── logout.php         'Tanca la sessió de l’usuari actual'
+│   └── profile.php        'Mostra i permet editar les dades personals de l’usuari autenticat'
+├── includes/
+│   └── db_connect.php     'Connexió segura a la base de dades (MySQLi o PDO)'
+```
+---
+
+### 3️⃣ Estructura de la base de dades  
+
+S’ha de crear una taula `usuaris` per gestionar la informació bàsica i les credencials dels usuaris.  
+Aquesta taula contindrà camps com:  
+- `id` (clau primària)  
+- `nom_usuari`  
+- `contrasenya`  
+- `email`  
+- `nom`  
+- `cognoms`  
+- `data_registre`
 
 ---
+
+### 4️⃣ Flux general d’implementació. (Aquestes tasques les haureu de planificar vosaltres des de el tercer sprint)
+
+🔹 **1. Registre d’usuari**  
+   - Crear un formulari HTML amb nom, correu i contrasenya.  
+   - Validar les dades i comprovar que no hi haja duplicats.  
+   - Xifrar la contrasenya abans de guardar-la a la base de dades.  
+
+🔹 **2. Inici de sessió**  
+   - Formulari per a l’autenticació amb usuari i contrasenya.  
+   - Verificar credencials i establir una sessió segura.  
+
+🔹 **3. Perfil d’usuari**  
+   - Mostrar la informació personal i permetre la seua modificació.  
+
+🔹 **4. Tancament de sessió**  
+   - Esborrar la sessió i redirigir l’usuari a la pàgina d’inici.  
+
+---
+
+### 5️⃣ Bones pràctiques  
+
+🔐 **Hash de contrasenyes:** utilitzar `password_hash()` i `password_verify()`, mai guardar-les en text pla.  
+🧱 **Sessions segures:** regenerar l’ID de sessió després del login (`session_regenerate_id(true)`).  
+🚫 **Protecció contra SQL Injection:** usar sempre sentències preparades.  
+🧩 **Validació:** comprovar camps buits, longituds i formats de correu.  
+📱 **Disseny responsiu:** formularis funcionals en tots els dispositius.  
+🧾 **Feedback d’usuari:** missatges clars d’error o èxit durant el procés d’autenticació.  
+
 
 ## C3. 💬 Comentaris i valoracions de productes  
 
 ### 1️⃣ Objectius  
 
 Fomentar la interacció entre els usuaris i el contingut de la botiga mitjançant **comentaris i valoracions** en les fitxes dels productes.  
-Els **usuaris identificats** podran deixar opinions, puntuacions o indicar que un producte els agrada (“👍 M’agrada”).  
+Els **usuaris autenticats** podran deixar opinions, puntuacions o indicar que un producte els agrada (“👍 M’agrada”).  
 
 Cada comentari o valoració estarà associat **al perfil de l’usuari que l’ha escrit**, i es mostrarà en temps real dins de la pàgina del producte.  
 
@@ -147,10 +228,12 @@ Aquesta funcionalitat ha d’integrar-se en la interfície **de manera dinàmica
 
 ### 2️⃣ Requisits previs  
 
-✅ Sistema d’identificació d’usuaris actiu (apartat 2)  
+✅ Sistema d’autenticació d’usuaris actiu (apartat 2)  
 ✅ Base de dades amb taules per a productes i comentaris  
+✅ Entorn amb suport per a **AJAX** o **Fetch API** per enviar dades sense recarregar la pàgina  
 ✅ Fulls d’estil CSS o framework (Bootstrap, Tailwind...) per mantenir coherència visual  
 ✅ JavaScript actiu en el client per gestionar la interacció dinàmica  
+
 
 
 ### 4️⃣ Flux general d’implementació  
@@ -190,6 +273,18 @@ Aquesta funcionalitat ha d’integrar-se en la interfície **de manera dinàmica
 🧩 Les respostes del servidor s’enviaran en **format JSON** per facilitar la manipulació amb JavaScript.  
 ♿ Es garantirà que els botons i formularis siguen accessibles amb teclat i lectors de pantalla.  
 🎨 S’adaptarà el disseny perquè funcione tant en dispositius d’escriptori com en mòbils.  
+
+---
+
+### 7️⃣ Bones pràctiques  
+
+🧱 **Validar dades al servidor i al client** abans de guardar comentaris o puntuacions.  
+🚫 **Evitar SPAM o abús** mitjançant límits de freqüència o CAPTCHA.  
+🔐 **Comprovar autenticació** abans de permetre qualsevol acció.  
+🧾 **Registrar la data i usuari** de cada comentari per a traçabilitat.  
+📊 **Mostrar estadístiques bàsiques** (nombre de comentaris, valoració mitjana).  
+🧠 **Separar la lògica del frontend i backend** per facilitar manteniment.  
+
 
 
 ## C4. ☁️ Desplegament i còpies de seguretat remotes  
@@ -264,5 +359,4 @@ deploy/
 🧱 **Separar entorns** (producció, preproducció, desenvolupament) per evitar errors humans.  
 🌍 **Notificar o registrar** cada desplegament per tindre un historial de versions.  
 
----
 
