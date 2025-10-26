@@ -360,3 +360,78 @@ deploy/
 🌍 **Notificar o registrar** cada desplegament per tindre un historial de versions.  
 
 
+## C5. 🧭 Estructura, usabilitat de la interfície i components visuals clau (DIW)
+
+### 1️⃣ Objectius  
+
+Dissenyar i implementar una **pàgina base / plantilla** per a l’e‑commerce que oferisca una **navegació clara i intuïtiva**, amb una **disposició lògica** de menús i seccions principals (**Inici, Productes, Carret, Contacte**).  
+Aplicar **principis de disseny centrat en l’usuari** (consistència, jerarquia visual, feedback immediat) i integrar **elements essencials**: **cercador funcional**, **filtres de producte**, **carret visible**, **botons d’acció** (Afegir al carret, Comprar, Registrar‑se) i **gestió d’estats visuals** (hover, actiu, deshabilitat, focus).  
+
+---
+
+### 2️⃣ Requisits previs  
+
+✅ Guia d’estil bàsica o **design tokens** (colors, tipografies, espais).  
+✅ Framework de CSS (Tailwind/Bootstrap) o fulls d’estil propis.  
+✅ Conjunt d’icones (per ex. Lucide/Font Awesome).  
+✅ Rutes mínimes al frontend: `/`, `/productes`, `/carret`, `/contacte`.  
+✅ Criteris d’accessibilitat: **WCAG 2.1 AA** i navegació per teclat.  
+
+---
+
+### 3️⃣ Estructura base / plantilla (layout)
+
+- **Capçalera (header):** logotip (enllaç a Inici), **cercador** accessible, menú principal (Inici, Productes, Contacte), **indicador del carret** (quantitat i subtotal).  
+- **Cos (main):** espai per a **breadcrumb**, **Hero** opcional, **contenidor** per a llistats (grid/llista) i **sidebar de filtres**.  
+- **Peu (footer):** enllaços útils, contacte, legal.  
+- **Disposició responsiva:**  
+  - Mòbil: menú hamburguesa; filtres en **off‑canvas** o acordions.  
+  - Escriptori: **grid 12** amb sidebar per a filtres i contenidor principal per a productes.  
+- **Rutes i navegació:** estat actiu al menú; **focus visible**; breadcrumb per a context.  
+
+---
+
+### 4️⃣ Components visuals clau  
+
+- **Cercador**  
+  - Input amb `label` visible/oculta (`aria-label`), botó d’enviament, suggeriments (opcional).  
+- **Filtres de productes**  
+  - Categoria, preu (rang), disponibilitat, valoració; botó **“Netejar filtres”**.  
+- **Targeta de producte**  
+  - Imatge, nom, preu, valoració, **CTA “Afegir al carret”**; estat *out of stock*.  
+- **Carret visible (widget)**  
+  - Icona amb **badge** de quantitat; desplegable resum (mini‑cart) amb subtotals i enllaç a “Comprar”.  
+- **Botons d’acció**  
+  - Estats **normal/hover/actiu/deshabilitat/ càrrega**; amplària plena en mòbil.  
+- **Feedback i estats**  
+  - *Hover*, *focus*, errors de formulari, **esquelets de càrrega** i **empty states**.  
+
+---
+
+### 5️⃣ Accessibilitat i usabilitat  
+
+- **Navegació per teclat** (ordre de tabulació lògic, `:focus-visible`).  
+- **Contrast de color** suficient (ratios AA).  
+- **ARIA** per a components personalitzats (botons, llistes de resultats, filtres).  
+- **Formularis** amb `label`, missatges d’error clars i indicació de camps obligatoris.  
+- **Salt a contingut** (“Skip to content”) al principi del document.  
+
+---
+
+### 6️⃣ Proves i validació  
+
+- **Checklist UX** (claror de navegació, consistència de CTAs, llegibilitat).  
+- **Micro‑tests d’usabilitat** (3 usuaris): trobar un producte, afegir‑lo al carret, iniciar compra.  
+- **Rendiment**: revisar *Core Web Vitals* bàsics (LCP, CLS) en entorn local.  
+
+---
+
+### 7️⃣ Bones pràctiques  
+
+🧭 Jerarquia clara (H1‑H6), espais consistents, patrons previsibles.  
+♿ Prioritzar accessibilitat des del disseny (no com a afegit).  
+🧩 Components reutilitzables, sense CSS duplicat; noms semàntics.  
+🔁 Estats de càrrega i errors definits (no deixar buits).  
+🌍 Preparació per a i18n (textos en fitxers/constats).  
+
+---
