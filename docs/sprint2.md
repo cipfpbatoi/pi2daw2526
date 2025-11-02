@@ -1,216 +1,317 @@
-## C1. 🧩 Importació inicial de productes (Excel → BD / JSON)
+## 🧩 C1. Importació inicial de productes (Excel → JSON Server)
 
-### 1️⃣ Objetius 
+### 1️⃣ Objectius
 
-Implementar en **PHP** un script que carregue automàticament un **catàleg de productes** des d’un **fitxer Excel** proporcionat pel client.  
-L’objectiu és que la botiga **dispose d’uns productes ja definits per mostrar a la web** sense haver d’introduir productes manualment un a un.  
+Implementar en **PHP** un script que carregue automàticament un catàleg de productes des d’un fitxer **Excel** proporcionat pel client.
 
-El procés pot:  
-- 📥 **Importar les dades** a la **base de dades MySQL** de l’aplicació.
+L’objectiu és que la botiga dispose d’uns productes ja definits per mostrar a la web, sense haver d’introduir-los manualment un a un.
+
+El procés ha de permetre:
+- 📥 Importar les dades de l’arxiu Excel i convertir-les a **format JSON**.
+- 🚀 Enviar aquest JSON al **JSON Server**, simulant una API REST amb dades de productes.
+- 🔍 Veure productes importats.
 
 ---
 
-### 2️⃣ Requisits previs  
+### 2️⃣ Requisits previs
 
-✅ Configuració Docker (contenidors per a PHP, Nginx, MySQL i Phpmyadmin)
-✅ Instal·lació de **Composer** per gestionar dependències PHP
-✅ Bajo Composer instala biblioteca **PhpSpreadsheet** per llegir fitxers Excel (composer require phpoffice/phpspreadsheet)
-✅ Connexió a una base de dades (MySQL o similar)
-✅ Carpeta /uploads/ amb permisos d’escriptura
-
-📦 **Exemple de com quedaría la l'arbre de directoris al finalitzar'**:
-
-#### 🗂️ Estructura del projecte
-
+✅ Configuració Docker (contenidors per a PHP, Nginx i JSON Server)  
+✅ Instal·lació de Composer (si uses PHP) per gestionar dependències  
+✅ Biblioteca [PhpSpreadsheet](https://github.com/PHPOffice/PhpSpreadsheet) per llegir fitxers Excel  
+```Dins del contenidor php.
+sudo docker exec -it tu_php bash 
+composer require phpoffice/phpspreadsheet:^2
+```
+✅ JSON Server instal·lat (dins del .yaml):  
 ```bash
+jsonserver:                    # <<— AÇÍ, DINS DE "services:"
+    image: node:20-alpine
+    container_name: jsonserver
+    working_dir: /app
+    command: sh -c "npm i -g json-server && json-server --watch /data/products.json --host 0.0.0.0 --port 3000"
+    volumes:
+      - ./data:/data
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - pi_network
+```
+✅ Carpeta `/uploads/` amb permisos d’escriptura  
+✅ Carpeta `/data/` per guardar els arxius `products.json` generats
+
+---
+
+### 📦 Estructura del projecte
+
+```
+## 🗂️ Exemple Estructura actual del projecte (serà diferent en cada projecte)
+
 PI/
-├── .docker/
-│   ├── mysql/
-│   │   └── init/               'Hi ha que donar-li permisos de lectura i escritura'
-│   │       └── root_access.sql 'Dona  acces a root des de qualsevol IP '
-│   ├── nginx/
-│   │   ├── conf.d/
-│   │   │   └── default.conf    'Fitxer de configuración de Nginx'
-│   └── php/
-│       ├── conf.d/
-│       └── Dockerfile          'Construeix un entorn PHP amb totes les extensions i llibreries, incloent PhpSpreadsheet i la connexió amb MySQL.'
+├── .docker/ # Configuracions Docker
+│ ├── mysql/ # Config MySQL (scripts init)
+│ ├── nginx/ # Config Nginx (default.conf)
+│ └── php/ # Config PHP (Dockerfile, ini files)
 │
-├── public/
-│   ├── img/                    'Img dels productes'
-│   ├── css/                    'carpeta css'
-│   ├── js/                     'carpeta jss'│   
-│   ├── views/                  'carpeta jss'
-│   ├── app/
-│   ├── index.php
-│   └── importar_excel.php      'Archiu que anem a crear per importar Full de Càlcul a la Base de Dades'
+├── backend/ # Codi backend en PHP
+│ ├── vendor/ # Dependències instal·lades per Composer
+│ ├── app.js # Script JS del backend (si s’utilitza)
+│ ├── composer.json # Dependències del projecte PHP
+│ ├── composer.lock # Bloqueig de versions Composer
+│ └── importar_excel.php # Script per importar l’Excel i generar el JSON
 │
-├── database/
-│   └── schema.sql
-├── uploads
-│   └── productes.xlsx      'Archiu de prova per pujar productes'
-├── docs/ 
+├── carpeta_excluida/ # Carpeta descartada o sense ús actiu
 │
-├── vendor/                 'Contiene todas las dependencias PHP instaladas por Composer, la instalació de Composer crea aquest directori'
-├── composer.json           'Dependencias, versiones y configuraciones del proyecto PHP que Composer debe instalar y gestionar'
-├── composer.lock           'Dependencias, versiones y configuraciones del proyecto PHP que Composer debe instalar y gestionar'
-├── docker-compose.yml      'Defineix els serveis de Docker (com PHP, Nginx, MySQL o phpMyAdmin), indicant com s’han de construir, connectar i executar conjuntament.'
-├── README.md
-└── .gitignore
+├── data/ # Fitxers de dades (JSON Server)
+│ └── products.json # Fitxer JSON generat automàticament
+│
+├── database/ # Esquemes o scripts SQL (si cal)
+│
+├── docs/ # Documentació del projecte
+│
+├── frontend/ # Codi del frontend (HTML, CSS, JS)
+│
+├── uploads/ # Fitxers pujats pel client
+│ └── productes.xlsx # Fitxer Excel d’exemple
+│
+├── .gitignore # Fitxer per ignorar contingut a Git
+├── docker-compose.yml # Definició dels serveis Docker
+└── README.md # Document principal del projecte
 ```
 
-### 3️⃣ Estructura de la base de dades  
+---
 
-Abans de començar la importació, has de crear una base de dades i cal definir la taula `productes` amb camps com:
+### 3️⃣ Estructura del fitxer JSON generat
 
-```sql
-CREATE TABLE productes (
-  sku VARCHAR(100) PRIMARY KEY,             -- ClauPrimaria
-  nom VARCHAR(255) NOT NULL,
-  descripcio TEXT,
-  img VARCHAR(200),
-  preu DECIMAL(10,2) NOT NULL DEFAULT 0.00,
-  estoc INT NOT NULL DEFAULT 0
-)
+El fitxer `products.json` contindrà una col·lecció de productes amb el format següent:
 
+```json
+{
+  "productes": [
+    {
+      "id": 1,
+      "sku": "A001",
+      "nom": "Cafetera Premium",
+      "descripcio": "Cafetera automàtica amb molinet integrat",
+      "img": "img/cafetera.jpg",
+      "preu": 129.99,
+      "estoc": 15
+    },
+    {
+      "id": 2,
+      "sku": "A002",
+      "nom": "Tetera Elèctrica",
+      "descripcio": "Tetera d’acer inoxidable amb control de temperatura",
+      "img": "img/tetera.jpg",
+      "preu": 59.95,
+      "estoc": 10
+    }
+  ]
+}
 ```
+
+> 📝 Aquest JSON serà servit per `json-server` a `http://localhost:3000/productes`
+
+---
 
 ### 4️⃣ Flux general d’implementació (en PHP)
 
-🔹 **1. Formulari d’upload**  
-   - Crear una pàgina HTML amb un formulari per pujar el fitxer Excel.  
-   - Permetre extensions `.xlsx`, `.xls`, o `.csv`.
+### 🔹 1. Formulari d’upload
+- Crear una pàgina HTML amb un formulari per pujar el fitxer Excel.
+- Permetre extensions `.xlsx`, `.xls` o `.csv`.
 
-🔹 **2. Rebre i desar el fitxer**  
-   - El servidor guarda el fitxer a `/uploads/` amb un nom únic.  
+### 🔹 2. Rebre i desar el fitxer
+- El servidor guarda el fitxer a `/uploads/` amb un nom únic.
 
-🔹 **3. Llegir el contingut de l’Excel**  
-   - Utilitzar `PhpSpreadsheet` per accedir a les dades.  
-   - Validar que existeixen les columnes esperades: `Nom`, `Preu`, `Estoc`, etc.  
+### 🔹 3. Llegir el contingut de l’Excel
+- Utilitzar **PhpSpreadsheet** per accedir a les dades.
+- Validar que existeixen les columnes esperades: `Nom`, `Preu`, `Estoc`, etc.
 
-🔹 **4. Validar les dades**  
-   - Comprovar que els preus i l’estoc siguen numèrics.  
-   - Ignorar o registrar files buides o amb errors.  
+### 🔹 4. Validar les dades
+- Comprovar que els preus i l’estoc siguen numèrics.
+- Ignorar o registrar files buides o amb errors.
 
-🔹 **5. Importar a la base de dades**  
-   - Inserir els productes utilitzant consultes preparades (PDO).  
-   - Evitar duplicats mitjançant un camp únic (`sku` o `nom`).  
-🔹 **6.Guardar el log de la importació**
-🔹 **7. Mostrar resultat final**  
-   - Nombre total de productes importats.  
-   - Files ignorades o amb errors.  
-   - Missatge d’èxit i resum d’errors si n’hi ha.
+### 🔹 5. Generar l’arxiu JSON
+- Convertir les dades llegides a un **array associatiu**.
+- Guardar el resultat al fitxer `/data/products.json`.
 
----
+### 🔹 6. Enviar les dades al JSON Server
+- Opcional: fer una petició `POST` o `PUT` via `cURL` a `http://json-server:3000/productes`.
 
-### 5️⃣ Exemple de funcionament (Aquestes tasques les haureu de planificar vosaltres des de el tercer sprint)
-
-#### 🟦 To Do  
-- Configuració Docker
-- Crear la carpeta `/uploads` amb permisos adequats.  
-- Configurar la connexió a la base de dades.  
-- Preparar el formulari d’upload.  
-- Definir la taula `productes`.  
-
-#### 🟨 In Progress  
-- Lectura de l’arxiu Excel amb `PhpSpreadsheet`.  
-- Validació de dades (preu, estoc, formats).  
-- Creació del fitxer `products.json` de prova.  
-
-#### 🟩 Done  
-- ✅ Importació completada amb èxit.  
-- ✅ Productes visibles a la base de dades.  
-- ✅ Fitxer JSON generat correctament.  
-- ✅ Informe d’errors i resum final.  
+### 🔹 7. Mostrar resultat final
+- Nombre total de productes importats.
+- Files ignorades o amb errors.
+- Missatge d’èxit i resum d’errors si n’hi ha.
 
 ---
 
-### 6️⃣ Bones pràctiques  
+### 5️⃣ Bones pràctiques
 
-🧠 **Validar sempre** l’estructura del fitxer abans d’importar-lo.  
-💾 **Fer còpia de seguretat** abans d’una nova importació massiva.  
-⚙️ **Separar la lògica** d’importació en funcions o classes independents.  
-🪶 **Evitar camps manuals**, tot ha d’estar automatitzat.  
-📅 **Registrar la data i l’usuari** que realitza la importació.  
-📦 **Evitar duplicats** utilitzant identificadors únics (`sku` o `nom`).  
-🧾 **Mostrar resum d’errors** per facilitar correccions al fitxer original.  
-
----
-
-## C2. 👥 Registre i inici de sessió d’usuaris  
-
-### 1️⃣ Objectius  
-
-Implementar un sistema d’autenticació d’usuaris en PHP que permeta registrar-se i iniciar sessió amb credencials segures (nom d’usuari i contrasenya).  
-Cada usuari disposarà d’un perfil personal bàsic, des d’on podrà consultar i actualitzar la seua informació.  
-
-L’objectiu és garantir que l’accés a les funcionalitats de comentaris i valoració de productes estiga protegit.
-Quabn l'usuari estiga loguejat guardarà una cookie amb la identifiació de l'usuari.  
+🧠 Validar sempre l’estructura del fitxer abans d’importar-lo  
+💾 Fer còpia de seguretat del JSON abans d’una nova importació  
+⚙️ Separar la lògica d’importació en funcions o classes independents  
+🪶 Evitar camps manuals: tot ha d’estar automatitzat  
+📅 Registrar la data i l’usuari que realitza la importació  
+📦 Evitar duplicats utilitzant identificadors únics (`sku` o `nom`)  
+🧾 Mostrar resum d’errors per facilitar correccions al fitxer original  
 
 ---
 
-### 2️⃣ Requisits previs  
+## 💡 Exemple d’execució JSON Server
 
-✅ Configuració Docker amb serveis per a PHP, Nginx i MySQL  
-✅ Taula `usuaris` creada a la base de dades  
-✅ Llibreria `password_hash()` i `password_verify()` de PHP per al xifrat de contrasenyes  
-✅ Sessions PHP activades (`session_start()`)  
-✅ Formularis HTML per al registre i login  
-✅ Validació del costat client i servidor  
+Després d’executar la importació, pots iniciar el servidor amb:
 
-📦 **Estructura orientativa:**
+```bash
+json-server --watch data/products.json --port 3000
 ```
-public/
+
+I accedir a:
+- 📦 `http://localhost:3000/productes` → Llista de productes
+- 🔍 `http://localhost:3000/productes/1` → Producte individual
+
+---
+
+## 🧩 C2. 👥 Registre i inici de sessió d’usuaris (versió JSON Server)
+
+### 🎯 1️⃣ Objectius
+
+Implementar un sistema d’autenticació d’usuaris en **PHP** que permeta:
+- 📝 Registrar nous usuaris des d’un formulari.
+- 🔐 Iniciar sessió amb credencials segures (nom d’usuari i contrasenya).
+- 💾 Guardar i consultar usuaris a través de **JSON Server** (no base de dades).
+- 🍪 Crear i gestionar **cookies de sessió** perquè els usuaris mantinguen la seua autenticació.
+
+L’objectiu és garantir que només els usuaris autenticats puguen accedir a les funcionalitats de **comentaris i valoració de productes**.
+
+---
+
+### ⚙️ 2️⃣ Requisits previs
+
+✅ Entorn Docker configurat amb serveis per a **PHP**, **Nginx** i **JSON Server**  
+✅ Fitxer `users.json` dins de la carpeta `/data/` per emmagatzemar els usuaris  
+✅ Llibreria integrada de PHP `password_hash()` i `password_verify()` per xifrar contrasenyes  
+✅ Sessions i cookies PHP activades (`session_start()`)  
+✅ Formularis HTML per al registre i inici de sessió  
+✅ Validació de formularis tant del costat client com servidor  
+
+---
+
+### 🗂️ 3️⃣ Estructura orientativa del projecte
+
+```
+backend/
 ├── auth/
-│   ├── register.php       'Formulari i procés de registre d’usuaris'
-│   ├── login.php          'Formulari i procés d’inici de sessió'
-│   ├── logout.php         'Tanca la sessió de l’usuari actual'
-│   └── profile.php        'Mostra i permet editar les dades personals de l’usuari autenticat'
+│   ├── register.php        # 🧾 Formulari i procés de registre d’usuaris
+│   ├── login.php           # 🔑 Formulari i procés d’inici de sessió
+│   ├── logout.php          # 🚪 Tanca la sessió i elimina la cookie
+│   └── profile.php         # 👤 Mostra i permet editar les dades de l’usuari autenticat
+│
 ├── includes/
-│   └── db_connect.php     'Connexió segura a la base de dades (MySQLi o PDO)'
+│   └── json_connect.php    # 🌐 Funcions per llegir i escriure al JSON Server (via HTTP)
+│
+data/
+├── products.json           # 📦 Productes (de l’sprint anterior)
+└── users.json              # 👥 Usuaris registrats
 ```
----
-
-### 3️⃣ Estructura de la base de dades  
-
-S’ha de crear una taula `usuaris` per gestionar la informació bàsica i les credencials dels usuaris.  
-Aquesta taula contindrà camps com:  
-- `id` (clau primària)  
-- `nom_usuari`  
-- `contrasenya`  
-- `email`  
-- `nom`  
-- `cognoms`  
-- `data_registre`
 
 ---
 
-### 4️⃣ Flux general d’implementació. (Aquestes tasques les haureu de planificar vosaltres des de el tercer sprint)
+### 🧱 4️⃣ Estructura del fitxer `users.json`
 
-🔹 **1. Registre d’usuari**  
-   - Crear un formulari HTML amb nom, correu i contrasenya.  
-   - Validar les dades i comprovar que no hi haja duplicats.  
-   - Xifrar la contrasenya abans de guardar-la a la base de dades.  
+En lloc d’una base de dades MySQL, JSON Server gestionarà la col·lecció d’usuaris:
 
-🔹 **2. Inici de sessió**  
-   - Formulari per a l’autenticació amb usuari i contrasenya.  
-   - Verificar credencials i establir una sessió segura.  
-
-🔹 **3. Perfil d’usuari**  
-   - Mostrar la informació personal i permetre la seua modificació.  
-
-🔹 **4. Tancament de sessió**  
-   - Esborrar la sessió i redirigir l’usuari a la pàgina d’inici.  
+```json
+{
+  "usuaris": [
+    {
+      "id": 1,
+      "nom_usuari": "andres",
+      "contrasenya": "$2y$10$ABC123HASHXIFRAT...",
+      "email": "andres@example.com",
+      "nom": "Andrés",
+      "cognoms": "García Pérez",
+      "data_registre": "2025-10-31T10:00:00Z"
+    }
+  ]
+}
+```
 
 ---
 
-### 5️⃣ Bones pràctiques  
+### 🔄 5️⃣ Flux general d’implementació (PHP + JSON Server)
 
-🔐 **Hash de contrasenyes:** utilitzar `password_hash()` i `password_verify()`, mai guardar-les en text pla.  
-🧱 **Sessions segures:** regenerar l’ID de sessió després del login (`session_regenerate_id(true)`).  
-🚫 **Protecció contra SQL Injection:** usar sempre sentències preparades.  
-🧩 **Validació:** comprovar camps buits, longituds i formats de correu.  
-📱 **Disseny responsiu:** formularis funcionals en tots els dispositius.  
-🧾 **Feedback d’usuari:** missatges clars d’error o èxit durant el procés d’autenticació.  
+#### 🧩 1. Registre d’usuari
+- ✍️ Formulari HTML amb camps: **nom d’usuari, email i contrasenya**.  
+- 🔍 Validar que no hi haja camps buits ni usuaris duplicats (`GET /usuaris?nom_usuari=...`).  
+- 🔐 Xifrar la contrasenya amb `password_hash()`.  
+- 📤 Enviar una petició `POST /usuaris` al JSON Server per afegir el nou usuari.
+
+```php
+$data = [
+  "nom_usuari" => $nomUsuari,
+  "contrasenya" => password_hash($contrasenya, PASSWORD_DEFAULT),
+  "email" => $email,
+  "nom" => $nom,
+  "cognoms" => $cognoms,
+  "data_registre" => date('c')
+];
+```
+
+---
+
+#### 🔑 2. Inici de sessió
+- 🧾 Formulari per a l’autenticació amb **nom d’usuari i contrasenya**.  
+- 🔎 Comprovar si l’usuari existeix (`GET /usuaris?nom_usuari=...`).  
+- 🔐 Validar la contrasenya amb `password_verify()`.  
+- ✅ Si és correcte:
+  - Crear una sessió (`session_start()`).  
+  - Guardar una cookie d’identificació (`setcookie('user_id', $usuari['id'], time()+3600, "/")`).
+
+---
+
+#### 👤 3. Perfil d’usuari
+- 📡 Consultar la cookie o sessió per identificar l’usuari.  
+- 📋 Mostrar la informació obtinguda del JSON Server (`GET /usuaris/{id}`).  
+- ✏️ Permetre actualitzar dades bàsiques mitjançant `PATCH /usuaris/{id}`.
+
+---
+
+#### 🚪 4. Tancament de sessió
+- ❌ Eliminar la cookie (`setcookie('user_id', '', time()-3600, "/")`).  
+- 🧹 Destruir la sessió (`session_destroy()`).  
+- 🔁 Redirigir l’usuari a la pàgina d’inici.
+
+---
+
+### 🧠 6️⃣ Bones pràctiques
+
+🔐 **Contrasenyes segures**  
+Utilitza `password_hash()` i `password_verify()` per xifrar i validar contrasenyes.  
+
+🧱 **Sessions segures**  
+Crida `session_regenerate_id(true)` després del login per evitar hijacking.  
+
+🚫 **Protecció contra injeccions o manipulacions**  
+Valida sempre el contingut rebut del JSON Server abans de mostrar-lo.  
+
+🧩 **Validació de dades**  
+Comprova camps buits, longituds, formats de correu i duplicats d’usuari.  
+
+📱 **Disseny responsiu**  
+Formularis accessibles i adaptats a dispositius mòbils.  
+
+🧾 **Feedback clar a l’usuari**  
+Missatges d’error o èxit visibles després de cada acció (registre, login, logout).
+
+---
+
+### 🧭 7️⃣ Exemple de flux resumit
+
+1️⃣ L’usuari s’inscriu → `POST /usuaris` → guardat en `users.json`  
+2️⃣ L’usuari inicia sessió → validació amb `password_verify()`  
+3️⃣ PHP crea sessió i cookie → accés a pàgines protegides  
+4️⃣ L’usuari pot editar el seu perfil o tancar sessió  
+ 
 
 
 ## C3. 💬 Comentaris i valoracions de productes  
