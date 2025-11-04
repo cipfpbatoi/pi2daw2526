@@ -53,23 +53,12 @@ PI/
 │ ├── nginx/ # Config Nginx (default.conf)
 │ └── php/ # Config PHP (Dockerfile, ini files)
 │
-├── backend/ # Codi backend en PHP
-│ ├── vendor/ # Dependències instal·lades per Composer
-│ ├── app.js # Script JS del backend (si s’utilitza)
-│ ├── composer.json # Dependències del projecte PHP
-│ ├── composer.lock # Bloqueig de versions Composer
-│ └── importar_excel.php # Script per importar l’Excel i generar el JSON
-│
-├── carpeta_excluida/ # Carpeta descartada o sense ús actiu
 │
 ├── data/ # Fitxers de dades (JSON Server)
 │ └── products.json # Fitxer JSON generat automàticament
 │
-├── database/ # Esquemes o scripts SQL (si cal)
-│
 ├── docs/ # Documentació del projecte
 │
-├── frontend/ # Codi del frontend (HTML, CSS, JS)
 │
 ├── uploads/ # Fitxers pujats pel client
 │ └── productes.xlsx # Fitxer Excel d’exemple
@@ -199,7 +188,6 @@ L’objectiu és garantir que només els usuaris autenticats puguen accedir a le
 ### 🗂️ 3️⃣ Estructura orientativa del projecte
 
 ```
-backend/
 ├── auth/
 │   ├── register.php        # 🧾 Formulari i procés de registre d’usuaris
 │   ├── login.php           # 🔑 Formulari i procés d’inici de sessió
