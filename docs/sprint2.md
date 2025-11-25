@@ -419,7 +419,7 @@ Configurar un servei d’allotjament complet en AWS per a la posada en produccio
 
 - Per a l'accés als backups per https la protecció serà mitjançant usuari i contrasenya (utilitza el mòdul mod_auth). 
 - **Redirecció HTTP → HTTPS obligatòria.**  
-- Certificats SSL/TLS per a cada vhost firmat per una autoritat de certificacio válida.  
+- Certificats SSL/TLS per a cada vhost.  
 - Exemple d’estructura de directoris
 
   | Usuari | Document Root            | Logs            |
@@ -471,7 +471,7 @@ Configurar un servei d’allotjament complet en AWS per a la posada en produccio
 1. URL, IP de cada vhost, nom de domini i credencials FTP, usuaris i passwords 
 2. Nom i versió dels serveis instal·lats per a cada entorn  
 3. Captures de pantalla de tots els serveis funcionant (HTTP, HTTPS, FTP, SSH, APIs).  
-4. Logs d’accés i de desplegament.  
+4. Logs d’accés i de error de cada vhost junt a la pantalla on es comprova que s'ha accedit a cada aplicació.  
 5. Tasques realitzades per cada membre del grup.
 6. Documentar script i cron en el PDF de lliurament amb captures dels backups.
 
