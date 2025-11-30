@@ -471,9 +471,11 @@ Configurar un servei d’allotjament complet en AWS per a la posada en produccio
 1. URL, IP de cada vhost, nom de domini i credencials FTP, usuaris i passwords 
 2. Nom i versió dels serveis instal·lats per a cada entorn  
 3. Captures de pantalla de tots els serveis funcionant (HTTP, HTTPS, FTP, SSH, APIs).  
-4. Logs d’accés i de error de cada vhost junt a la pantalla on es comprova que s'ha accedit a cada aplicació.  
-5. Tasques realitzades per cada membre del grup.
-6. Documentar script i cron en el PDF de lliurament amb captures dels backups.
+4. Logs d’accés i de error de cada vhost junt a la pantalla on es comprova que s'ha accedit a cada aplicació.
+5. Captures de pantalla on es veja que es pot pujar els fitxers de la web per ftp i log d'accés. 
+6. Tasques realitzades per cada membre del grup.
+7. Documentar script i cron en el PDF de lliurament amb captures dels backups.
+8. Compte de AWS en el que s'han creat les màquines
 
 
 ## C5. 🧭 Estructura, usabilitat de la interfície i components visuals clau (DIW)
