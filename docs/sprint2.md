@@ -53,23 +53,12 @@ PI/
 │ ├── nginx/ # Config Nginx (default.conf)
 │ └── php/ # Config PHP (Dockerfile, ini files)
 │
-├── backend/ # Codi backend en PHP
-│ ├── vendor/ # Dependències instal·lades per Composer
-│ ├── app.js # Script JS del backend (si s’utilitza)
-│ ├── composer.json # Dependències del projecte PHP
-│ ├── composer.lock # Bloqueig de versions Composer
-│ └── importar_excel.php # Script per importar l’Excel i generar el JSON
-│
-├── carpeta_excluida/ # Carpeta descartada o sense ús actiu
 │
 ├── data/ # Fitxers de dades (JSON Server)
 │ └── products.json # Fitxer JSON generat automàticament
 │
-├── database/ # Esquemes o scripts SQL (si cal)
-│
 ├── docs/ # Documentació del projecte
 │
-├── frontend/ # Codi del frontend (HTML, CSS, JS)
 │
 ├── uploads/ # Fitxers pujats pel client
 │ └── productes.xlsx # Fitxer Excel d’exemple
@@ -199,7 +188,6 @@ L’objectiu és garantir que només els usuaris autenticats puguen accedir a le
 ### 🗂️ 3️⃣ Estructura orientativa del projecte
 
 ```
-backend/
 ├── auth/
 │   ├── register.php        # 🧾 Formulari i procés de registre d’usuaris
 │   ├── login.php           # 🔑 Formulari i procés d’inici de sessió
@@ -390,75 +378,104 @@ Aquesta funcionalitat ha d’integrar-se en la interfície **de manera dinàmica
 
 ## C4. ☁️ Desplegament i còpies de seguretat remotes  
 
-### 1️⃣ Objectius  
+### 1. Objectiu general
+Configurar un servei d’allotjament complet en AWS per a la posada en produccio de l'aplicació web i còpies de seguretat, garantint seguretat, aïllament i accessibilitat pública.
 
-Garantir que l’aplicació web estiga **sempre disponible, actualitzada i amb les dades protegides**, implantant un sistema de **desplegament remot i còpies de seguretat automàtiques**.  
+### 2. Resultats d'aprenentatge i criteris d'avaluació
 
-L’objectiu principal és permetre al client **actualitzar la seua aplicació fàcilment** i **recuperar-la ràpidament** en cas d’error o pèrdua de dades.  
+#### **RA1 – Implanta arquitectures web analitzant i aplicant criteris de funcionalitat**
+- **d)** Instal·lació i configuració bàsica de servidors d'aplicacions.  
+- **e)** Instal·lació i configuració bàsica de tecnologies de virtualització de servidors en el núvol i contenidors.
 
----
+#### **RA2 – Implanta aplicacions web en servidors web, avaluant i aplicant criteris de configuració per al seu funcionament segur**
+- **e)** Instal·lació de certificats digitals.  
+- **f)** Assegurament de comunicacions client-servidor.  
+- **g)** Documentació de configuració i administració segura.  
+- **h)** Ajustos necessaris per implantació d’aplicacions.  
+- **i)** Ús de virtualització per desplegament web en núvol i contenidors.  
+- **j)** Instal·lació i ús d’eines de gestió de logs.
 
-### 2️⃣ Requisits previs  
+#### **RA4 – Administra servidors de transferència d'arxius, avaluant i aplicant criteris de configuració que garantisquen la disponibilitat del servei**
+- **b)** Creació d’usuaris i grups per accés remot.  
+- **e)** Ús de protocols segurs de transferència d’arxius.  
+- **g)** Documentació de configuració i administració de FTP.  
+- **h)** Ús de virtualització per desplegament de servidors FTP en núvol i contenidors.
 
-✅ Entorn de desplegament preparat (servidor remot, VPS o hosting)  
-✅ Accés segur configurat (SFTP, SCP o SSH amb claus públiques)  
-✅ Directori remot per a l’aplicació web i un altre per a les còpies de seguretat  
-✅ Contenidors Docker configurats per reproduir l’entorn local  
-✅ Eines de sincronització o scripts per automatitzar pujades i còpies de seguretat  
-✅ Opcional: servei de còpies en el núvol (Google Drive, Dropbox, AWS S3...)  
+### 3. Requeriments
 
-📦 **Estructura orientativa per a desplegament:**
+#### 3.1 Accés SSH (*RA4-b, RA4-e*)
+- Només usuari `ubuntu` per a gestió del sistema no per a desplegar aplicacions.  
+- Autenticació només amb claus públiques.  
+- Login `root` deshabilitat.  
+- Missatge de benvinguda:  
+  *“Benvingut a la instància de Servidor Web en AWS de NOM COGNOM DE CADA MEMBRE DEL GRUP”*  
+- Claus autoritzades: tots el membres del grup i professor.
 
-deploy/
-├── backup.sh 'Script per generar i guardar còpies de seguretat (fitxers + BD)'
-├── upload.sh 'Script per pujar actualitzacions al servidor remot via SFTP o rsync'
-├── .env 'Configuració d’accés segur i rutes remotes'
-└── cronjobs/ 'Tasca programada per a còpies automàtiques'
-└── backup_cron.sh
+#### 3.2 Servidor Apache (HTTP/S) (*RA2-e, RA2-f, RA2-h*)
+- Es crearan  **2 virtual host**
 
+  1. `app.projecteGrupX.es` → Es desplegarà l'aplicació web (entórn producció)
+  2. `backup.projecteGrupX.es` → còpies de seguretat. Es podran veure totes les còpies de seguretat.
 
----
+- Per a l'accés als backups per https la protecció serà mitjançant usuari i contrasenya (utilitza el mòdul mod_auth). 
+- **Redirecció HTTP → HTTPS obligatòria.**  
+- Certificats SSL/TLS per a cada vhost.  
+- Exemple d’estructura de directoris
 
-### 3️⃣ Flux general d’implementació  
+  | Usuari | Document Root            | Logs            |
+  | ------ | ------------------------ | --------------- |
+  | app    | /home/app/ftp/www        | /home/app/logs/ |
+  | backup | /home/backup/ftp/fitxers |                 |
 
-🔹 **1. Desplegament inicial**  
-   - Crear un servidor remot (VPS o hosting amb SSH).  
-   - Copiar els fitxers de l’aplicació i configurar Docker o Nginx remotament.  
-   - Verificar que tots els serveis (PHP, MySQL, Nginx) funcionen igual que en local.  
+#### 3.3 Servidor FTP (*RA4-b, RA4-e, RA4-g*)
 
-🔹 **2. Transferència d’actualitzacions**  
-   - Automatitzar pujades amb **scripts SFTP, rsync o Git hooks**.  
-   - Només sincronitzar els fitxers modificats (backend, frontend, configuracions).  
-   - Garantir que el servei continue actiu durant la transferència.  
+- Un **usuari dedicat per cada vhost**. 
+- Accés restringit al directoris de treball del document root i al backup respectivament.  
+- Mode passiu amb ports 30000-30050.  
+- No permetre accés anònim.  
+- L’usuari `ubuntu` no té accés FTP.
 
-🔹 **3. Còpies de seguretat periòdiques**  
-   - Crear un script que faça còpia de la base de dades (`mysqldump`) i dels fitxers del projecte.  
-   - Guardar-les en un directori dedicat del servidor o enviar-les a un servei extern (S3, Google Drive, FTP...).  
-   - Configurar un **cron job** perquè s’execute automàticament (per exemple, cada dia a les 2:00).  
+  | Usuari | Document Root            |
+  | ------ | ------------------------ |
+  | app    | /home/app/ftp/www        |
+  | backup | /home/backup/ftp/fitxers |
 
-🔹 **4. Restauració**  
-   - Permetre restaurar fàcilment una còpia de seguretat amb un script (`restore.sh`).  
-   - Assegurar la coherència entre fitxers i base de dades abans de reiniciar els serveis.  
+#### 3.4 Desplegament (*RA2-h, RA4-g*)	
+- Cada alumne ha de poder pujar fitxers al vhost per desplegar l'aplicació i accedir.
+- Tots el alumnes han de poder accedir a gestionar els backups.  
+- Comprovar accessibilitat HTTPS per ambdós vhosts.
 
----
+#### 3.5 Backups nocturns *(RA2-j, RA4-g*)
+- Script que s’executa cada nit:  
+  1. Fa còpia dels fitxers del document root i els comprimeix en un únic arxiu.  
+  3. còpia aquest fitxer en el documentRoot del vhost de còpies de seguretat corresponent.  
+- Els fitxers han de portar data i hora en el nom (`app_backup_YYYYMMDD.tar.gz`, `db_backup_YYYYMMDD.sql`).  
+- Es deu de llimitar el nombre de còpies guardades (ex: últimes 7).  
 
-### 4️⃣ Integració amb Docker  
+#### 3.6 IPs estàtiques (RA1-e)
+- Assignar Elastic IP per garantir accés públic constant.
 
-🧱 Els contenidors es poden recrear automàticament en el servidor remot amb:  
-- `docker-compose pull && docker-compose up -d` per aplicar noves versions.  
-- Volums Docker per mantindre dades persistents de la base de dades.  
-- Còpies incrementals dels volums `/var/lib/mysql` i del codi font del projecte.  
+#### 3.7 Seguretat i aïllament *(RA2-f, RA2-h, RA4-b)*
+- Un usuari per cada vhost i cada usuari només pot accedir al seu vhost principal i backup.  
+- Usuari `ubuntu` només gestiona el sistema.  
+- Redirecció HTTP → HTTPS obligatòria.  
 
----
+#### 3.8 Entorn de Proves (RA1-d, RA2-f, RA2-h, RA2-i, RA4-b)
 
-### 5️⃣ Bones pràctiques  
+- Crear un entorn de proves per a cada alumne, separat del vhost principal i del de backup.
+  - Subdomini suggerit: `test.projecteGrupX.es`.
+  - Els alumnes podran pujar fitxers i provar canvis sense afectar l’aplicació principal.
+  - Accés FTP i HTTPS obligatori per l’entorn de proves.
 
-🔐 **Utilitzar connexions segures (SFTP, SSH)** per evitar filtracions.  
-📅 **Automatitzar les còpies** amb cron per assegurar-ne la periodicitat.  
-💾 **Comprimir i datar** cada còpia (`backup_YYYYMMDD.zip`) per identificar-les fàcilment.  
-🧩 **Verificar les còpies** periòdicament per garantir que són restaurables.  
-🧱 **Separar entorns** (producció, preproducció, desenvolupament) per evitar errors humans.  
-🌍 **Notificar o registrar** cada desplegament per tindre un historial de versions.  
+### 4. Documentació mínima a Inclore
+1. URL, IP de cada vhost, nom de domini i credencials FTP, usuaris i passwords 
+2. Nom i versió dels serveis instal·lats per a cada entorn  
+3. Captures de pantalla de tots els serveis funcionant (HTTP, HTTPS, FTP, SSH, APIs).  
+4. Logs d’accés i de error de cada vhost junt a la pantalla on es comprova que s'ha accedit a cada aplicació.
+5. Captures de pantalla on es veja que es pot pujar els fitxers de la web per ftp i log d'accés. 
+6. Tasques realitzades per cada membre del grup.
+7. Documentar script i cron en el PDF de lliurament amb captures dels backups.
+8. Compte de AWS en el que s'han creat les màquines
 
 
 ## C5. 🧭 Estructura, usabilitat de la interfície i components visuals clau (DIW)
