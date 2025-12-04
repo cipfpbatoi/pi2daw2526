@@ -28,6 +28,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 **Context**: Cal un esquelet Laravel operatiu dins del repositori únic.
 
 **Què fer**  
+
 - Crear la carpeta `laravel/` i inicialitzar el projecte (`composer create-project laravel/laravel .` des de dins).
 - Configurar `.env` per a **MySQL** (mateixa instància que legacy) i clau d’aplicació (`php artisan key:generate`).
 - Actualitzar `docker-compose.yml` perquè expose un servei web per Laravel (PHP + Nginx/Apache) apuntant a `laravel/public`, compartint xarxa/BBDD amb la resta.
@@ -40,6 +41,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 **Context**: Traslladem l’esquema de `products.json` i `users.json` a MySQL amb migracions.
 
 **Què fer**  
+
 - Crear migració i model `Product` (`php artisan make:model Product -m`). Camps inspirats en `products.json`: `sku`, `name`, `description`, `price`, `stock`, `image`, `category`, timestamps. Afegir índex únic per `sku`.
 - Reutilitzar la migració d’usuaris per defecte de Laravel (`users`), adaptant només si calen camps extra bàsics (telèfon, rol, etc. opcional).
 - Executar migracions `php artisan migrate` contra la BBDD MySQL del docker-compose.
@@ -53,6 +55,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 **Context**: Substituïm l’autenticació manual en PHP per una solució integrada.
 
 **Què fer**  
+
 - Instal·lar Breeze (`composer require laravel/breeze --dev` + `php artisan breeze:install`). Escollir versió Blade (no SPA encara).  
 - Executar `npm install && npm run dev` o equivalent per compilar assets si cal (segons stack triada).  
 - Verificar rutes `/register` i `/login` funcionals amb usuaris guardats en MySQL (hash per defecte).  
@@ -65,7 +68,8 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 ### C4 – Importació d’Excel a la BBDD (command o controlador)
 **Context**: Reaprofitem el flux d’Excel del Sprint 2 però ara tot va directament a MySQL via Laravel.
 
-**Què fer**  
+**Què fer**
+
 - Afegir dependència per gestionar Excel (p.ex. `composer require maatwebsite/excel` o integrar PhpSpreadsheet manualment).  
 - Crear un **command** (`php artisan make:command ImportProducts`) o un controlador amb formulari d’upload que llija l’Excel i inserisca/actualitze productes.  
 - Validar camps obligatoris (`sku`, `name`, `price`, `stock`) i formats numèrics. Gestionar errors amigables.  
@@ -80,6 +84,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 **Context**: Necessitem una sortida visual i un endpoint inicial per al futur client SPA.
 
 **Què fer**  
+
 - Crear ruta pública `/productes` en `web.php` que consulte `Product::all()` i passe dades a una vista Blade.  
 - Maquetar una vista `resources/views/productes/index.blade.php` amb **targetes/grids** reutilitzant l’estil del front antic (DIW). Pot fer servir `@vite` per CSS/JS de Breeze o un CSS propi importat del v1, adaptant-lo a **disseny responsiu** (Grid/Flex, media queries) i millorant accessibilitat.  
 - Exposar una ruta `GET /api/products` senzilla a `routes/api.php` que retorne JSON de productes (sense auth).  
@@ -93,6 +98,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 **Context**: Continuem utilitzant JS en client per cobrir comentaris i validacions mentre no arriba la SPA Vue.
 
 **Què fer**  
+
 - Reutilitzar el JS de sprints 1 i 2 per a validació de formularis (registre/login, comentaris) i actualitzar-lo perquè treballe amb les noves rutes Laravel (forms Blade).  
 - Implementar un bloc de comentaris/valoracions senzill en la vista de producte (o en `/productes`) que, de moment, faça crides AJAX a rutes Laravel (o dummy) per guardar/mostrar comentaris.  
 - Garantir **validacions al client** (formats, camps obligatoris) i feedback accessible.  
@@ -103,6 +109,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 ---
 
 ## 📦 Entregables del sprint
+
 - Codi Laravel dins `laravel/` amb migracions, models, rutes, vistes i autenticació Breeze funcional.
 - `docker-compose.yml` actualitzat amb el servei Laravel i MySQL compartit (mantenint `legacy-php/` intacte).
 - Documentació mínima al `README.md`: nova arquitectura (carpetes `legacy-php/` + `laravel/`), instruccions de posada en marxa i comandes principals (`php artisan migrate`, `php artisan serve`/contenidor, importació Excel, etc.), nota de comparació Breeze vs. auth manual i validacions/JS reutilitzat.
@@ -111,6 +118,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - Evidència de **planificació i execució** (tauler, Gantt o checklist) per cobrir els RA3 i RA4 del mòdul de projecte.
 
 ## ✅ Criteris d’avaluació
+
 - **Laravel core**: migracions correctes, models Eloquent, rutes i controladors nets.
 - **Autenticació**: Breeze operatiu (registre/login/logout), usuaris guardats en MySQL amb hash.
 - **Importació Excel**: càrrega a `products` amb validacions i gestió d’errors (no es trenquen dades).
@@ -121,5 +129,6 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - **Gestió de projecte (RA3 i RA4)**: planificació i execució evidenciades (tasques/cronograma, seguiment d’estat, revisió final).
 
 ## 🔭 Connexions amb sprints futurs
+
 - **Sprint 4**: construirem una **SPA amb Vue** que consumirà l’API Laravel (`/api/products` i nous endpoints) amb gestió de rols/permisos.
 - **Sprint 5+**: desenvoluparem un **microservei Node.js** per a estadístiques i recomanacions sobre la mateixa BBDD MySQL, documentat amb **Swagger**, i integrarem processos asíncrons.
