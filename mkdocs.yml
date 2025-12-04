@@ -7,6 +7,7 @@ nav:
   - "Enunciat": "projecte.md"
   - "Iteració: Entorn, aparador i contacte": "sprint1.md"
   - "Iteració: Catàleg de productes": "sprint2.md"
+  - "Iteració: Migració a Laravel": "sprint3.md"
   - "Annex I: Connexió a la base de dades": "05accesoDatos.md"
 theme:
   language: ca
