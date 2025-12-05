@@ -81,49 +81,49 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 ---
 
 ### C5 – Vista Blade de llistat de productes i primera API `/api/products`
-**Context**: Objectiu de sortida ràpida: tindre llistat de productes visible i API de lectura operativa. Es prepara la base de comentaris/valoracions (taula + rutes esborrany) però sense encara integrar validacions ni UI.
+**Context**: Necessitem una sortida visual i un endpoint inicial per al futur client SPA.
 
 **Què fer**  
 
-- Rutes i vistes productes: crear ruta pública `/productes` en `web.php` que consulte `Product::all()` i passe dades a una vista Blade.  
-- Maquetació: crear `resources/views/productes/index.blade.php` amb **targetes/grids** reutilitzant l’estil del front antic, responsiu amb Grid/Flex i media queries.  
-- API productes: exposar una ruta `GET /api/products` senzilla a `routes/api.php` que retorne JSON de productes (sense auth) i verificar‑la amb una crida manual.  
-- API comentaris/valoracions (primera passada, backend només): crear migració `comments` o `reviews` (`user_id`, `product_id`, text, rating opcional), model Eloquent i esborrany de controlador amb accions `index` i `store` + rutes base (web o API). El controlador pot quedar amb lògica mínima de prova; la persistència i validacions completes s’abordaran en C6. No fer encara UI ni JS.  
-- README: afegir text sobre consum futur per la SPA Vue i indicar on estan les rutes `/productes` i `/api/products`.
+- Crear ruta pública `/productes` en `web.php` que consulte `Product::all()` i passe dades a una vista Blade.  
+- Maquetar una vista `resources/views/productes/index.blade.php` amb **targetes/grids** reutilitzant l’estil del front antic (DIW). Pot fer servir `@vite` per CSS/JS de Breeze o un CSS propi importat del v1, adaptant-lo a **disseny responsiu** (Grid/Flex, media queries) i millorant accessibilitat.  
+- Exposar una ruta `GET /api/products` senzilla a `routes/api.php` que retorne JSON de productes (sense auth).  
+- API comentaris/valoracions (base backend): crear la migració `comments` o `reviews` (`user_id`, `product_id`, text, rating opcional), el model Eloquent i un controlador esborrany amb `index` i `store` + rutes base (API). Pots deixar la lògica mínima o placeholder; la implementació completa i la UI arribaran a C6.
+- Afegir un petit text al README indicant que en sprints futurs el client Vue consumirà aquesta API.
 
 **Fitxers clau**: `laravel/routes/web.php`, `laravel/routes/api.php`, `laravel/app/Http/Controllers/ProductController.php`, `laravel/resources/views/productes/index.blade.php`.
 
 ---
 
 ### C6 – Validacions i comentaris/valoracions al client (JS provisional)
-**Context**: Objectiu d’arribada: fer operatiu el flux de comentaris/valoracions amb validacions client/server i UI provisional. Es parteix de la base creada a C5 i s’acaba tot (API, formulari, fetch, proves).
+**Context**: Continuem utilitzant JS en client per cobrir comentaris i validacions mentre no arriba la SPA Vue.
 
 **Què fer**  
 
 - Validació auth: Breeze ja aplica validacions servidor per a registre/login; només adapta JS de registre/login si afegixes camps nous i necessites feedback immediat al client.  
-- Validació contacte: reutilitzar la validació del formulari de contacte del front antic, adaptant noms de camps i missatges i comprovant que funciona amb Laravel.  
-- API comentaris/valoracions (execució final): acabar la migració i el model (si no s’ha fet a C5), completar el controlador amb `store` i `index` filtrat per producte, decidir protecció auth o anonimat i provar les rutes amb peticions reals.  
+- Validació contacte: reutilitzar la validació del **formulari de contacte** del front antic, adaptant noms de camps i missatges.  
+- API comentaris/valoracions (execució completa): acabar la migració si estava pendent, implementar lògica real en `store` i `index` amb validacions (camps obligatoris, rang de rating), decidir si cal auth o permetre anònims i protegir rutes si toca.  
 - Bloc UI: afegir al Blade de productes un formulari de comentaris/valoracions i la llista de comentaris consumint l’API amb fetch/AJAX; mostrar errors/validacions al client (formats, camps obligatoris, rang de rating).  
-- Proves: crear almenys un comentari/valoració des del front provisional i verificar que es guarda i es mostra; documentar el flux i l’estat provisional fins a la SPA Vue.
+- Provisionalitat: documentar que aquesta solució és temporal fins a la SPA Vue, però assegura la continuïtat funcional del front.
 
 **Fitxers clau**: `laravel/resources/views/productes/index.blade.php` (comentaris/valoracions), `laravel/public/js/` o `resources/js/` (validacions i crides fetch/AJAX), `laravel/routes/web.php` o `laravel/routes/api.php` (rutes de comentaris/valoracions), `laravel/app/Models/` + `laravel/app/Http/Controllers/` per a l’API.
 
 ---
 
 ### C7 – Proves bàsiques amb Laravel
-**Context**: Validar mínimament el flux backend (productes, auth, importació, comentaris) amb tests automatitzats i/o checklist manual.
+**Context**: Validar l’API construïda (productes i comentaris/valoracions) amb tests automatitzats de Laravel. L’autenticació Breeze es dona per fiable (no cal testejar-la).
 
 **Què fer**  
 
-- Tests d’API productes: test de `GET /api/products` comprovant resposta 200 i estructura bàsica.  
-- Tests d’auth: test de registre i login amb Breeze (creació d’usuari, hash i redirecció) o prova manual documentada.  
-- Tests de comentaris/valoracions: testant `store` i `index` (amb producte existent) i validacions de camps obligatoris/rating.  
-- Prova d’importació: test de command/controlador d’Excel amb fixture mínima o, si no arriba, checklist manual documentant passos i resultats.  
+- Tests d’API productes: `GET /api/products` (200 i estructura bàsica) i, si hi ha endpoint de creació/actualització, cobrir validacions mínimes.  
+- Tests de comentaris/valoracions: `store` i `index` amb producte existent; validar camps obligatoris i rang de rating; provar error quan el producte no existeix o l’usuari no està autenticat si es requereix.  
+- Prova d’importació: test de command/controlador d’Excel amb fixture mínima si es pot; si no, documentar checklist manual.  
 - Documentar resultats: llistar què s’ha provat, dades utilitzades i estat (passa/falla) per adjuntar a evidències.
 
-**Fitxers clau**: `laravel/tests/Feature/*` (productes, auth, comentaris), `laravel/tests/` en general, arxius de fixtures d’Excel si s’usen.
+**Fitxers clau**: `laravel/tests/Feature/*` (productes, comentaris), `laravel/tests/` en general, arxius de fixtures d’Excel si s’usen.
 
 ---
+
 
 ## 📦 Entregables del sprint
 
@@ -131,9 +131,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - Infraestructura docker clarificada: si continues amb el compose del landing, deixa‑l intacte i documenta com Laravel s’hi connecta; si uses el `docker-compose.yml` de Sail dins `laravel/`, indica com conviu amb el stack existent.
 - Documentació mínima al `README.md`: nova arquitectura (carpetes `legacy-php/` + `laravel/`), instruccions de posada en marxa i operacions bàsiques (migracions, arrencar el servei, importació d’Excel) explicades sense donar el comando literal, nota de comparació Breeze vs. auth manual i validacions/JS reutilitzat.
 - Captura o GIF breu de la vista `/productes` mostrant targetes.
-- API de comentaris/valoracions mínima operativa (migració, model, rutes i proves manuals bàsques des del front provisional).
-- Evidència de proves: tests Laravel o checklist manual sobre productes, auth, importació i comentaris/valoracions.
-- Breu evidència de **proves** (artisan test o checklist manual) sobre productes, auth i importació.
+- Evidència de proves: tests Laravel sobre API de productes i de comentaris/valoracions, i checklist manual només si cal per a la importació.
 - Evidència de **planificació i execució** (tauler, Gantt o checklist) per cobrir els RA3 i RA4 del mòdul de projecte.
 
 ## ✅ Criteris d’avaluació
@@ -144,7 +142,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - **DIW**: vista Blade coherenta amb l’estètica del Sprint 2 (responsiu, targetes clares) i feedback/validacions visibles.
 - **Qualitat de codi**: nomenclatura clara, arxius en la carpeta adequada, comentaris mínims i útils, README actualitzat.
 - **Integració**: `legacy-php/` preservat; nova API `/api/products` disponible per a futurs consums.
-- **Proves**: execució de tests bàsics o checklist manual documentat.
+- **Proves**: tests Laravel sobre API de productes i comentaris/valoracions; checklist manual només si la importació no té test.
 - **Gestió de projecte (RA3 i RA4)**: planificació i execució evidenciades (tasques/cronograma, seguiment d’estat, revisió final).
 
 ## 🔭 Connexions amb sprints futurs
