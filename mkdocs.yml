@@ -8,7 +8,7 @@ nav:
   - "Iteració: Entorn, aparador i contacte": "sprint1.md"
   - "Iteració: Catàleg de productes": "sprint2.md"
   - "Iteració: Migració a Laravel": "sprint3.md"
-  - "Annex I: Connexió a la base de dades": "05accesoDatos.md"
+  - "Iteració: Client SPA amb Vue i control de rols": "sprint4.md"
 theme:
   language: ca
   favicon: imagenes/favicon.png
