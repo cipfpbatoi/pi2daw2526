@@ -4,12 +4,13 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 
 És el primer contacte “seriós” amb un framework gran. Partirem del catàleg i usuaris del sprint anterior, els migrarem a MySQL via Eloquent i deixarem preparat el terreny per al futur client SPA (Vue) i per al microservei Node.js que compartirà la mateixa base de dades.
 
-## 🎯 Objectius d’aprenentatge (DWES · DAW)
+## 🎯 Objectius d’aprenentatge (DWES · DIW · DAW)
 - Entendre i configurar un projecte **Laravel** amb `.env`, migracions i Eloquent (DWES).
 - Aplicar **bones pràctiques MVC** i rutes en un framework PHP modern (DAW).
 - Integrar **autenticació Laravel Breeze** i comparar-la amb l’autenticació manual de PHP (DWES/Seguretat).
 - Automatitzar la importació d’Excel a base de dades des de Laravel, validant formats i camps (DWES).
 - Definir i exposar una **API REST base** per a productes, pensada per a ser consumida en Sprint 4 (DWES/DWEC).
+- Permetre la **gestió de productes importats** (llistat i edició) només per a **administradors autenticats** (DWES/Seguretat).
 - Realitzar **proves bàsiques** (artisan test o proves manuals guiades) per validar API i imports (DWES RA8.g).
 
 ## 🌐 Relació amb el projecte integrador
@@ -87,19 +88,33 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - Exposar una ruta `GET /api/products` a `routes/api.php` que retorne JSON de productes (sense auth).
 - Afegir `GET /api/products/{id}` i, si és viable, `GET /api/products?category=...&q=...` amb filtres bàsics i paginació.
 - Utilitzar **Resources** (p. ex. `ProductResource`) per normalitzar la resposta JSON (preus, stock, timestamps).
-- Opcional: crear una ruta pública `/productes` en `web.php` per a una vista Blade mínima de verificació (sense JS), reutilitzant l’estil del front antic si es vol.
 - Afegir un text al README indicant que en el Sprint 4 la SPA Vue consumirà aquesta API.
 
 **Fitxers clau**: `laravel/routes/api.php`, `laravel/app/Http/Controllers/ProductController.php`, `laravel/app/Http/Resources/ProductResource.php`, `laravel/routes/web.php` (si es fa la vista), `laravel/resources/views/productes/index.blade.php` (si es fa la vista).
 
 ---
 
-### C6 – Proves bàsiques amb Laravel
-**Context**: Validar l’API construïda (productes) amb tests automatitzats de Laravel. L’autenticació Breeze es dona per fiable (no cal testejar-la).
+### C6 – CRUD d’administració de productes importats (web)
+**Context**: Cal que els productes importats es puguen veure i modificar per a manteniment intern, només per administradors autenticats.
+
+**Què fer**  
+
+- Crear rutes d’**administració** (web) per llistar i editar productes importats (CRUD mínim: `index`, `edit`, `update`).  
+- Restringir l’accés a **usuaris autenticats amb rol d’administrador** (middleware, policy o gate).  
+- Vista d’admin amb taula/llistat i formulari d’edició senzill (sense JS).  
+- Afegir una nota al README indicant l’accés restringit a administradors.
+
+**Fitxers clau**: `laravel/routes/web.php`, `laravel/app/Http/Controllers/Admin/ProductAdminController.php` (o similar), `laravel/resources/views/admin/products/*`, `laravel/app/Http/Middleware/*` o `laravel/app/Policies/*`.
+
+---
+
+### C7 – Proves bàsiques amb Laravel
+**Context**: Validar l’API construïda (productes) i l’accés d’administració amb tests automatitzats de Laravel. L’autenticació Breeze es dona per fiable (no cal testejar-la).
 
 **Què fer**  
 
 - Tests d’API productes: `GET /api/products` i `GET /api/products/{id}` (200 i estructura bàsica); si hi ha filtres o paginació, cobrir-ho amb casos simples.  
+- Tests d’accés admin: comprovar que el llistat/edició de productes importats està restringit (403 per a no admins).  
 - Prova d’importació: test de command/controlador d’Excel amb fixture mínima si es pot; si no, documentar checklist manual.  
 - Documentar resultats: llistar què s’ha provat, dades utilitzades i estat (passa/falla) per adjuntar a evidències.
 
@@ -113,6 +128,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - Codi Laravel dins `laravel/` amb migracions, models, rutes (web i API) i autenticació Breeze funcional.
 - Infraestructura docker clarificada: si continues amb el compose del landing, deixa‑l intacte i documenta com Laravel s’hi connecta; si uses el `docker-compose.yml` de Sail dins `laravel/`, indica com conviu amb el stack existent.
 - Documentació mínima al `README.md`: nova arquitectura (carpetes `legacy-php/` + `laravel/`), instruccions de posada en marxa i operacions bàsiques (migracions, arrencar el servei, importació d’Excel) explicades sense donar el comando literal, i nota de comparació Breeze vs. auth manual.
+- Vista/CRUD d’**administració de productes importats** amb accés restringit a administradors.
 - Evidència de proves: tests Laravel sobre API de productes i checklist manual només si cal per a la importació.
 - Evidència de **planificació i execució** (tauler, Gantt o checklist) per cobrir els RA3 i RA4 del mòdul de projecte.
 
@@ -121,6 +137,7 @@ En aquest sprint fem el salt de la versió **PHP + JSON Server** (v1, que es man
 - **Laravel core**: migracions correctes, models Eloquent, rutes i controladors nets.
 - **Autenticació**: Breeze operatiu (registre/login/logout), usuaris guardats en MySQL amb hash.
 - **Importació Excel**: càrrega a `products` amb validacions i gestió d’errors (no es trenquen dades).
+- **Gestió de productes**: llistat i edició accessibles només per administradors autenticats.
 - **Qualitat de codi**: nomenclatura clara, arxius en la carpeta adequada, comentaris mínims i útils, README actualitzat.
 - **Integració**: `legacy-php/` preservat; nova API `/api/products` disponible per a futurs consums.
 - **Proves**: tests Laravel sobre API de productes; checklist manual només si la importació no té test.
