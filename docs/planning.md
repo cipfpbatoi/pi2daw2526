@@ -96,21 +96,19 @@ Els **grups A i B** realitzen el mateix contingut, però en dies diferents:
 - [ ] 503.- Processos asíncrons amb cues Laravel.
 
 ### Setmana 24  
-- [ ] 504.- Dockerització i contenidors.
+- [ ] 504.- Configuració de l'entorn de desenvolupament Dockerització i contenidors.
 
 ### Setmana 25  
-- [ ] 505.- CI/CD bàsic amb GitHub Actions.
-
+- [ ] 505.- Desplegament final en producció (Desplegament automàtic)
+      
 ### Setmana 26  
-- [ ] 506.- Millores front-end (paginació, validació avançada).
-
----
-
+- [ ] 506.- Configuració del DNS - Certificat SSL i connexió HTTPS.
+      
 ### Setmana 27   – Iteració 6
-- [ ] 601.- Desplegament final en producció (Docker Compose).
-
+- [ ] 601.- CI/CD bàsic amb GitHub Actions.
+      
 ### Setmana 28  
-- [ ] 602.- Certificat SSL i connexió HTTPS.
+- [ ] 602.- Millores front-end (paginació, validació avançada).
 
 ### Setmana 29  
 - [ ] 603.- Revisió de qualitat i documentació tècnica.
