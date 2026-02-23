@@ -1,0 +1,855 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cipfpbatoi.github.io/pi2daw2526/sprint3.html">
+      
+      
+        <link rel="prev" href="sprint2.html">
+      
+      
+        <link rel="next" href="sprint4.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Iteració: Migració a Laravel - Projecte Intermodular 2DAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-X6D0LR7TC8"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-X6D0LR7TC8",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-X6D0LR7TC8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sa3-iteracio-backend-laravel-api-base-per-a-sprint-4" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-header__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projecte Intermodular 2DAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Iteració: Migració a Laravel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-nav__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    Projecte Intermodular 2DAW
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projecte.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enunciat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Entorn, aparador i contacte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Catàleg de productes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Migració a Laravel
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sprint3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Migració a Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectius-daprenentatge-dwes-diw-daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectius d’aprenentatge (DWES · DIW · DAW)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacio-amb-el-projecte-integrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 Relació amb el projecte integrador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasques-histories-dusuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Tasques / Històries d’usuari
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Tasques / Històries d’usuari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c1-creacio-del-projecte-laravel-i-configuracio-de-lentorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C1 – Creació del projecte Laravel i configuració de l’entorn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c2-model-de-dades-i-migracions-products-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C2 – Model de dades i migracions (products, users)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c3-autenticacio-amb-laravel-breeze" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C3 – Autenticació amb Laravel Breeze
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-importacio-dexcel-a-la-bbdd-command-o-controlador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C4 – Importació d’Excel a la BBDD (command o controlador)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c5-api-base-de-productes-per-al-sprint-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C5 – API base de productes per al Sprint 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c6-crud-dadministracio-de-productes-importats-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6 – CRUD d’administració de productes importats (web)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c7-proves-basiques-amb-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C7 – Proves bàsiques amb Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entregables-del-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Entregables del sprint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criteris-davaluacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Criteris d’avaluació
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connexions-amb-sprints-futurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔭 Connexions amb sprints futurs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Client SPA amb Vue i control de rols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interació: Integrament i desplegament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sa3-iteracio-backend-laravel-api-base-per-a-sprint-4">SA.3 Iteració: Backend Laravel + API base (per a Sprint 4)<a class="headerlink" href="#sa3-iteracio-backend-laravel-api-base-per-a-sprint-4" title="Permanent link">&para;</a></h1>
+<p>En aquest sprint fem el salt de la versió <strong>PHP + JSON Server</strong> (v1, que es manté intacta a <code>legacy-php/</code>) a una versió <strong>més professional amb Laravel</strong> (v2) dins la carpeta <code>laravel/</code>. L’objectiu és construir el backend mínim viable sobre MySQL, sense perdre el treball anterior, i deixar <strong>una API REST base</strong> preparada per al Sprint 4.</p>
+<p>És el primer contacte “seriós” amb un framework gran. Partirem del catàleg i usuaris del sprint anterior, els migrarem a MySQL via Eloquent i deixarem preparat el terreny per al futur client SPA (Vue) i per al microservei Node.js que compartirà la mateixa base de dades.</p>
+<h2 id="objectius-daprenentatge-dwes-diw-daw">🎯 Objectius d’aprenentatge (DWES · DIW · DAW)<a class="headerlink" href="#objectius-daprenentatge-dwes-diw-daw" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Entendre i configurar un projecte <strong>Laravel</strong> amb <code>.env</code>, migracions i Eloquent (DWES).</li>
+<li>Aplicar <strong>bones pràctiques MVC</strong> i rutes en un framework PHP modern (DAW).</li>
+<li>Integrar <strong>autenticació Laravel Breeze</strong> i comparar-la amb l’autenticació manual de PHP (DWES/Seguretat).</li>
+<li>Automatitzar la importació d’Excel a base de dades des de Laravel, validant formats i camps (DWES).</li>
+<li>Definir i exposar una <strong>API REST base</strong> per a productes, pensada per a ser consumida en Sprint 4 (DWES/DWEC).</li>
+<li>Permetre la <strong>gestió de productes importats</strong> (llistat i edició) només per a <strong>administradors autenticats</strong> (DWES/Seguretat).</li>
+<li>Realitzar <strong>proves bàsiques</strong> (artisan test o proves manuals guiades) per validar API i imports (DWES RA8.g).</li>
+</ul>
+<h2 id="relacio-amb-el-projecte-integrador">🌐 Relació amb el projecte integrador<a class="headerlink" href="#relacio-amb-el-projecte-integrador" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Aquest sprint correspon a la <strong>Iteració 3 (backend Laravel + API base + proves)</strong> de l’enunciat global (<code>docs/projecte.md</code>).</li>
+<li>Es manté tota la v1 dins <code>legacy-php/</code> (PHP + JSON Server + front antic). No es toca.</li>
+<li>Es crea <code>laravel/</code> amb el backend v2 professional. <strong>docker-compose.yml</strong> es pot ampliar per incloure servei PHP-FPM + Nginx/Apache compartint <strong>MySQL</strong> amb la resta de serveis.</li>
+<li>MySQL serà la BBDD comuna per a Laravel i, en sprints futurs, per al microservei Node.js (estadístiques/recomanacions amb Swagger).</li>
+<li>La part client dels sprints 1 i 2 es versiona com a <strong>legacy</strong>; en aquest sprint el focus és el backend i l’API que consumiran els clients del Sprint 4.</li>
+</ul>
+<hr />
+<h2 id="tasques-histories-dusuari">🧩 Tasques / Històries d’usuari<a class="headerlink" href="#tasques-histories-dusuari" title="Permanent link">&para;</a></h2>
+<h3 id="c1-creacio-del-projecte-laravel-i-configuracio-de-lentorn">C1 – Creació del projecte Laravel i configuració de l’entorn<a class="headerlink" href="#c1-creacio-del-projecte-laravel-i-configuracio-de-lentorn" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Cal un esquelet Laravel operatiu dins del repositori únic.</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Crear la carpeta <code>laravel/</code> i inicialitzar el projecte amb Laravel (instal·lació habitual via Composer, sense copiar el comando al guió).</li>
+<li>Configurar <code>.env</code> per a <strong>MySQL</strong> (mateixa instància que legacy) i generar la clau d’aplicació.</li>
+<li>Revisar l’stack de contenidors existent del landing: si ja tens <code>docker-compose.yml</code> per al front, mantín‑lo intacte i decideix si Laravel compartirà la BBDD via eixe compose o si arrencarà el seu propi <code>docker-compose.yml</code> amb <strong>Sail</strong> dins <code>laravel/</code>. Documenta l’opció escollida però no facilites el comando literal.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/.env</code>, <code>laravel/config/database.php</code>, <code>docker-compose.yml</code>, possibles <code>docker/Dockerfile</code> o <code>docker/nginx.conf</code>.</p>
+<hr />
+<h3 id="c2-model-de-dades-i-migracions-products-users">C2 – Model de dades i migracions (products, users)<a class="headerlink" href="#c2-model-de-dades-i-migracions-products-users" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Traslladem l’esquema de <code>products.json</code> i <code>users.json</code> a MySQL amb migracions.</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Crear migració i model <code>Product</code> (via generator de Laravel). Camps inspirats en <code>products.json</code>: <code>sku</code>, <code>name</code>, <code>description</code>, <code>price</code>, <code>stock</code>, <code>image</code>, <code>category</code>, timestamps. Afegir índex únic per <code>sku</code>.</li>
+<li>Reutilitzar la migració d’usuaris per defecte de Laravel (<code>users</code>), adaptant només si calen camps extra bàsics (telèfon, rol, etc. opcional).</li>
+<li>Executar migracions contra la BBDD MySQL del docker-compose que hages triat (el de legacy o el de Sail).</li>
+<li>Afegir <code>database/seeders/ProductSeeder</code> amb uns quants productes de prova per validar l’API.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/database/migrations/create_products_table.php</code>, <code>laravel/app/Models/Product.php</code>, <code>laravel/database/seeders/*</code>, <code>laravel/database/factories/ProductFactory.php</code> (si es vol fer proves).</p>
+<hr />
+<h3 id="c3-autenticacio-amb-laravel-breeze">C3 – Autenticació amb Laravel Breeze<a class="headerlink" href="#c3-autenticacio-amb-laravel-breeze" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Substituïm l’autenticació manual en PHP per una solució integrada.</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Instal·lar Breeze i escollir versió Blade (no SPA encara).  </li>
+<li>Compilar assets amb l’eina que pertoque (npm, Vite) si cal, sense indicar el comando literal.  </li>
+<li>Verificar rutes <code>/register</code> i <code>/login</code> funcionals amb usuaris guardats en MySQL (hash per defecte).  </li>
+<li>Comparar en una nota breu (README) el flux Breeze vs. autenticació manual del Sprint 2 (cookies/sessions vs. middleware + Eloquent).</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/routes/web.php</code>, <code>laravel/resources/views/auth/*</code>, <code>laravel/app/Models/User.php</code>, <code>laravel/app/Http/Middleware/*</code>.</p>
+<hr />
+<h3 id="c4-importacio-dexcel-a-la-bbdd-command-o-controlador">C4 – Importació d’Excel a la BBDD (command o controlador)<a class="headerlink" href="#c4-importacio-dexcel-a-la-bbdd-command-o-controlador" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Reaprofitem el flux d’Excel del Sprint 2 però ara tot va directament a MySQL via Laravel.</p>
+<p><strong>Què fer</strong></p>
+<ul>
+<li>Afegir dependència per gestionar Excel (Laravel-Excel o PhpSpreadsheet, sense llistar el comando).  </li>
+<li>Crear un <strong>command</strong> o un controlador amb formulari d’upload que llija l’Excel i inserisca/actualitze productes.  </li>
+<li>Validar camps obligatoris (<code>sku</code>, <code>name</code>, <code>price</code>, <code>stock</code>) i formats numèrics. Gestionar errors amigables.  </li>
+<li>Desar imatge o ruta d’imatge segons dades disponibles (no cal pujar arxius encara).  </li>
+<li>Registrar logs/resums d’importació (nombre de línies, errors) i mostrar feedback en terminal o vista.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/app/Console/Commands/ImportProducts.php</code> o <code>laravel/app/Http/Controllers/ProductImportController.php</code>, <code>laravel/routes/web.php</code> (ruta d’upload opcional), <code>laravel/app/Imports/*</code> si s’usa Laravel-Excel.</p>
+<hr />
+<h3 id="c5-api-base-de-productes-per-al-sprint-4">C5 – API base de productes per al Sprint 4<a class="headerlink" href="#c5-api-base-de-productes-per-al-sprint-4" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Necessitem una API mínima però sòlida que puga consumir la SPA del Sprint 4.</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Exposar una ruta <code>GET /api/products</code> a <code>routes/api.php</code> que retorne JSON de productes (sense auth).</li>
+<li>Afegir <code>GET /api/products/{id}</code> i, si és viable, <code>GET /api/products?category=...&amp;q=...</code> amb filtres bàsics i paginació.</li>
+<li>Utilitzar <strong>Resources</strong> (p. ex. <code>ProductResource</code>) per normalitzar la resposta JSON (preus, stock, timestamps).</li>
+<li>Afegir un text al README indicant que en el Sprint 4 la SPA Vue consumirà aquesta API.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/routes/api.php</code>, <code>laravel/app/Http/Controllers/ProductController.php</code>, <code>laravel/app/Http/Resources/ProductResource.php</code>, <code>laravel/routes/web.php</code> (si es fa la vista), <code>laravel/resources/views/productes/index.blade.php</code> (si es fa la vista).</p>
+<hr />
+<h3 id="c6-crud-dadministracio-de-productes-importats-web">C6 – CRUD d’administració de productes importats (web)<a class="headerlink" href="#c6-crud-dadministracio-de-productes-importats-web" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Cal que els productes importats es puguen veure i modificar per a manteniment intern, només per administradors autenticats.</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Crear rutes d’<strong>administració</strong> (web) per llistar i editar productes importats (CRUD mínim: <code>index</code>, <code>edit</code>, <code>update</code>).  </li>
+<li>Restringir l’accés a <strong>usuaris autenticats amb rol d’administrador</strong> (middleware, policy o gate).  </li>
+<li>Vista d’admin amb taula/llistat i formulari d’edició senzill (sense JS).  </li>
+<li>Afegir una nota al README indicant l’accés restringit a administradors.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/routes/web.php</code>, <code>laravel/app/Http/Controllers/Admin/ProductAdminController.php</code> (o similar), <code>laravel/resources/views/admin/products/*</code>, <code>laravel/app/Http/Middleware/*</code> o <code>laravel/app/Policies/*</code>.</p>
+<hr />
+<h3 id="c7-proves-basiques-amb-laravel">C7 – Proves bàsiques amb Laravel<a class="headerlink" href="#c7-proves-basiques-amb-laravel" title="Permanent link">&para;</a></h3>
+<p><strong>Context</strong>: Validar l’API construïda (productes) i l’accés d’administració amb tests automatitzats de Laravel. L’autenticació Breeze es dona per fiable (no cal testejar-la).</p>
+<p><strong>Què fer</strong>  </p>
+<ul>
+<li>Tests d’API productes: <code>GET /api/products</code> i <code>GET /api/products/{id}</code> (200 i estructura bàsica); si hi ha filtres o paginació, cobrir-ho amb casos simples.  </li>
+<li>Tests d’accés admin: comprovar que el llistat/edició de productes importats està restringit (403 per a no admins).  </li>
+<li>Prova d’importació: test de command/controlador d’Excel amb fixture mínima si es pot; si no, documentar checklist manual.  </li>
+<li>Documentar resultats: llistar què s’ha provat, dades utilitzades i estat (passa/falla) per adjuntar a evidències.</li>
+</ul>
+<p><strong>Fitxers clau</strong>: <code>laravel/tests/Feature/*</code> (productes), <code>laravel/tests/</code> en general, arxius de fixtures d’Excel si s’usen.</p>
+<hr />
+<h2 id="entregables-del-sprint">📦 Entregables del sprint<a class="headerlink" href="#entregables-del-sprint" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Codi Laravel dins <code>laravel/</code> amb migracions, models, rutes (web i API) i autenticació Breeze funcional.</li>
+<li>Infraestructura docker clarificada: si continues amb el compose del landing, deixa‑l intacte i documenta com Laravel s’hi connecta; si uses el <code>docker-compose.yml</code> de Sail dins <code>laravel/</code>, indica com conviu amb el stack existent.</li>
+<li>Documentació mínima al <code>README.md</code>: nova arquitectura (carpetes <code>legacy-php/</code> + <code>laravel/</code>), instruccions de posada en marxa i operacions bàsiques (migracions, arrencar el servei, importació d’Excel) explicades sense donar el comando literal, i nota de comparació Breeze vs. auth manual.</li>
+<li>Vista/CRUD d’<strong>administració de productes importats</strong> amb accés restringit a administradors.</li>
+<li>Evidència de proves: tests Laravel sobre API de productes i checklist manual només si cal per a la importació.</li>
+<li>Evidència de <strong>planificació i execució</strong> (tauler, Gantt o checklist) per cobrir els RA3 i RA4 del mòdul de projecte.</li>
+</ul>
+<h2 id="criteris-davaluacio">✅ Criteris d’avaluació<a class="headerlink" href="#criteris-davaluacio" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Laravel core</strong>: migracions correctes, models Eloquent, rutes i controladors nets.</li>
+<li><strong>Autenticació</strong>: Breeze operatiu (registre/login/logout), usuaris guardats en MySQL amb hash.</li>
+<li><strong>Importació Excel</strong>: càrrega a <code>products</code> amb validacions i gestió d’errors (no es trenquen dades).</li>
+<li><strong>Gestió de productes</strong>: llistat i edició accessibles només per administradors autenticats.</li>
+<li><strong>Qualitat de codi</strong>: nomenclatura clara, arxius en la carpeta adequada, comentaris mínims i útils, README actualitzat.</li>
+<li><strong>Integració</strong>: <code>legacy-php/</code> preservat; nova API <code>/api/products</code> disponible per a futurs consums.</li>
+<li><strong>Proves</strong>: tests Laravel sobre API de productes; checklist manual només si la importació no té test.</li>
+<li><strong>Gestió de projecte (RA3 i RA4)</strong>: planificació i execució evidenciades (tasques/cronograma, seguiment d’estat, revisió final).</li>
+</ul>
+<h2 id="connexions-amb-sprints-futurs">🔭 Connexions amb sprints futurs<a class="headerlink" href="#connexions-amb-sprints-futurs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Sprint 4</strong>: construirem una <strong>SPA amb Vue</strong> que consumirà l’API Laravel (<code>/api/products</code> i nous endpoints) amb gestió de rols/permisos.</li>
+<li><strong>Sprint 5+</strong>: desenvoluparem un <strong>microservei Node.js</strong> per a estadístiques i recomanacions sobre la mateixa BBDD MySQL, documentat amb <strong>Swagger</strong>, i integrarem processos asíncrons.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/aitormedrano" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<i.gomismullor@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.56.56 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

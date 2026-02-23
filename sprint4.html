@@ -1,0 +1,1494 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cipfpbatoi.github.io/pi2daw2526/sprint4.html">
+      
+      
+        <link rel="prev" href="sprint3.html">
+      
+      
+        <link rel="next" href="sprint5.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Iteració: Client SPA amb Vue i control de rols - Projecte Intermodular 2DAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-X6D0LR7TC8"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-X6D0LR7TC8",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-X6D0LR7TC8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sprint-4-client-spa-amb-vue-i-control-de-rols" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-header__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projecte Intermodular 2DAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Iteració: Client SPA amb Vue i control de rols
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-nav__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    Projecte Intermodular 2DAW
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projecte.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enunciat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Entorn, aparador i contacte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Catàleg de productes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Migració a Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Client SPA amb Vue i control de rols
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sprint4.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Client SPA amb Vue i control de rols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índex
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c1-interficie-dusuari-avancada-amb-vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C1. ⚡ Interfície d’usuari avançada amb Vue.js
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C1. ⚡ Interfície d’usuari avançada amb Vue.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-requisits-previs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-flux-general-dimplementacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Flux general d’implementació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-interficie-i-experiencia-dusuari" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Interfície i experiència d’usuari
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bones-practiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Bones pràctiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-estat-del-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c2-integracio-de-lautenticacio-mitjancant-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C2. 🔐 Integració de l’autenticació mitjançant API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C2. 🔐 Integració de l’autenticació mitjançant API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius-amb-mapeig-dwec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius (amb mapeig DWEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-requisits-previs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-estructura-de-projecte-modul-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Estructura de projecte (mòdul auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-flux-dautenticacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Flux d’autenticació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pinia-store-authstorejs-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Pinia Store: authStore.js (exemple)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-servei-http-i-interceptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Servei HTTP i interceptors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-rutes-protegides-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7️⃣ Rutes protegides (guards)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-actualitzacio-dinamica-de-la-interficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8️⃣ Actualització dinàmica de la interfície
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-seguretat-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9️⃣ Seguretat (client)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-i-validacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔟 Testing i validació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-estat-del-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣1️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c3-gestio-de-rols-dusuari-i-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C3. 👥 Gestió de rols d’usuari i permisos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C3. 👥 Gestió de rols d’usuari i permisos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius-amb-mapeig-dwec-i-dwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius (amb mapeig DWEC i DWES)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-requisits-previs_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-estructura-de-projecte-modul-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Estructura de projecte (mòdul roles)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-model-de-rols-i-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Model de rols i permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-flux-dautoritzacio-al-backend-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Flux d’autorització al backend (Laravel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-flux-dautoritzacio-al-frontend-vue-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Flux d’autorització al frontend (Vue 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-composable-userolejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7️⃣ Composable useRole.js
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-components-de-control-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8️⃣ Components de control visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-testing-i-validacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9️⃣ Testing i validació
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bones-practiques-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔟 Bones pràctiques de seguretat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-estat-del-desenvolupament_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣1️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interació: Integrament i desplegament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sprint-4-client-spa-amb-vue-i-control-de-rols">🧭 Sprint 4 — Client SPA amb Vue i control de rols<a class="headerlink" href="#sprint-4-client-spa-amb-vue-i-control-de-rols" title="Permanent link">&para;</a></h1>
+<p>Aquest sprint té com a objectiu consolidar la part <strong>client</strong> del projecte intermodular mitjançant la creació d’una <strong>interfície moderna, dinàmica i segura</strong> amb <strong>Vue.js</strong>. 
+A partir del backend ja desplegat (Laravel, API REST), s’implementaran les funcionalitats principals del frontend, incloent:</p>
+<ul>
+<li><strong>C1.</strong> Desenvolupament d’una interfície SPA amb components Vue i rutes dinàmiques.</li>
+<li><strong>C2.</strong> Integració del sistema d’autenticació i gestió de sessions mitjançant API.</li>
+<li><strong>C3.</strong> Gestió de rols i permisos d’usuari per a un control d’accés granular.</li>
+</ul>
+<p>L’objectiu és aconseguir una experiència d’usuari fluida i segura, respectant els principis de modularitat, escalabilitat i bones pràctiques de desenvolupament web professional.</p>
+<hr />
+<h2 id="index">Índex<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#c1--interfície-dusuari-avançada-amb-vuejs">⚡ C1. Interfície d’usuari avançada amb Vue.js</a></li>
+<li><a href="#c2--integració-de-lautenticació-mitjançant-api">🔐 C2. Integració de l’autenticació mitjançant API</a></li>
+<li><a href="#c3--gestió-de-rols-dusuari-i-permisos">👥 C3. Gestió de rols d’usuari i permisos</a></li>
+</ol>
+<hr />
+<h2 id="c1-interficie-dusuari-avancada-amb-vuejs">C1. ⚡ Interfície d’usuari avançada amb Vue.js<a class="headerlink" href="#c1-interficie-dusuari-avancada-amb-vuejs" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius">1️⃣ Objectius<a class="headerlink" href="#1-objectius" title="Permanent link">&para;</a></h3>
+<p>Desenvolupar una <strong>interfície d’usuari moderna i interactiva</strong> basada en <strong>Vue.js</strong>, transformant el projecte en una <strong>SPA (Single Page Application)</strong>. 
+L’objectiu és oferir una experiència d’ús més fluida, sense recàrregues completes de pàgina, amb navegació dinàmica i actualització reactiva de dades.</p>
+<p>Aquesta implementació permetrà:</p>
+<ul>
+<li>🧩 Separar clarament la <strong>lògica</strong>, la <strong>presentació</strong> i el <strong>comportament</strong> del client.</li>
+<li>🚀 Millorar la <strong>usabilitat i velocitat</strong> de navegació.</li>
+<li>🖥️ Aconseguir una experiència semblant a una aplicació d’escriptori.</li>
+</ul>
+<p>Correspon als resultats d’aprenentatge:</p>
+<ul>
+<li><strong>DWEC RA6.h</strong> → Dissenya aplicacions SPA amb frameworks moderns.</li>
+<li><strong>DWEC RA6.c</strong> → Implementa components reutilitzables i modulars.</li>
+<li><strong>DWEC RA4.f</strong> → Aplica bones pràctiques en la manipulació del DOM i l’ús d’esdeveniments.</li>
+</ul>
+<hr />
+<h3 id="2-requisits-previs">2️⃣ Requisits previs<a class="headerlink" href="#2-requisits-previs" title="Permanent link">&para;</a></h3>
+<p>✅ Node.js i npm instal·lats (<strong>v20 o superior</strong>) 
+✅ Entorn Docker amb servei per a l’API (PHP/Laravel) i MySQL 
+✅ Estructura del projecte Vue amb <code>vite</code> 
+✅ Coneixement bàsic de components, props, <code>v-model</code> i rutes (<code>vue-router</code>) 
+✅ Coneixement d’API REST i integració amb <code>axios</code></p>
+<p>📦 <strong>Estructura orientativa del projecte Vue.js:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>frontend/
+<span class="linenos" data-linenos=" 2 "></span>├── src/
+<span class="linenos" data-linenos=" 3 "></span>│   ├── assets/               # Recursos estàtics (imatges, icones, CSS)
+<span class="linenos" data-linenos=" 4 "></span>│   ├── components/           # Components reutilitzables (Botons, Navbar, CardProducte)
+<span class="linenos" data-linenos=" 5 "></span>│   ├── views/                # Vistes principals (Home, Productes, Perfil, Login)
+<span class="linenos" data-linenos=" 6 "></span>│   ├── router/
+<span class="linenos" data-linenos=" 7 "></span>│   │   └── index.js          # Definició de rutes SPA
+<span class="linenos" data-linenos=" 8 "></span>│   ├── store/                # (Opcional) Gestió d’estat global amb Pinia
+<span class="linenos" data-linenos=" 9 "></span>│   ├── App.vue               # Component arrel
+<span class="linenos" data-linenos="10 "></span>│   └── main.js               # Punt d’entrada de l’aplicació
+<span class="linenos" data-linenos="11 "></span>├── public/
+<span class="linenos" data-linenos="12 "></span>│   └── index.html            # Pàgina HTML principal
+<span class="linenos" data-linenos="13 "></span>├── package.json
+<span class="linenos" data-linenos="14 "></span>├── vite.config.js
+<span class="linenos" data-linenos="15 "></span>└── Dockerfile
+</code></pre></div>
+<hr />
+<h3 id="3-flux-general-dimplementacio">3️⃣ Flux general d’implementació<a class="headerlink" href="#3-flux-general-dimplementacio" title="Permanent link">&para;</a></h3>
+<p>🔹 <strong>1. Inicialització del projecte</strong></p>
+<ul>
+<li>Crear el projecte amb <code>npm create vue@latest</code> o <code>npm create vite@latest</code>.</li>
+<li>Configurar l’estructura de carpetes segons bones pràctiques.</li>
+</ul>
+<p>🔹 <strong>2. Creació de components bàsics</strong></p>
+<ul>
+<li><code>Navbar.vue</code>, <code>Footer.vue</code>, <code>CardProducte.vue</code>, etc.</li>
+<li>Utilitzar <strong>props</strong> per passar dades i <strong>events</strong> (<code>@click</code>, <code>@submit</code>) per comunicar components.</li>
+</ul>
+<p>🔹 <strong>3. Definició de rutes SPA</strong></p>
+<ul>
+<li>Instal·lar <code>vue-router</code> i definir rutes sense recàrrega.</li>
+</ul>
+<p>🔹 <strong>4. Integració amb el backend (API REST)</strong></p>
+<ul>
+<li>Utilitzar <code>fetch</code> o <code>axios</code> per recuperar i enviar dades a l’API.</li>
+<li>Mostrar dades dinàmicament amb <code>v-for</code>, <code>v-if</code> i <code>computed</code>.</li>
+</ul>
+<p>🔹 <strong>5. Gestió d’estat i autenticació</strong></p>
+<ul>
+<li>Utilitzar <strong>Pinia</strong> per compartir dades entre components.</li>
+<li>Implementar rutes protegides i redireccions després del login.</li>
+</ul>
+<p>🔹 <strong>6. Optimització i desplegament</strong></p>
+<ul>
+<li>Compilar l’aplicació per a producció amb <code>npm run build</code>.</li>
+<li>Integrar el frontend amb Nginx o el contenidor Docker corresponent.</li>
+</ul>
+<hr />
+<h3 id="4-interficie-i-experiencia-dusuari">4️⃣ Interfície i experiència d’usuari<a class="headerlink" href="#4-interficie-i-experiencia-dusuari" title="Permanent link">&para;</a></h3>
+<p>🎨 <strong>Disseny modern i coherent</strong> 
+🧭 <strong>Navegació sense recàrrega</strong> 
+⚡ <strong>Respostes instantànies</strong> 
+📱 <strong>Disseny responsive</strong> 
+🎞️ <strong>Transicions suaus entre vistes</strong></p>
+<hr />
+<h3 id="5-bones-practiques">5️⃣ Bones pràctiques<a class="headerlink" href="#5-bones-practiques" title="Permanent link">&para;</a></h3>
+<p>🧱 <strong>Modularitat</strong> · 🔐 <strong>Seguretat</strong> · ♻️ <strong>Reactivitat controlada</strong> · 💬 <strong>Feedback visual</strong> · 🧠 <strong>Organització del codi</strong> · 📁 <strong>Gestió d’estat neta</strong></p>
+<hr />
+<h3 id="6-estat-del-desenvolupament">6️⃣ Estat del desenvolupament<a class="headerlink" href="#6-estat-del-desenvolupament" title="Permanent link">&para;</a></h3>
+<h4 id="to-do">🟦 To Do<a class="headerlink" href="#to-do" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Crear projecte amb Vite.</li>
+<li>Definir rutes i components bàsics.</li>
+<li>Configurar comunicació amb API REST.</li>
+</ul>
+<h4 id="in-progress">🟨 In Progress<a class="headerlink" href="#in-progress" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Integració amb backend (login, productes, comentaris).</li>
+<li>Afegir animacions i transicions.</li>
+<li>Gestió d’estat global i autenticació.</li>
+</ul>
+<h4 id="done">🟩 Done<a class="headerlink" href="#done" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Navegació SPA funcional.</li>
+<li>Components modulars operatius.</li>
+<li>Integració visual amb backend i estils coherents.</li>
+<li>Optimització i desplegament complet amb Docker.</li>
+</ul>
+<hr />
+<h2 id="c2-integracio-de-lautenticacio-mitjancant-api">C2. 🔐 Integració de l’autenticació mitjançant API<a class="headerlink" href="#c2-integracio-de-lautenticacio-mitjancant-api" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius-amb-mapeig-dwec">1️⃣ Objectius (amb mapeig DWEC)<a class="headerlink" href="#1-objectius-amb-mapeig-dwec" title="Permanent link">&para;</a></h3>
+<p>Implementar l’autenticació de l’usuari des del <strong>client Vue 3</strong> comunicant-se amb el <strong>servidor Laravel</strong> mitjançant <strong>crides HTTP asíncrones</strong> amb Axios.<br />
+L’aplicació ha de gestionar de manera segura les <strong>sessions, tokens o cookies</strong>, i <strong>actualitzar la interfície</strong> segons l’estat d’autenticació.</p>
+<p><strong>Referència DWEC:</strong></p>
+<ul>
+<li><strong>RA7.f:</strong> Implementa mecanismes de seguretat en aplicacions web del costat client.</li>
+</ul>
+<hr />
+<h3 id="2-requisits-previs_1">2️⃣ Requisits previs<a class="headerlink" href="#2-requisits-previs_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API Laravel amb endpoints:</li>
+<li><code>POST /api/login</code></li>
+<li><code>POST /api/logout</code></li>
+<li><code>GET /api/user</code> (usuari autenticat)</li>
+<li>Autenticació basada en <strong>token (Bearer)</strong> o <strong>cookie de sessió</strong>.</li>
+<li>Front-end Vue 3 amb <strong>Axios</strong>, <strong>Pinia</strong>, <strong>Vue Router</strong> i <strong>persistència local</strong> (<code>localStorage</code> o <code>sessionStorage</code>).</li>
+</ul>
+<hr />
+<h3 id="3-estructura-de-projecte-modul-auth">3️⃣ Estructura de projecte (mòdul <code>auth</code>)<a class="headerlink" href="#3-estructura-de-projecte-modul-auth" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>src/
+<span class="linenos" data-linenos=" 2 "></span>├─ modules/
+<span class="linenos" data-linenos=" 3 "></span>│  ├─ auth/
+<span class="linenos" data-linenos=" 4 "></span>│  │  ├─ views/
+<span class="linenos" data-linenos=" 5 "></span>│  │  │  ├─ LoginView.vue
+<span class="linenos" data-linenos=" 6 "></span>│  │  │  ├─ RegisterView.vue (opcional)
+<span class="linenos" data-linenos=" 7 "></span>│  │  │  └─ ProfileView.vue
+<span class="linenos" data-linenos=" 8 "></span>│  │  ├─ components/
+<span class="linenos" data-linenos=" 9 "></span>│  │  │  ├─ AuthForm.vue
+<span class="linenos" data-linenos="10 "></span>│  │  │  └─ LogoutButton.vue
+<span class="linenos" data-linenos="11 "></span>│  │  ├─ store.js              # Pinia store per a auth
+<span class="linenos" data-linenos="12 "></span>│  │  ├─ api.js                # Funcions Axios: login, logout, getUser
+<span class="linenos" data-linenos="13 "></span>│  │  └─ guards.js             # Router guards per a rutes protegides
+<span class="linenos" data-linenos="14 "></span>│  └─ ...
+<span class="linenos" data-linenos="15 "></span>├─ services/
+<span class="linenos" data-linenos="16 "></span>│  └─ http.js                  # Instància Axios + interceptors
+<span class="linenos" data-linenos="17 "></span>└─ stores/
+<span class="linenos" data-linenos="18 "></span>   └─ uiStore.js               # estat global (loading, toasts, etc.)
+</code></pre></div>
+<blockquote>
+<p><strong>RA7.f:</strong> la seguretat es centralitza i s’abstrau (no es manipulen tokens directament en components).</p>
+</blockquote>
+<hr />
+<h3 id="4-flux-dautenticacio">4️⃣ Flux d’autenticació<a class="headerlink" href="#4-flux-dautenticacio" title="Permanent link">&para;</a></h3>
+<h4 id="login">🔹 Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h4>
+<ol>
+<li>L’usuari ompli el formulari de login (<code>AuthForm.vue</code>).</li>
+<li><code>authStore.login(credentials)</code> → <code>authApi.login()</code>.</li>
+<li>El servidor Laravel retorna:
+   - Token JWT → s’emmagatzema en <code>localStorage</code>.
+   - o cookie HTTP-only (si està configurat així).</li>
+<li><code>authStore</code> actualitza l’estat (<code>isAuthenticated = true</code>) i guarda <code>user</code>.</li>
+<li>El router redirigeix a <code>/dashboard</code> o <code>/profile</code>.</li>
+</ol>
+<h4 id="logout">🔹 Logout<a class="headerlink" href="#logout" title="Permanent link">&para;</a></h4>
+<ol>
+<li><code>authStore.logout()</code> → <code>authApi.logout()</code>.</li>
+<li>Es netegen el token i l’usuari de <code>store</code> i <code>localStorage</code>.</li>
+<li>Es redirigeix a <code>/login</code>.</li>
+</ol>
+<h4 id="refresh-persistencia">🔹 Refresh / Persistència<a class="headerlink" href="#refresh-persistencia" title="Permanent link">&para;</a></h4>
+<p>En muntar l’aplicació (<code>App.vue</code>) o en un guard del router:</p>
+<ul>
+<li>Si hi ha token vàlid → crida <code>authApi.getUser()</code> i restaura l’estat.</li>
+<li>Si no → redirigeix a <code>/login</code> (si la ruta és protegida).</li>
+</ul>
+<hr />
+<h3 id="5-pinia-store-authstorejs-exemple">5️⃣ Pinia Store: <code>authStore.js</code> (exemple)<a class="headerlink" href="#5-pinia-store-authstorejs-exemple" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;pinia&#39;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">login</span><span class="p">,</span><span class="w"> </span><span class="nx">logout</span><span class="p">,</span><span class="w"> </span><span class="nx">getUser</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./api&#39;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">defineStore</span><span class="p">(</span><span class="s1">&#39;auth&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nx">isAuthenticated</span><span class="o">:</span><span class="w"> </span><span class="o">!!</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">  </span><span class="p">}),</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="w">  </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="nx">login</span><span class="p">(</span><span class="nx">credentials</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">login</span><span class="p">(</span><span class="nx">credentials</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">token</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">)</span>
+<span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">},</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="nx">logout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">logout</span><span class="p">()</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="p">},</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="nx">fetchUser</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="29 "></span><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getUser</span><span class="p">()</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="32 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="33 "></span><span class="p">})</span>
+</code></pre></div>
+<hr />
+<h3 id="6-servei-http-i-interceptors">6️⃣ Servei HTTP i interceptors<a class="headerlink" href="#6-servei-http-i-interceptors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">import</span><span class="w"> </span><span class="nx">axios</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;axios&#39;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/modules/auth/store&#39;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="nx">baseURL</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://localhost:8000/api&#39;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">  </span><span class="c1">// Permet enviar cookies (si uses sessions/CSRF amb cookies)</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">  </span><span class="nx">withCredentials</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="p">})</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="c1">// Afegir token a cada petició (abans de cada request)</span>
+<span class="linenos" data-linenos="11 "></span><span class="nx">http</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="p">()</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">config</span>
+<span class="linenos" data-linenos="17 "></span><span class="p">})</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span><span class="c1">// Gestió d’errors globals (401, 403)</span>
+<span class="linenos" data-linenos="20 "></span><span class="nx">http</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">  </span><span class="c1">// Si tot va bé, retorna la resposta tal qual</span>
+<span class="linenos" data-linenos="22 "></span><span class="w">  </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">,</span>
+<span class="linenos" data-linenos="23 "></span><span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="24 "></span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="p">()</span>
+<span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="c1">// Si hi ha un 401 (No autoritzat), tanquem sessió</span>
+<span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span><span class="w">      </span><span class="nx">auth</span><span class="p">.</span><span class="nx">logout</span><span class="p">()</span>
+<span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="29 "></span><span class="w">    </span><span class="c1">// Rebutgem la promesa perquè els .catch() la puguen gestionar</span>
+<span class="linenos" data-linenos="30 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span>
+<span class="linenos" data-linenos="31 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="32 "></span><span class="p">)</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">http</span>
+</code></pre></div>
+<blockquote>
+<p><strong>RA7.f:</strong> gestió segura del token, interceptors centralitzats, protecció davant accés no autoritzat.</p>
+</blockquote>
+<hr />
+<h3 id="7-rutes-protegides-guards">7️⃣ Rutes protegides (guards)<a class="headerlink" href="#7-rutes-protegides-guards" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="w"> </span><span class="kr">from</span><span class="p">,</span><span class="w"> </span><span class="nx">next</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">  </span><span class="c1">// to   → ruta destinació</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="w">  </span><span class="c1">// from → ruta actual</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="c1">// next → continuar / redirigir / cancel·lar</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">  </span><span class="c1">// Si la ruta és protegida i l’usuari no està autenticat</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">requiresAuth</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">auth</span><span class="p">.</span><span class="nx">isAuthenticated</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="nx">next</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="nx">next</span><span class="p">()</span>
+<span class="linenos" data-linenos="12 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">})</span>
+</code></pre></div>
+<ul>
+<li>Rutes com <code>/dashboard</code>, <code>/orders</code>, <code>/profile</code> han d’estar protegides des del Vue Router amb <code>meta.requiresAuth = true</code>.</li>
+<li>Rutes públiques: <code>/login</code>, <code>/register</code>, <code>/about</code>.</li>
+</ul>
+<hr />
+<h3 id="8-actualitzacio-dinamica-de-la-interficie">8️⃣ Actualització dinàmica de la interfície<a class="headerlink" href="#8-actualitzacio-dinamica-de-la-interficie" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mostrar diferent <strong>navbar</strong> segons <code>auth.isAuthenticated</code>.</li>
+<li>Protegir seccions (botons o formularis) si l’usuari no està connectat.</li>
+<li>Mostrar nom d’usuari o avatar després del login.</li>
+<li>En logout, el contingut privat desapareix sense recarregar la pàgina.</li>
+</ul>
+<blockquote>
+<p><strong>RA7.f:</strong> la UI reacciona a l’estat de seguretat de manera immediata.</p>
+</blockquote>
+<hr />
+<h3 id="9-seguretat-client">9️⃣ Seguretat (client)<a class="headerlink" href="#9-seguretat-client" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No guardar contrasenyes en cap variable persistent.</li>
+<li>Token només en <strong>localStorage</strong> (si no es pot usar cookie HTTP-only).</li>
+<li>Tancar sessió automàticament en 401.</li>
+<li>Evitar exposar dades sensibles al DOM.</li>
+<li>Afegir <code>timeout</code> en peticions Axios i tractar errors de xarxa.</li>
+</ul>
+<hr />
+<h3 id="testing-i-validacio">🔟 Testing i validació<a class="headerlink" href="#testing-i-validacio" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Proves d’integració</strong> del flux login/logout (amb API mockejada).</li>
+<li><strong>Tests unitaris</strong> per a <code>authStore</code> i <code>api.js</code>.</li>
+<li><strong>Proves E2E (Cypress o Playwright)</strong> per simular un login real en navegador.</li>
+<li><strong>Lint i auditoria</strong> de dependències (vulnerabilitats).</li>
+</ul>
+<hr />
+<h3 id="11-estat-del-desenvolupament">1️⃣1️⃣ Estat del desenvolupament<a class="headerlink" href="#11-estat-del-desenvolupament" title="Permanent link">&para;</a></h3>
+<h4 id="to-do_1">🟦 To Do<a class="headerlink" href="#to-do_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Crear endpoints d’autenticació al backend Laravel (<code>/login</code>, <code>/logout</code>, <code>/user</code>).</li>
+<li>Configurar la instància <strong>Axios</strong> amb interceptors i <code>baseURL</code> comuna.</li>
+<li>Implementar formulari de <strong>LoginView.vue</strong> i validacions bàsiques.</li>
+<li>Definir <strong>router guards</strong> per a rutes protegides.</li>
+</ul>
+<h4 id="in-progress_1">🟨 In Progress<a class="headerlink" href="#in-progress_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Desenvolupament del <strong>Pinia store (<code>authStore</code>)</strong> amb gestió de token i usuari.</li>
+<li>Integració amb l’API real de Laravel i proves de resposta HTTP.</li>
+<li>Actualització dinàmica del <strong>navbar</strong> i del contingut segons l’estat de sessió.</li>
+<li>Afegir feedback visual (toasts, loading, errors d’autenticació).</li>
+</ul>
+<h4 id="done_1">🟩 Done<a class="headerlink" href="#done_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Arquitectura bàsica del mòdul <code>auth/</code> creada (views, components, api, store).</li>
+<li>Navegació SPA funcional amb redireccions després de login/logout.</li>
+<li>Gestió d’errors globals (401/403) i tancament automàtic de sessió.</li>
+<li>Sessió persistent amb token al <code>localStorage</code> i restauració en reobrir l’app.</li>
+</ul>
+<hr />
+<h2 id="c3-gestio-de-rols-dusuari-i-permisos">C3. 👥 Gestió de rols d’usuari i permisos<a class="headerlink" href="#c3-gestio-de-rols-dusuari-i-permisos" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius-amb-mapeig-dwec-i-dwes">1️⃣ Objectius (amb mapeig DWEC i DWES)<a class="headerlink" href="#1-objectius-amb-mapeig-dwec-i-dwes" title="Permanent link">&para;</a></h3>
+<p>Implementar un sistema de <strong>gestió de rols i permisos</strong> que permeta diferenciar funcionalitats segons el tipus d’usuari.<br />
+L’aplicació ha de garantir que <strong>només els usuaris autoritzats</strong> poden accedir a determinades rutes, opcions o accions tant al <strong>backend (Laravel)</strong> com al <strong>frontend (Vue 3)</strong>.</p>
+<p><strong>Referències:</strong></p>
+<ul>
+<li><strong>DWEC RA4.h:</strong> Control d’accés i gestió de permisos en aplicacions web.</li>
+<li><strong>DWES RA7.e:</strong> Gestió de seguretat en l’accés a dades i funcionalitats.</li>
+<li><strong>DWES RA7.f:</strong> Restricció d’operacions segons rols d’usuari.</li>
+<li><strong>DWES RA7.g:</strong> Validació i protecció d’endpoints d’API.</li>
+<li><strong>DWES RA7.h:</strong> Implementació d’autenticació i autorització en entorns web.</li>
+</ul>
+<hr />
+<h3 id="2-requisits-previs_2">2️⃣ Requisits previs<a class="headerlink" href="#2-requisits-previs_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API Laravel amb <strong>middleware d’autenticació i autorització</strong> (<code>auth:sanctum</code>, <code>can</code>, <code>role</code> o policies).</li>
+<li>Models i relacions de base de dades:</li>
+<li><code>users</code></li>
+<li><code>roles</code></li>
+<li><code>role_user</code> (taula pivot)</li>
+<li>Rols principals:</li>
+<li><strong>Administrador (gerent):</strong> accés complet a l’aplicació i a la gestió de tots els recursos.</li>
+<li><strong>Venedor:</strong> pot crear, editar i eliminar els seus propis productes.</li>
+<li><strong>Editor:</strong> gestiona comentaris i continguts publicats per altres usuaris.</li>
+<li><strong>Usuari bàsic:</strong> accés només a funcionalitats públiques o de consulta.</li>
+<li>Front-end Vue 3 amb <strong>Pinia</strong>, <strong>Axios</strong>, <strong>Vue Router</strong> i components visuals condicionals segons el rol.</li>
+</ul>
+<hr />
+<h3 id="3-estructura-de-projecte-modul-roles">3️⃣ Estructura de projecte (mòdul <code>roles</code>)<a class="headerlink" href="#3-estructura-de-projecte-modul-roles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>src/
+<span class="linenos" data-linenos=" 2 "></span>├─ modules/
+<span class="linenos" data-linenos=" 3 "></span>│  ├─ roles/
+<span class="linenos" data-linenos=" 4 "></span>│  │  ├─ composables/
+<span class="linenos" data-linenos=" 5 "></span>│  │  │  └─ useRole.js            # composable amb helpers de verificació de rols
+<span class="linenos" data-linenos=" 6 "></span>│  │  ├─ components/
+<span class="linenos" data-linenos=" 7 "></span>│  │  │  ├─ RoleGuard.vue         # mostra o oculta contingut segons rol/permisos
+<span class="linenos" data-linenos=" 8 "></span>│  │  │  └─ RoleBadge.vue         # etiqueta visual del rol (Admin, Vendor, etc.)
+<span class="linenos" data-linenos=" 9 "></span>│  │  ├─ views/
+<span class="linenos" data-linenos="10 "></span>│  │  │  └─ RoleManagementView.vue (per a admins/gerents)
+<span class="linenos" data-linenos="11 "></span>│  │  ├─ store.js                 # Pinia store per a rols i permisos (opcional)
+<span class="linenos" data-linenos="12 "></span>│  │  └─ api.js                   # crides Axios per obtindre/modificar rols (opcional)
+<span class="linenos" data-linenos="13 "></span>│  └─ ...
+<span class="linenos" data-linenos="14 "></span>├─ router/
+<span class="linenos" data-linenos="15 "></span>│  └─ guards/roleGuard.js         # redirecció segons permisos de l’usuari
+<span class="linenos" data-linenos="16 "></span>└─ services/
+<span class="linenos" data-linenos="17 "></span>   └─ http.js                     # instància Axios amb interceptors i auth
+</code></pre></div>
+<blockquote>
+<p><strong>DWES RA7.e–RA7.h:</strong> estructura modular que separa la lògica d’autorització i evita accessos no autoritzats des del client.</p>
+</blockquote>
+<hr />
+<h3 id="4-model-de-rols-i-permisos">4️⃣ Model de rols i permisos<a class="headerlink" href="#4-model-de-rols-i-permisos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Descripció</th>
+<th>Accions permeses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Administrador / Gerent</strong></td>
+<td>Control total de l’aplicació</td>
+<td>CRUD complet, gestió d’usuaris, productes i comentaris</td>
+</tr>
+<tr>
+<td><strong>Venedor</strong></td>
+<td>Administra els seus productes</td>
+<td>Crear, editar i eliminar productes propis</td>
+</tr>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Gestiona contingut i comentaris</td>
+<td>Moderar i eliminar comentaris, editar descripcions</td>
+</tr>
+<tr>
+<td><strong>Usuari</strong></td>
+<td>Consumidor final</td>
+<td>Consultar productes, comentar, editar perfil</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="5-flux-dautoritzacio-al-backend-laravel">5️⃣ Flux d’autorització al backend (Laravel)<a class="headerlink" href="#5-flux-dautoritzacio-al-backend-laravel" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Middleware <code>auth:sanctum</code></strong> valida la sessió o el token.</li>
+<li>Cada endpoint incorpora <strong>polítiques (Policy)</strong> o middleware <code>role:</code> que limiten l’accés segons el rol.</li>
+<li>Els controladors Laravel criden mètodes com <code>authorize('update', $product)</code> o <code>Gate::allows(...)</code>.</li>
+<li>El backend respon amb codi <code>403 Forbidden</code> si l’usuari no té permisos suficients.</li>
+</ol>
+<blockquote>
+<p><strong>DWES RA7.g:</strong> protecció granular d’endpoints de l’API per rols i accions.</p>
+</blockquote>
+<hr />
+<h3 id="6-flux-dautoritzacio-al-frontend-vue-3">6️⃣ Flux d’autorització al frontend (Vue 3)<a class="headerlink" href="#6-flux-dautoritzacio-al-frontend-vue-3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Després del login, el servidor envia el <strong>rol de l’usuari</strong> dins del token o dins de l’objecte <code>user</code>.</li>
+<li>El <code>authStore</code> guarda <code>user.role</code> (Pinia).</li>
+<li>El router utilitza un <strong>guard de rol</strong> abans d’accedir a rutes restringides:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="w"> </span><span class="kr">from</span><span class="p">,</span><span class="w"> </span><span class="nx">next</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="w">  </span><span class="c1">// Si la ruta defineix rols permesos i el rol actual no està dins</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">roles</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">to</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">roles</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">auth</span><span class="p">.</span><span class="nx">user</span><span class="o">?</span><span class="p">.</span><span class="nx">role</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="nx">next</span><span class="p">(</span><span class="s1">&#39;/forbidden&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="nx">next</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">})</span>
+</code></pre></div>
+<ol start="4">
+<li>En components, s’utilitza <code>v-if="can('delete')"</code> o un component <code>&lt;RoleGuard&gt;</code> per amagar funcionalitats no permeses.</li>
+</ol>
+<blockquote>
+<p><strong>DWEC RA4.h / DWES RA7.f:</strong> gestió visual i lògica dels permisos a nivell de component i ruta.</p>
+</blockquote>
+<hr />
+<h3 id="7-composable-userolejs">7️⃣ Composable <code>useRole.js</code><a class="headerlink" href="#7-composable-userolejs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">storeToRefs</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;pinia&#39;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useAuthStore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/modules/auth/store&#39;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">useRole</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="w">  </span><span class="c1">// Convertim propietats del store a refs reactives</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">storeToRefs</span><span class="p">(</span><span class="nx">useAuthStore</span><span class="p">())</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">permission</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="c1">// Llegim el rol de l’usuari actual</span>
+<span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">role</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">role</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos" data-linenos="13 "></span><span class="w">      </span><span class="nx">admin</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;create&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;edit&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;delete&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;moderate&#39;</span><span class="p">],</span>
+<span class="linenos" data-linenos="14 "></span><span class="w">      </span><span class="nx">vendor</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;create&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;edit&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;delete&#39;</span><span class="p">],</span>
+<span class="linenos" data-linenos="15 "></span><span class="w">      </span><span class="nx">editor</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;moderate&#39;</span><span class="p">],</span>
+<span class="linenos" data-linenos="16 "></span><span class="w">      </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;read&#39;</span><span class="p">]</span>
+<span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="p">}</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="c1">// Retorna true si el permís està dins de les regles del rol</span>
+<span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">rules</span><span class="p">[</span><span class="nx">role</span><span class="p">]</span><span class="o">?</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">permission</span><span class="p">)</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="kc">false</span>
+<span class="linenos" data-linenos="21 "></span><span class="w">  </span><span class="p">}</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos" data-linenos="24 "></span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Exemple d’ús en un component Vue (SFC):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useRole</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/modules/roles/composables/useRole&#39;</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useRole</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>  <span class="cm">&lt;!-- Si el rol ho permet, apareix el botó --&gt;</span>
+<span class="linenos" data-linenos=" 9 "></span>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;</span><span class="nx">can</span><span class="p">(</span><span class="s1">&#39;delete&#39;</span><span class="p">)</span><span class="s">&quot;</span><span class="p">&gt;</span>Eliminar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p><strong>DWEC RA4.h:</strong> encapsulació de la lògica d’autorització per a ús en tota la interfície.</p>
+</blockquote>
+<hr />
+<h3 id="8-components-de-control-visual">8️⃣ Components de control visual<a class="headerlink" href="#8-components-de-control-visual" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>&lt;RoleGuard&gt;</code>:</strong> component d’ordre superior per ocultar contingut segons permisos.</li>
+<li><strong><code>&lt;RoleBadge&gt;</code>:</strong> etiqueta visual que indica el rol actual.</li>
+<li><strong>Menús dinàmics:</strong> elements del menú principal controlats per <code>v-if="auth.user?.role === 'admin'"</code>.</li>
+</ul>
+<blockquote>
+<p><strong>DWES RA7.h:</strong> retroalimentació visual clara segons el nivell d’autorització.</p>
+</blockquote>
+<hr />
+<h3 id="9-testing-i-validacio">9️⃣ Testing i validació<a class="headerlink" href="#9-testing-i-validacio" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tests unitaris (Vitest):</strong> verificació de <code>useRole().can()</code> per a cada tipus d’usuari.</li>
+<li><strong>Tests d’integració:</strong> comprovació de visibilitat d’opcions en components segons rol.</li>
+<li><strong>E2E (Cypress o Playwright):</strong> comprovació d’accés restringit a rutes protegides i flux de login real.</li>
+<li><strong>Simulacions d’API:</strong> respostes 403 i redireccions automàtiques.</li>
+</ul>
+<hr />
+<h3 id="bones-practiques-de-seguretat">🔟 Bones pràctiques de seguretat<a class="headerlink" href="#bones-practiques-de-seguretat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No confiar en la validació del front-end: totes les restriccions també s’apliquen al backend.</li>
+<li>Limitar la informació retornada per l’API segons rol (principi de mínim privilegi).</li>
+<li>Verificar rols a cada petició (<code>authorize</code>, <code>Gate</code>, <code>Policy</code>).</li>
+<li>Controlar excepcions i mostrar missatges d’error clars però no massa detallats (per evitar fugues d’informació).</li>
+</ul>
+<hr />
+<h3 id="11-estat-del-desenvolupament_1">1️⃣1️⃣ Estat del desenvolupament<a class="headerlink" href="#11-estat-del-desenvolupament_1" title="Permanent link">&para;</a></h3>
+<h4 id="to-do_2">🟦 To Do<a class="headerlink" href="#to-do_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Definir taules i relacions de rols al backend (Laravel).</li>
+<li>Crear middleware i policies per al control d’accés.</li>
+<li>Configurar <code>meta.roles</code> a les rutes Vue.</li>
+<li>Dissenyar components <code>RoleGuard</code> i <code>RoleBadge</code>.</li>
+</ul>
+<h4 id="in-progress_2">🟨 In Progress<a class="headerlink" href="#in-progress_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Implementació del <strong>composable <code>useRole()</code></strong> i proves de permisos.</li>
+<li>Integració amb el <strong>Pinia <code>authStore</code></strong> per llegir el rol autenticat.</li>
+<li>Control visual de menús i seccions segons rol.</li>
+<li>Validació de respostes 403 i tractament d’errors al client.</li>
+</ul>
+<h4 id="done_2">🟩 Done<a class="headerlink" href="#done_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Model base de rols creat a Laravel i associacions correctes.</li>
+<li>Assignació de rols a usuaris i proves amb API REST.</li>
+<li>Control d’accés funcional en rutes i components Vue.</li>
+<li>Gestió visual coherent segons el rol d’usuari.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/aitormedrano" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<i.gomismullor@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.56.56 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

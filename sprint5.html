@@ -1,0 +1,2305 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cipfpbatoi.github.io/pi2daw2526/sprint5.html">
+      
+      
+        <link rel="prev" href="sprint4.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Interació: Integrament i desplegament - Projecte Intermodular 2DAW</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-X6D0LR7TC8"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-X6D0LR7TC8",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-X6D0LR7TC8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sprint-5-y-sprint-6-integracions-externes-swagger-docker-desplegament-final-qualitat-i-lliurament-del-producte" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-header__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projecte Intermodular 2DAW
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interació: Integrament i desplegament
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode nit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode nit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal"  aria-label="Canviar a mode dia"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode dia" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Projecte Intermodular 2DAW" class="md-nav__button md-logo" aria-label="Projecte Intermodular 2DAW" data-md-component="logo">
+      
+  <img src="imagenes/logofp.png" alt="logo">
+
+    </a>
+    Projecte Intermodular 2DAW
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projecte.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enunciat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Entorn, aparador i contacte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Catàleg de productes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Migració a Laravel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sprint4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iteració: Client SPA amb Vue i control de rols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interació: Integrament i desplegament
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sprint5.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interació: Integrament i desplegament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Índex
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c1-integracio-amb-serveis-externs-oauth2-dwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C1. 🔗 Integració amb serveis externs (OAuth2) - (DWES)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C1. 🔗 Integració amb serveis externs (OAuth2) - (DWES)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-requisits-previs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Requisits previs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-disseny-recomanat-laravel-oauth2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Disseny recomanat (Laravel + OAuth2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-implementacio-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Implementació orientativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-i-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Testing i seguretat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c2-documentacio-de-lapi-propia-amb-swagger-openapi-dwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C2. 📚 Documentació de l’API pròpia amb Swagger (OpenAPI) - (DWES)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C2. 📚 Documentació de l’API pròpia amb Swagger (OpenAPI) - (DWES)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-eina-recomanada-en-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Eina recomanada en Laravel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-contingut-minim-que-ha-dincloure-la-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Contingut mínim que ha d’incloure la doc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verificacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Verificació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c3-millores-avancades-al-front-end-vue-dwec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C3. ✨ Millores avançades al front-end (Vue) - (DWEC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C3. ✨ Millores avançades al front-end (Vue) - (DWEC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-filtres-i-paginacio-patro-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Filtres i paginació (patró recomanat)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-watchers-exemples-dus-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Watchers (exemples d’ús útil)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-formularis-amb-vee-validate-yup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Formularis amb Vee-Validate + Yup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4-disseny-final-i-accessibilitat-professional-diw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C4. 🎨 Disseny final i accessibilitat professional (DIW)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C4. 🎨 Disseny final i accessibilitat professional (DIW)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-requisits-i-bones-practiques-destils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Requisits i bones pràctiques d’estils
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-checklist-daccessibilitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Checklist d’accessibilitat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-estat-del-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c5-digitalitzacio-de-la-tenda-amb-tecnologies-intelligents-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C5. 🤖 Digitalització de la tenda amb tecnologies intel·ligents (DIG)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C5. 🤖 Digitalització de la tenda amb tecnologies intel·ligents (DIG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-proposta-dimplementacio-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Proposta d’implementació (exemples)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-estat-del-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-sostenibilitat-criteris-asg-i-ecodisseny-sost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C6. 🌱 Sostenibilitat: criteris ASG i ecodisseny (SOST)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C6. 🌱 Sostenibilitat: criteris ASG i ecodisseny (SOST)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-millores-sostenibles-recomanades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Millores sostenibles recomanades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-estat-del-desenvolupament_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c7-desplegament-cloud-dns-i-cicd-ddaw-nuv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C7. 🧪 Desplegament Cloud, DNS i CI/CD (DDAW + NUV)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C7. 🧪 Desplegament Cloud, DNS i CI/CD (DDAW + NUV)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-dns-del-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 PART 1 --- DNS del projecte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 PART 1 --- DNS del projecte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasques-a-realitzar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasques a realitzar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-entorn-de-desenvolupament-amb-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐳 PART 2 --- Entorn de desenvolupament amb Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐳 PART 2 --- Entorn de desenvolupament amb Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obligatori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obligatori
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-entorn-de-produccio-i-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 PART 3 --- Entorn de Producció i CI/CD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 PART 3 --- Entorn de Producció i CI/CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositoris-independents-pipelines-independents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repositoris independents → pipelines independents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd-minim-requerit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI/CD mínim requerit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aillament-dentorns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aïllament d'entorns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-amb-lets-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS amb Let's Encrypt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologies-valides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tecnologies vàlides
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-arquitectura-escalable-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ PART 4 --- Arquitectura escalable en AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="☁️ PART 4 --- Arquitectura escalable en AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisits-tecnics-obligatoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧱 Requisits tècnics obligatoris
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-documentacio-tecnica-del-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ PART 5 --- DOCUMENTACIÓ TÈCNICA DEL PROJECTE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="☁️ PART 5 --- DOCUMENTACIÓ TÈCNICA DEL PROJECTE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectiu_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectiu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-documental-obligatori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Model documental obligatori
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacio-per-repositori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Documentació per repositori
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacio-dels-entorns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 Documentació dels entorns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracio-i-entrega-continuada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Integració i entrega continuada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normes-de-contribucio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👥 Normes de contribució
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usuaris-de-prova" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuaris de prova
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacio-global-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 Documentació global del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraestructura-al-nuvol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ Infraestructura al núvol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaluacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Avaluació
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-sistema-funcional-pero-deficientment-documentat-no-es-considerara-una-solucio-professional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un sistema funcional però deficientment documentat no es considerarà una solució professional.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c8-documentacio-final-manual-dusuari-i-presentacio-tots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C8. 📚 Documentació final, manual d’usuari i presentació (TOTS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C8. 📚 Documentació final, manual d’usuari i presentació (TOTS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-objectius_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Objectius
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-documentacio-tecnica-minims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Documentació tècnica (mínims)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-manual-dusuari-minims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Manual d’usuari (mínims)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sessio-de-presentacio-al-client-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Sessió de presentació al client (demo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-estat-del-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Estat del desenvolupament
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-dentregables-sprint-5-i-sprint-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist d’entregables — Sprint 5 i Sprint 6
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Checklist d’entregables — Sprint 5 i Sprint 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c1-integracio-externa-oauth2-dwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 C1 — Integració externa (OAuth2) (DWES)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c2-documentacio-api-amb-swagger-openapi-dwes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 C2 — Documentació API amb Swagger / OpenAPI (DWES)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c3-millores-avancades-vue-dwec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✨ C3 — Millores avançades Vue (DWEC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-disseny-final-i-accessibilitat-diw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 C4 — Disseny final i accessibilitat (DIW)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c5-millora-digital-intelligent-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 C5 — Millora digital / “intel·ligent” (DIG)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c6-sostenibilitat-asg-ecodisseny-sost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌱 C6 — Sostenibilitat (ASG + ecodisseny) (SOST)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c7-docker-dns-cloud-i-cicd-ddaw-nuv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐳☁️ C7 — Docker, DNS, Cloud i CI/CD (DDAW + NUV)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐳☁️ C7 — Docker, DNS, Cloud i CI/CD (DDAW + NUV)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-desenvolupament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker (desenvolupament)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produccio-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producció + CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-aws-documentada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura AWS (documentada)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c8-documentacio-final-manual-presentacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 C8 — Documentació final + manual + presentació
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sprint-5-y-sprint-6-integracions-externes-swagger-docker-desplegament-final-qualitat-i-lliurament-del-producte">🧩 Sprint 5 y Sprint 6 — Integracions externes, Swagger, Docker, Desplegament final, qualitat i lliurament del producte<a class="headerlink" href="#sprint-5-y-sprint-6-integracions-externes-swagger-docker-desplegament-final-qualitat-i-lliurament-del-producte" title="Permanent link">&para;</a></h1>
+<p>Aquest sprint té com a objectiu ampliar i professionalitzar el projecte intermodular incorporant <strong>integracions externes</strong> amb <strong>OAuth2</strong>, documentació formal de l’API amb <strong>Swagger/OpenAPI</strong>, <strong>dockerització completa</strong> i un flux bàsic de <strong>CI/CD</strong>. 
+A més, com a activitat vinculada a l’assignatura <strong>Introducció al Núvol Públic (NUV)</strong>, es desplegarà una versió del projecte en <strong>AWS</strong>, documentant el procés i comparant-lo amb el desplegament local mitjançant <strong>Docker Compose</strong>.
+Completarem el projecte amb un resultat <strong>professional, estable i llest per a producció</strong>. 
+Es treballarà en la <strong>presentació final (UI/UX)</strong>, la <strong>digitalització del negoci (tecnologies intel·ligents)</strong>, la <strong>sostenibilitat (ASG i ecodisseny)</strong>, i el <strong>desplegament complet amb Docker en un servidor real amb HTTPS</strong>.</p>
+<p>A més, es farà una revisió total de <strong>qualitat i documentació</strong>, incloent <strong>manual d’usuari</strong>, <strong>accessibilitat</strong> i una <strong>sessió final de demostració</strong> amb el client.</p>
+<p>Inclou els requisits del client i mapeja el treball als resultats d’aprenentatge:</p>
+<ul>
+<li><strong>C1</strong> Integració amb serveis externs i gestió segura de tokens.(DWES) - RA9</li>
+<li><strong>C2</strong> Documentació de l’API pròpia amb Swagger (OpenAPI).(DWES) - RA9</li>
+<li><strong>C3</strong> Millores avançades de Vue (watchers, filtres, paginació, validació en temps real).(DWEC) RA3.g, RA4.d, RA5.g, RA6.e</li>
+<li><strong>C4</strong> Presentació estètica, consistència i accessibilitat professional (DIW).</li>
+<li><strong>C5</strong> Millora digital: dades, IA o recomanacions intel·ligents (DIG).</li>
+<li><strong>C6</strong> E-commerce sostenible: criteris ASG i ecodisseny (SOST).</li>
+<li><strong>C7</strong> Desplegament Cloud, DNS i CI/CD (DDAW + NUV). DAW RA2, RA2.i, DAW RA6.h, DAW RA3.i</li>
+<li><strong>C8</strong> Documentació final, manual d’usuari, validació i presentació al client.DWES RA8.g, DWES RA9.f, DIW RA5.g, DIW RA6.f</li>
+</ul>
+<hr />
+<h2 id="index">Índex<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+<ol>
+<li>[🔗 C1. Integració amb serveis externs (OAuth2)] DWES</li>
+<li>[📚 C2. Documentació de l’API pròpia amb Swagger (OpenAPI)] DWES</li>
+<li>[✨ C3. Millores avançades al front-end (Vue)] DWEC</li>
+<li>[🎨 C4. Disseny final i accessibilitat professional]DIW</li>
+<li>[🤖 C5. Digitalització de la tenda amb tecnologies intel·ligents]DIG</li>
+<li>[🌱 C6. Sostenibilitat: criteris ASG i ecodisseny]SOST</li>
+<li>[🐳 C7. Desplegament Cloud, DNS i CI/CD] DDAW + NUV</li>
+<li>[📚 C8. Documentació final, manual d’usuari i presentació]</li>
+<li>[✅ Lliurables i criteris de validació]</li>
+</ol>
+<hr />
+<h2 id="c1-integracio-amb-serveis-externs-oauth2-dwes">C1. 🔗 Integració amb serveis externs (OAuth2) - (DWES)<a class="headerlink" href="#c1-integracio-amb-serveis-externs-oauth2-dwes" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius">1️⃣ Objectius<a class="headerlink" href="#1-objectius" title="Permanent link">&para;</a></h3>
+<p>Afegir una integració amb <strong>almenys una API externa</strong> que requerisca <strong>OAuth2</strong>, per ampliar funcionalitats o millorar l’experiència d’usuari.</p>
+<p>Exemples vàlids (tria’n <strong>un</strong> com a mínim):</p>
+<ul>
+<li><strong>Login amb Google</strong> (OpenID Connect sobre OAuth2).</li>
+<li><strong>Importació de dades</strong> des d’un servei extern relacionat (p. ex. Google Calendar/Drive, GitHub, Spotify, etc.) si té sentit amb el vostre projecte.</li>
+</ul>
+<p><strong>Referència:</strong> <strong>DWES RA9</strong> (integració amb serveis existents, gestió segura de tokens).</p>
+<hr />
+<h3 id="2-requisits-previs">2️⃣ Requisits previs<a class="headerlink" href="#2-requisits-previs" title="Permanent link">&para;</a></h3>
+<p>✅ Backend Laravel (API REST) funcionant 
+✅ Frontend Vue (SPA) amb Axios / Pinia 
+✅ Variables d’entorn preparades (<code>.env</code>) 
+✅ Compte desenvolupador del proveïdor (Google Console / etc.)</p>
+<hr />
+<h3 id="3-disseny-recomanat-laravel-oauth2">3️⃣ Disseny recomanat (Laravel + OAuth2)<a class="headerlink" href="#3-disseny-recomanat-laravel-oauth2" title="Permanent link">&para;</a></h3>
+<p>La forma més estàndard en Laravel és fer servir <strong>Laravel Socialite</strong> per a inici de sessió amb proveïdors OAuth2.</p>
+<p><strong>Flux general (Authorization Code):</strong>
+1. L’usuari prem “Inicia sessió amb Google” (frontend).
+2. El backend redirigeix a Google amb <code>client_id</code>, <code>redirect_uri</code>, <code>scope</code>, <code>state</code>.
+3. Google retorna un <code>code</code> al <code>redirect_uri</code>.
+4. El backend canvia <code>code</code> per <code>access_token</code> i (opcional) <code>refresh_token</code>.
+5. El backend crea/actualitza usuari local i genera un token propi (p. ex. Sanctum) per al frontend.
+6. El frontend guarda el token propi i treballa amb l’API pròpia.</p>
+<blockquote>
+<p>Important: <strong>no exposeu client_secret al frontend</strong>. El secret ha d’estar <strong>sempre</strong> al backend.</p>
+</blockquote>
+<hr />
+<h3 id="4-implementacio-orientativa">4️⃣ Implementació orientativa<a class="headerlink" href="#4-implementacio-orientativa" title="Permanent link">&para;</a></h3>
+<h4 id="a-paquets-i-configuracio">A) Paquets i configuració<a class="headerlink" href="#a-paquets-i-configuracio" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Instal·lar Socialite i configurar el proveïdor (Google).</li>
+<li>Afegir credencials a <code>.env</code>:</li>
+<li><code>GOOGLE_CLIENT_ID=...</code></li>
+<li><code>GOOGLE_CLIENT_SECRET=...</code></li>
+<li><code>GOOGLE_REDIRECT_URI=https://.../api/oauth/google/callback</code></li>
+</ul>
+<h4 id="b-rutes-api">B) Rutes API<a class="headerlink" href="#b-rutes-api" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>GET /api/oauth/google/redirect</code> → redirigeix al proveïdor</li>
+<li><code>GET /api/oauth/google/callback</code> → rep el <code>code</code>, obté tokens, crea usuari, retorna token del vostre sistema</li>
+</ul>
+<h4 id="c-gestio-segura-de-tokens">C) Gestió segura de tokens<a class="headerlink" href="#c-gestio-segura-de-tokens" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Guardar tokens externs <strong>xifrats</strong> (si cal reutilitzar-los) o només usar-los per a una operació puntual.</li>
+<li>Controlar expiració i renovació (si el projecte ho requereix).</li>
+<li>Revocar o “desconnectar” compte extern (opcional però recomanat).</li>
+</ul>
+<hr />
+<h3 id="5-testing-i-seguretat">5️⃣ Testing i seguretat<a class="headerlink" href="#5-testing-i-seguretat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Validar el paràmetre <code>state</code> (CSRF).</li>
+<li>Comprovar permisos mínims (scopes mínims).</li>
+<li>Provar errors típics:</li>
+<li><code>invalid_grant</code>, <code>redirect_uri_mismatch</code>, token caducat.</li>
+<li>No registrar tokens en logs.</li>
+<li>Documentar el flux i captures de pantalla del funcionament.</li>
+</ul>
+<hr />
+<h2 id="c2-documentacio-de-lapi-propia-amb-swagger-openapi-dwes">C2. 📚 Documentació de l’API pròpia amb Swagger (OpenAPI) - (DWES)<a class="headerlink" href="#c2-documentacio-de-lapi-propia-amb-swagger-openapi-dwes" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_1">1️⃣ Objectius<a class="headerlink" href="#1-objectius_1" title="Permanent link">&para;</a></h3>
+<p>Generar una <strong>documentació completa i interactiva</strong> de l’API REST del projecte: endpoints, paràmetres, exemples, codis d’estat i autenticació, accessible via interfície web.</p>
+<p><strong>Referència:</strong> <strong>DWES RA9</strong> (facilitar integracions i transparència per a tercers).</p>
+<hr />
+<h3 id="2-eina-recomanada-en-laravel">2️⃣ Eina recomanada en Laravel<a class="headerlink" href="#2-eina-recomanada-en-laravel" title="Permanent link">&para;</a></h3>
+<p>Opcions habituals:
+- <code>l5-swagger</code> (basat en swagger-php)
+- <code>scribe</code> (molt còmode per a docs automàtiques)</p>
+<p>En aquest sprint, s’accepta qualsevol opció que produïsca <strong>OpenAPI</strong> i una UI navegable (Swagger UI o similar).</p>
+<hr />
+<h3 id="3-contingut-minim-que-ha-dincloure-la-doc">3️⃣ Contingut mínim que ha d’incloure la doc<a class="headerlink" href="#3-contingut-minim-que-ha-dincloure-la-doc" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tots els endpoints</strong> del vostre backend (mínim els principals CRUD i auth).</li>
+<li>Esquemes (models DTO) i exemples JSON.</li>
+<li>Codis d’estat (<code>200</code>, <code>201</code>, <code>400</code>, <code>401</code>, <code>403</code>, <code>404</code>, <code>422</code>, <code>500</code>).</li>
+<li>Autenticació:</li>
+<li>Bearer Token (Sanctum/JWT) o cookie, segons el vostre cas.</li>
+<li>Possibilitat de <strong>provar</strong> peticions des de la UI.</li>
+</ul>
+<hr />
+<h3 id="4-verificacio">4️⃣ Verificació<a class="headerlink" href="#4-verificacio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>URL funcional (p. ex. <code>/api/documentation</code> o <code>/docs</code>).</li>
+<li>Captures i explicació de com s’autoritza a Swagger (on posar el Bearer token).</li>
+<li>Documentar com regenerar la doc (comanda Artisan o script).</li>
+</ul>
+<hr />
+<h2 id="c3-millores-avancades-al-front-end-vue-dwec">C3. ✨ Millores avançades al front-end (Vue) - (DWEC)<a class="headerlink" href="#c3-millores-avancades-al-front-end-vue-dwec" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_2">1️⃣ Objectius<a class="headerlink" href="#1-objectius_2" title="Permanent link">&para;</a></h3>
+<p>Refinar la interfície SPA amb funcionalitats avançades i reactives:</p>
+<ul>
+<li><strong>Filtres i paginació</strong> en llistats (p. ex. productes per categoria/preu, etc.)</li>
+<li>Ús de <strong>watchers</strong> per reaccionar a canvis de model/estat global</li>
+<li>Validació en temps real amb <strong>Vee-Validate + Yup</strong></li>
+<li>Compatibilitat entre navegadors i bones pràctiques</li>
+</ul>
+<p><strong>Referències:</strong> <strong>DWEC RA3.g, RA4.d, RA5.g, RA6.e</strong>.</p>
+<hr />
+<h3 id="2-filtres-i-paginacio-patro-recomanat">2️⃣ Filtres i paginació (patró recomanat)<a class="headerlink" href="#2-filtres-i-paginacio-patro-recomanat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Controls UI: input de cerca, select de categoria, rang de preu, etc.</li>
+<li>Estat a Pinia o dins de la vista:</li>
+<li><code>filters</code> (objecte reactiu)</li>
+<li><code>page</code>, <code>perPage</code></li>
+<li>Peticions a API amb query params:</li>
+<li><code>/api/products?search=...&amp;category=...&amp;min=...&amp;max=...&amp;page=...</code></li>
+</ul>
+<blockquote>
+<p>Si l’API encara no admet paginació/filtres, cal implementar-ho també al backend (p. ex. Eloquent <code>paginate()</code> + <code>when()</code> per filtres).</p>
+</blockquote>
+<hr />
+<h3 id="3-watchers-exemples-dus-util">3️⃣ Watchers (exemples d’ús útil)<a class="headerlink" href="#3-watchers-exemples-dus-util" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Si canvia un filtre → tornar a demanar dades automàticament</li>
+<li>Si canvia <code>auth.user</code> o un valor global → refrescar vistes</li>
+<li>Debounce en cerca (opcional, recomanat)</li>
+</ul>
+<hr />
+<h3 id="4-formularis-amb-vee-validate-yup">4️⃣ Formularis amb Vee-Validate + Yup<a class="headerlink" href="#4-formularis-amb-vee-validate-yup" title="Permanent link">&para;</a></h3>
+<p><strong>Requisit:</strong>
+- Validació immediata: camps obligats, formats, longituds, etc.
+- Feedback visual: missatges d’error i estats de camp (valid/invalid)
+- Esquemes Yup reutilitzables per formularis</p>
+<p>Exemples de formularis típics:
+- Login/Register
+- Crear/editar producte
+- Perfil d’usuari</p>
+<hr />
+<h2 id="c4-disseny-final-i-accessibilitat-professional-diw">C4. 🎨 Disseny final i accessibilitat professional (DIW)<a class="headerlink" href="#c4-disseny-final-i-accessibilitat-professional-diw" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_3">1️⃣ Objectius<a class="headerlink" href="#1-objectius_3" title="Permanent link">&para;</a></h3>
+<p>Aplicar una capa final de <strong>poliment visual</strong>, assegurant:</p>
+<ul>
+<li>Estètica professional i coherent en totes les pàgines.</li>
+<li>Fulls d’estil <strong>organitzats</strong> i <strong>mantenibles</strong>.</li>
+<li>Compliment de bones pràctiques d’accessibilitat (WCAG bàsic):</li>
+<li>contrast adequat</li>
+<li>navegació amb teclat</li>
+<li>textos alternatius (<code>alt</code>)</li>
+<li>formularis accessibles (<code>label</code>, <code>aria-*</code>)</li>
+<li>Ús equilibrat de text, imatge i espais en blanc.</li>
+<li>Imatges <strong>optimitzades</strong> (pes, formats moderns, dimensions correctes).</li>
+</ul>
+<p><strong>Referències DIW:</strong>
+- <strong>DIW (Accessibilitat i usabilitat)</strong> → contrast, navegació, components accessibles, responsive.
+- <strong>DIW (Maquetació moderna)</strong> → CSS Grid/Flexbox, consistència visual.</p>
+<hr />
+<h3 id="2-requisits-i-bones-practiques-destils">2️⃣ Requisits i bones pràctiques d’estils<a class="headerlink" href="#2-requisits-i-bones-practiques-destils" title="Permanent link">&para;</a></h3>
+<p>✅ Variables CSS (<code>:root</code>) per colors, tipografies, espaiats i breakpoints 
+✅ Sistema de layout amb <strong>Flexbox/Grid</strong> 
+✅ Components reutilitzables (botons, cards, formularis, badges) 
+✅ Ús de <code>rem</code>, <code>clamp()</code>, <code>minmax()</code> quan siga útil 
+✅ Fitxers CSS modulars i ben organitzats</p>
+<hr />
+<h3 id="3-checklist-daccessibilitat">3️⃣ Checklist d’accessibilitat<a class="headerlink" href="#3-checklist-daccessibilitat" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Totes les imatges amb <code>alt</code> significatiu (o <code>alt=""</code> si decoratives).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Formularis amb <code>label</code> vinculats (<code>for</code> + <code>id</code>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Validacions amb missatges clars i associats al camp (<code>aria-describedby</code>).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Focus visible i navegació amb teclat (Tab / Shift+Tab).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Contrast AA mínim (evitar gris clar sobre blanc).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Botons i enllaços amb text descriptiu (evitar “clic ací”).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Jerarquia semàntica: <code>h1 → h2 → h3</code>, <code>nav</code>, <code>main</code>, <code>footer</code>.</li>
+</ul>
+<hr />
+<h3 id="4-estat-del-desenvolupament">4️⃣ Estat del desenvolupament<a class="headerlink" href="#4-estat-del-desenvolupament" title="Permanent link">&para;</a></h3>
+<h4 id="to-do">🟦 To Do<a class="headerlink" href="#to-do" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Auditoria de contrast i focus.</li>
+<li>Revisar formularis (labels, errors, aria).</li>
+<li>Uniformitzar botons i cards.</li>
+</ul>
+<h4 id="in-progress">🟨 In Progress<a class="headerlink" href="#in-progress" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Refactor CSS i estructura de fitxers.</li>
+<li>Optimització d’imatges i responsive.</li>
+</ul>
+<h4 id="done">🟩 Done<a class="headerlink" href="#done" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Disseny coherent en totes les vistes.</li>
+<li>Layout professional i accessible.</li>
+</ul>
+<hr />
+<h2 id="c5-digitalitzacio-de-la-tenda-amb-tecnologies-intelligents-dig">C5. 🤖 Digitalització de la tenda amb tecnologies intel·ligents (DIG)<a class="headerlink" href="#c5-digitalitzacio-de-la-tenda-amb-tecnologies-intelligents-dig" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_4">1️⃣ Objectius<a class="headerlink" href="#1-objectius_4" title="Permanent link">&para;</a></h3>
+<p>Integrar una <strong>millora digital</strong> basada en tecnologies habilitadores digitals:</p>
+<ul>
+<li>☁️ Cloud (serveis en producció, deploy, persistència)</li>
+<li>🧠 IA / recomanacions (productes suggerits, destacats)</li>
+<li>📊 Anàlisi de dades (tendències, top vendes, productes més vistos)</li>
+</ul>
+<p>L’equip haurà d’identificar i implementar <strong>una millora concreta</strong>, com per exemple:</p>
+<ul>
+<li>Recomanador simple: “Productes relacionats” (categoria/etiquetes/preu).</li>
+<li>“Productes destacats” segons estadístiques (més venuts / millor valorats).</li>
+<li>Panell mínim d’analytics per admin (visites, conversions, top productes).</li>
+<li>Cerca intel·ligent amb suggeriments (autocomplete bàsic).</li>
+</ul>
+<hr />
+<h3 id="2-proposta-dimplementacio-exemples">2️⃣ Proposta d’implementació (exemples)<a class="headerlink" href="#2-proposta-dimplementacio-exemples" title="Permanent link">&para;</a></h3>
+<h4 id="opcio-a-recomanacions-intelligents-simple">✅ Opció A: Recomanacions intel·ligents (simple)<a class="headerlink" href="#opcio-a-recomanacions-intelligents-simple" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Algorisme: mateix <code>category_id</code>, preu semblant i bona valoració.</li>
+<li>Endpoint: <code>GET /api/products/{id}/recommendations</code></li>
+<li>Vista: carrusel/llistat “Recomanats per a tu”.</li>
+</ul>
+<h4 id="opcio-b-productes-destacats-per-dades">✅ Opció B: Productes destacats per dades<a class="headerlink" href="#opcio-b-productes-destacats-per-dades" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Guardar mètriques: <code>views</code>, <code>orders_count</code>, <code>rating_avg</code>.</li>
+<li>Endpoint: <code>GET /api/products/featured</code></li>
+<li>Home: secció “Top productes de la setmana”.</li>
+</ul>
+<h4 id="opcio-c-mini-analytics-admin">✅ Opció C: Mini-analytics admin<a class="headerlink" href="#opcio-c-mini-analytics-admin" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Taula / gràfic amb Top 5 vendes i Top 5 més vistos.</li>
+<li>Endpoint: <code>GET /api/admin/analytics/summary</code></li>
+<li>Vista Admin: dashboard simple.</li>
+</ul>
+<hr />
+<h3 id="3-estat-del-desenvolupament">3️⃣ Estat del desenvolupament<a class="headerlink" href="#3-estat-del-desenvolupament" title="Permanent link">&para;</a></h3>
+<h4 id="to-do_1">🟦 To Do<a class="headerlink" href="#to-do_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Triar una millora digital concreta (A/B/C).</li>
+<li>Definir dades necessàries i modelat DB si cal.</li>
+</ul>
+<h4 id="in-progress_1">🟨 In Progress<a class="headerlink" href="#in-progress_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Implementació endpoint + integració al front.</li>
+</ul>
+<h4 id="done_1">🟩 Done<a class="headerlink" href="#done_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Millora digital visible i justificada al lliurament.</li>
+</ul>
+<hr />
+<h2 id="c6-sostenibilitat-criteris-asg-i-ecodisseny-sost">C6. 🌱 Sostenibilitat: criteris ASG i ecodisseny (SOST)<a class="headerlink" href="#c6-sostenibilitat-criteris-asg-i-ecodisseny-sost" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_5">1️⃣ Objectius<a class="headerlink" href="#1-objectius_5" title="Permanent link">&para;</a></h3>
+<p>Aplicar sostenibilitat al projecte e-commerce incorporant:</p>
+<ul>
+<li><strong>Ambiental:</strong> reducció de pes, optimització d’imatges, menys peticions, eficiència.</li>
+<li><strong>Social:</strong> accessibilitat, inclusió, informació clara, UX sense barreres.</li>
+<li><strong>Governança:</strong> transparència (polítiques, traçabilitat), bones pràctiques i qualitat del codi.</li>
+</ul>
+<hr />
+<h3 id="2-millores-sostenibles-recomanades">2️⃣ Millores sostenibles recomanades<a class="headerlink" href="#2-millores-sostenibles-recomanades" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🖼️ Imatges en <strong>WebP/AVIF</strong>, lazy loading, dimensions adaptatives.</li>
+<li>📦 Reducció d’assets: minify, tree-shaking, compressió gzip/brotli en Nginx.</li>
+<li>♻️ Economia circular: secció “Reacondicionats”, “Reutilitzables” o “Materials reciclats”.</li>
+<li>🏷️ Etiqueta eco als productes:</li>
+<li>“Eco Score”</li>
+<li>“Embalatge reciclat”</li>
+<li>“Proveïdor local”</li>
+<li>🧾 Política de sostenibilitat visible (pàgina informativa).</li>
+</ul>
+<hr />
+<h3 id="3-estat-del-desenvolupament_1">3️⃣ Estat del desenvolupament<a class="headerlink" href="#3-estat-del-desenvolupament_1" title="Permanent link">&para;</a></h3>
+<h4 id="to-do_2">🟦 To Do<a class="headerlink" href="#to-do_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Definir quines millores ASG s’apliquen al projecte.</li>
+<li>Afegir etiqueta eco i criteris al catàleg.</li>
+</ul>
+<h4 id="in-progress_2">🟨 In Progress<a class="headerlink" href="#in-progress_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Optimització d’imatges i assets.</li>
+<li>Ajustos en UI/UX per més claredat i inclusió.</li>
+</ul>
+<h4 id="done_2">🟩 Done<a class="headerlink" href="#done_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Evidència clara de sostenibilitat + justificació en documentació.</li>
+</ul>
+<hr />
+<h2 id="c7-desplegament-cloud-dns-i-cicd-ddaw-nuv">C7. 🧪 Desplegament Cloud, DNS i CI/CD (DDAW + NUV)<a class="headerlink" href="#c7-desplegament-cloud-dns-i-cicd-ddaw-nuv" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu">🎯 Objectiu<a class="headerlink" href="#objectiu" title="Permanent link">&para;</a></h3>
+<p>En aquesta fase del projecte intermòdul, l'equip haurà de portar a producció l'aplicació desenvolupada de:</p>
+<ul>
+<li><strong>Vue</strong> (frontend)</li>
+<li><strong>Laravel</strong> (backend)</li>
+</ul>
+<p>aplicant pràctiques professionals de:</p>
+<ul>
+<li>Automatització de Tasques</li>
+<li>Containerització</li>
+<li>Integració i entrega Continuada</li>
+<li>Gestió de dominis i DNS</li>
+<li>Seguretat HTTPS</li>
+<li>Disseny d'infraestructura escalable en AWS</li>
+</ul>
+<hr />
+<h2 id="part-1-dns-del-projecte">🧭 PART 1 --- DNS del projecte<a class="headerlink" href="#part-1-dns-del-projecte" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu_1">Objectiu<a class="headerlink" href="#objectiu_1" title="Permanent link">&para;</a></h3>
+<p>Gestionar una zona DNS pròpia delegada al vostre servidor. La zona de treball serà `projecteXX.ddaw.es' on XX serà el número de grup assignat per a la realització del projecte</p>
+<h3 id="tasques-a-realitzar">Tasques a realitzar<a class="headerlink" href="#tasques-a-realitzar" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Implantar un <strong>servidor DNS màster</strong> al núvol (màquina virtual) o utilitzant un servici DNS en el núvol.</li>
+<li>Crear la zona:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>    projecteXX.ddaw.es
+</code></pre></div>
+<ol start="3">
+<li>
+<p>Definir com a mínim els registres necessàris per a publicar les vostres aplicacions:</p>
+</li>
+<li>
+<p>Facilitar a l'administrador del DNS pare les dades necessàries per
+    fer la <strong>delegació</strong>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="part-2-entorn-de-desenvolupament-amb-docker">🐳 PART 2 --- Entorn de desenvolupament amb Docker<a class="headerlink" href="#part-2-entorn-de-desenvolupament-amb-docker" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu_2">Objectiu<a class="headerlink" href="#objectiu_2" title="Permanent link">&para;</a></h3>
+<p>Permetre que qualsevol membre de l'equip puga engegar les 2 aplicacions en local.</p>
+<h3 id="requisits">Requisits<a class="headerlink" href="#requisits" title="Permanent link">&para;</a></h3>
+<p>Mitjançant <code>docker-compose</code> s'han d'arrancar de forma independent els 2 projectes:</p>
+<h3 id="obligatori">Obligatori<a class="headerlink" href="#obligatori" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dockerfile per a cada aplicació</li>
+<li>variables d'entorn</li>
+<li>persistència de la base de dades (en les que siga necessari)</li>
+<li>Incloure en el README  de cada projecte les instruccions per fer-ho</li>
+</ul>
+<hr />
+<h2 id="part-3-entorn-de-produccio-i-cicd">🚀 PART 3 --- Entorn de Producció i CI/CD<a class="headerlink" href="#part-3-entorn-de-produccio-i-cicd" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu_3">Objectiu<a class="headerlink" href="#objectiu_3" title="Permanent link">&para;</a></h3>
+<p>Automatitzar completament el pas de codi a producció en el núvol.</p>
+<h3 id="repositoris-independents-pipelines-independents">Repositoris independents → pipelines independents<a class="headerlink" href="#repositoris-independents-pipelines-independents" title="Permanent link">&para;</a></h3>
+<p>Cada aplicació ha de tindre el seu propi flux de desplegament.</p>
+<h3 id="cicd-minim-requerit">CI/CD mínim requerit<a class="headerlink" href="#cicd-minim-requerit" title="Permanent link">&para;</a></h3>
+<h4 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Instal·lació de dependències</li>
+<li>Build de producció</li>
+<li>Desplegament automàtic</li>
+</ul>
+<h4 id="backend-laravel">Backend (Laravel)<a class="headerlink" href="#backend-laravel" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Instal·lació de dependències</li>
+<li>Test</li>
+<li>Desplegament automàtic</li>
+<li><strong>execució obligatòria de migracions</strong> després del deploy</li>
+</ul>
+<h3 id="aillament-dentorns">Aïllament d'entorns<a class="headerlink" href="#aillament-dentorns" title="Permanent link">&para;</a></h3>
+<p>Frontend i backend han de funcionar de manera independent: 
+- Serveis/contenidors/Maquines virtuals separades
+- Configuracions pròpies
+- Capacitat de desplegar un sense afectar l'altre</p>
+<h3 id="https-amb-lets-encrypt">HTTPS amb Let's Encrypt<a class="headerlink" href="#https-amb-lets-encrypt" title="Permanent link">&para;</a></h3>
+<p>Les 2 aplicacions han de ser accessibles amb certificats vàlids:</p>
+<h3 id="tecnologies-valides">Tecnologies vàlides<a class="headerlink" href="#tecnologies-valides" title="Permanent link">&para;</a></h3>
+<p>Podeu utilitzar:</p>
+<ul>
+<li>màquines virtuals</li>
+<li>Docker</li>
+<li>ECS </li>
+<li>Auto Scaling</li>
+<li>Deployer o eines equivalents</li>
+</ul>
+<hr />
+<h2 id="part-4-arquitectura-escalable-en-aws">☁️ PART 4 --- Arquitectura escalable en AWS<a class="headerlink" href="#part-4-arquitectura-escalable-en-aws" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu_4">🎯 Objectiu<a class="headerlink" href="#objectiu_4" title="Permanent link">&para;</a></h3>
+<p>Dissenyar una arquitectura en <strong>AWS</strong> capaç de suportar el desplegament
+en producció de l'aplicació Vue + Laravel garantint:</p>
+<ul>
+<li>Separació de responsabilitats</li>
+<li>Seguretat entre capes</li>
+<li>Possibilitat d'escalat</li>
+<li>Alta disponibilitat</li>
+<li>Facilitat de manteniment</li>
+</ul>
+<hr />
+<h3 id="requisits-tecnics-obligatoris">🧱 Requisits tècnics obligatoris<a class="headerlink" href="#requisits-tecnics-obligatoris" title="Permanent link">&para;</a></h3>
+<h4 id="1-xarxa">1️⃣ Xarxa<a class="headerlink" href="#1-xarxa" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Creació d'una <strong>VPC pròpia</strong></li>
+<li>Separació com a mínim en:<ul>
+<li>subxarxes <strong>públiques</strong></li>
+<li>subxarxes <strong>privades d'aplicació</strong></li>
+<li>subxarxes <strong>privades de dades</strong></li>
+</ul>
+</li>
+</ul>
+<p>S'haurà d'explicar: 
+- Rang IP utilitzat
+- Distribució per AZ
+- Taules de rutes
+- Accés a Internet
+- Necessitat o no de NAT</p>
+<hr />
+<h4 id="2-capa-dentrada-edge">2️⃣ Capa d'entrada (Edge)<a class="headerlink" href="#2-capa-dentrada-edge" title="Permanent link">&para;</a></h4>
+<p>Ha d'existir un punt únic d'entrada de tràfic.</p>
+<p>Exemples vàlids: 
+- Una EC2 amb Nginx (reverse proxy)
+- Un Application Load Balancer</p>
+<p>Aquest component serà responsable de: 
+- Terminació HTTPS
+- Redireccions
+- Enviament del tràfic cap a backend o frontend</p>
+<hr />
+<h4 id="3-capa-daplicacio">3️⃣ Capa d'aplicació<a class="headerlink" href="#3-capa-daplicacio" title="Permanent link">&para;</a></h4>
+<p>On s'executen:</p>
+<ul>
+<li>Serveis del backend Laravel</li>
+<li>Serveis del frontend Vue</li>
+</ul>
+<h4 id="nivel-avancat">Nivel Avançat<a class="headerlink" href="#nivel-avancat" title="Permanent link">&para;</a></h4>
+<p>Ha de permetre <strong>replicar instàncies</strong>.</p>
+<p>Exemples vàlids: 
+- Auto Scaling Group
+- ECS amb diverses tasques
+- múltiples contenidors en diferents nodes</p>
+<hr />
+<h4 id="4-capa-de-dades">4️⃣ Capa de dades<a class="headerlink" href="#4-capa-de-dades" title="Permanent link">&para;</a></h4>
+<p>La base de dades haurà d'estar en subxarxes privades.</p>
+<p>S'ha d'implementar o proposar:</p>
+<ul>
+<li>RDS Multi-AZ</li>
+<li>Rèplica de lectura</li>
+<li>Esquema de backup i recuperació</li>
+</ul>
+<hr />
+<h4 id="5-seguretat">5️⃣ Seguretat<a class="headerlink" href="#5-seguretat" title="Permanent link">&para;</a></h4>
+<p>S'ha de demostrar aïllament entre capes mitjançant:</p>
+<ul>
+<li>Security Groups</li>
+<li>normes d'entrada i eixida</li>
+</ul>
+<p>Exemple: 
+- la base de dades només accepta connexions del backend
+- el backend només rep tràfic del balancejador o proxy</p>
+<hr />
+<h2 id="part-5-documentacio-tecnica-del-projecte">☁️ PART 5 --- DOCUMENTACIÓ TÈCNICA DEL PROJECTE<a class="headerlink" href="#part-5-documentacio-tecnica-del-projecte" title="Permanent link">&para;</a></h2>
+<h3 id="objectiu_5">🎯 Objectiu<a class="headerlink" href="#objectiu_5" title="Permanent link">&para;</a></h3>
+<p>El projecte intermòdular haurà d’anar acompanyat d’una documentació tècnica professional que descriga el sistema al llarg de tot el seu cicle de vida.</p>
+<p>Aquesta documentació haurà de permetre que un equip extern siga capaç de:</p>
+<ul>
+<li>Comprendre la solució implementada </li>
+<li>Llençar l’entorn de desenvolupament </li>
+<li>Reproduir la infraestructura al núvol </li>
+<li>Desplegar noves versions </li>
+<li>Operar i mantindre el servei </li>
+<li>Validar el funcionament de l’aplicació </li>
+<li>Continuar l’evolució del sistema </li>
+</ul>
+<hr />
+<h3 id="model-documental-obligatori">📂 Model documental obligatori<a class="headerlink" href="#model-documental-obligatori" title="Permanent link">&para;</a></h3>
+<p>Atés que el sistema està compost per diferents aplicacions en repositoris independents, la documentació haurà d’organitzar-se en dos nivells:</p>
+<ol>
+<li>documentació pròpia de cada aplicació </li>
+<li>documentació global de la solució</li>
+</ol>
+<hr />
+<h3 id="documentacio-per-repositori">📄 Documentació per repositori<a class="headerlink" href="#documentacio-per-repositori" title="Permanent link">&para;</a></h3>
+<p>Cada aplicació (frontend i backend) haurà d’incloure la seua documentació específica dins del seu repositori.</p>
+<p>Aquesta haurà de descriure, com a mínim:</p>
+<ul>
+<li>Arquitectura interna.</li>
+<li>Tecnologies Utilitzades. </li>
+<li>Configuració </li>
+<li>Execució en desenvolupament </li>
+<li>Procés de build </li>
+<li>Particularitats del desplegament </li>
+<li>Proves rellevants </li>
+<li>Els fluxos de CI/CD </li>
+<li>Els mecanismes d’escalabilitat i disponibilitat </li>
+<li>Qualssevol altra informació que cregueu necessària</li>
+</ul>
+<p>L’equip responsable del repositori serà també responsable de la qualitat i exactitud d’aquesta informació.</p>
+<hr />
+<h3 id="documentacio-dels-entorns">💻 Documentació dels entorns<a class="headerlink" href="#documentacio-dels-entorns" title="Permanent link">&para;</a></h3>
+<p>Per tal de diferenciar clarament els contextos d’execució, s’haurà de documentar separadament en cada repositori:</p>
+<ul>
+<li>l’entorn de desenvolupament </li>
+<li>l’entorn de producció </li>
+</ul>
+<p>Per a cada entorn s’haurà d’explicar:</p>
+<ul>
+<li>Objectiu </li>
+<li>Infraestructura </li>
+<li>Configuracions específiques </li>
+<li>Forma d’accés </li>
+<li>Diferències respecte als altres entorns </li>
+<li>Captures de pantalla amb el funcionament bàsic</li>
+</ul>
+<hr />
+<h3 id="integracio-i-entrega-continuada">🔄 Integració i entrega continuada<a class="headerlink" href="#integracio-i-entrega-continuada" title="Permanent link">&para;</a></h3>
+<p>Caldrà documentar el recorregut complet des d’un canvi en el repositori fins a la seua disponibilitat en producció.</p>
+<p>S’hauran de descriure:</p>
+<ul>
+<li>fases del pipeline </li>
+<li>processos automàtics </li>
+<li>desplegament </li>
+<li>migracions </li>
+<li>actualització de serveis </li>
+</ul>
+<hr />
+<h3 id="normes-de-contribucio">👥 Normes de contribució<a class="headerlink" href="#normes-de-contribucio" title="Permanent link">&para;</a></h3>
+<p>La documentació haurà d’explicar com s’ha organitzat el treball de l’equip.</p>
+<p>Caldrà incloure:</p>
+<ul>
+<li>Estratègia de branques </li>
+<li>Procés de revisió de codi </li>
+<li>Criteris d’acceptació </li>
+<li>Política de versions </li>
+<li>Code Style</li>
+<li>Distribució de responsabilitats </li>
+</ul>
+<h3 id="usuaris-de-prova">👤 Usuaris de prova<a class="headerlink" href="#usuaris-de-prova" title="Permanent link">&para;</a></h3>
+<p>La documentació haurà d’incloure credencials o mecanismes que permeten verificar el funcionament del sistema.</p>
+<p>No s’admetran comptes personals dels membres de l’equip.</p>
+<h3 id="documentacio-global-del-sistema">🌐 Documentació global del sistema<a class="headerlink" href="#documentacio-global-del-sistema" title="Permanent link">&para;</a></h3>
+<p>A més de la documentació particular, s’haurà de lliurar una documentació transversal que descriga el comportament conjunt del sistema.</p>
+<p>Aquesta documentació haurà de permetre entendre:</p>
+<ul>
+<li>la relació entre frontend, backend i base de dades </li>
+<li>els diferents entorns existents </li>
+<li>la infraestructura desplegada en AWS </li>
+<li>el sistema DNS </li>
+<li>les mesures de seguretat </li>
+<li>Qualssevol altra informació que cregueu necessària</li>
+</ul>
+<h3 id="infraestructura-al-nuvol">☁️ Infraestructura al núvol<a class="headerlink" href="#infraestructura-al-nuvol" title="Permanent link">&para;</a></h3>
+<p>La documentació de producció haurà de descriure detalladament:</p>
+<ul>
+<li>Organització de la xarxa </li>
+<li>Separació de recursos públics i privats </li>
+<li>Ubicació dels serveis </li>
+<li>Punt d’entrada del trànsit </li>
+<li>Integració amb DNS </li>
+<li>Configuració d’HTTPS </li>
+</ul>
+<h3 id="avaluacio">🎓 Avaluació<a class="headerlink" href="#avaluacio" title="Permanent link">&para;</a></h3>
+<p>La documentació es valorarà atenent a:</p>
+<ul>
+<li>Rigor tècnic </li>
+<li>Claredat </li>
+<li>Completitud </li>
+<li>Capacitat de justificació </li>
+<li>Coherència amb la infraestructura real </li>
+</ul>
+<h2 id="un-sistema-funcional-pero-deficientment-documentat-no-es-considerara-una-solucio-professional">Un sistema funcional però deficientment documentat no es considerarà una solució professional.<a class="headerlink" href="#un-sistema-funcional-pero-deficientment-documentat-no-es-considerara-una-solucio-professional" title="Permanent link">&para;</a></h2>
+<h2 id="c8-documentacio-final-manual-dusuari-i-presentacio-tots">C8. 📚 Documentació final, manual d’usuari i presentació (TOTS)<a class="headerlink" href="#c8-documentacio-final-manual-dusuari-i-presentacio-tots" title="Permanent link">&para;</a></h2>
+<h3 id="1-objectius_6">1️⃣ Objectius<a class="headerlink" href="#1-objectius_6" title="Permanent link">&para;</a></h3>
+<p>Tancar el projecte amb un lliurament complet:</p>
+<ul>
+<li>Revisió de codi i refactorització necessària.</li>
+<li>Documentació tècnica completa:</li>
+<li>arquitectura</li>
+<li>instal·lació</li>
+<li>configuració</li>
+<li>desplegament</li>
+<li>credencials / rols (sense exposar secrets)</li>
+<li>Manual d’usuari final (clar i accessible).</li>
+<li>Ajuda contextual dins l’app (tooltips, textos d’ajuda).</li>
+<li>Proves en diferents navegadors i dispositius.</li>
+<li>Presentació/demostració al client.</li>
+</ul>
+<p><strong>Referències:</strong>
+- <strong>DWES RA8.g / RA9.f:</strong> qualitat, manteniment i documentació.
+- <strong>DIW RA5.g / RA6.f:</strong> accessibilitat, usabilitat i proves multi-dispositiu.</p>
+<hr />
+<h3 id="2-documentacio-tecnica-minims">2️⃣ Documentació tècnica (mínims)<a class="headerlink" href="#2-documentacio-tecnica-minims" title="Permanent link">&para;</a></h3>
+<p>📄 <strong>README principal</strong> ha d’incloure:</p>
+<ul>
+<li>Descripció del projecte i stack tecnològic.</li>
+<li>Com executar en desenvolupament (Docker).</li>
+<li>Com desplegar en producció (docker-compose.prod).</li>
+<li>Variables d’entorn necessàries (sense secrets).</li>
+<li>Estructura de carpetes i arquitectura.</li>
+<li>API bàsica (endpoints clau).</li>
+<li>Rols i permisos.</li>
+</ul>
+<hr />
+<h3 id="3-manual-dusuari-minims">3️⃣ Manual d’usuari (mínims)<a class="headerlink" href="#3-manual-dusuari-minims" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Com registrar-se/iniciar sessió (si aplica).</li>
+<li>Navegació del catàleg, filtres, cerca.</li>
+<li>Veure detall de producte, afegir al carret, compra (si aplica).</li>
+<li>Gestió de perfil i comandes.</li>
+<li>Funcions d’admin (si existeixen).</li>
+<li>FAQ i resolució de problemes freqüents.</li>
+</ul>
+<p>📌 <strong>Ajuda contextual dins l’app</strong>
+- Tooltips en botons amb icones.
+- Text d’ajuda en pantalles complexes (checkout, formularis).
+- Missatges d’error comprensibles (no tècnics).</p>
+<hr />
+<h3 id="4-sessio-de-presentacio-al-client-demo">4️⃣ Sessió de presentació al client (demo)<a class="headerlink" href="#4-sessio-de-presentacio-al-client-demo" title="Permanent link">&para;</a></h3>
+<p>La demostració ha d’incloure:</p>
+<ul>
+<li>Recorrregut complet per la web i funcionalitats.</li>
+<li>Explicació de com es compleixen els requisits inicials.</li>
+<li>Mostra de: SPRINT1, SPRINT2, SPRINT3,SPRINT4, SPRINT5 i SPRINT6</li>
+<li>Lliurament final:</li>
+<li>Diagrama de tasques Gantt</li>
+<li>repositori amb tag/release estable</li>
+<li>documentació tècnica</li>
+<li>manual d’usuari</li>
+</ul>
+<hr />
+<h3 id="5-estat-del-desenvolupament">5️⃣ Estat del desenvolupament<a class="headerlink" href="#5-estat-del-desenvolupament" title="Permanent link">&para;</a></h3>
+<h4 id="to-do_3">🟦 To Do<a class="headerlink" href="#to-do_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Completar README + documentació tècnica.</li>
+<li>Escriure manual d’usuari i afegir ajuda contextual.</li>
+</ul>
+<h4 id="in-progress_3">🟨 In Progress<a class="headerlink" href="#in-progress_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Refactorització i revisió final (lint, errors, optimització).</li>
+<li>Proves cross-browser i responsive.</li>
+</ul>
+<h4 id="done_3">🟩 Done<a class="headerlink" href="#done_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lliurament complet i validat amb el client.</li>
+</ul>
+<h2 id="checklist-dentregables-sprint-5-i-sprint-6">✅ Checklist d’entregables — Sprint 5 i Sprint 6<a class="headerlink" href="#checklist-dentregables-sprint-5-i-sprint-6" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Format checklist per a marcar ✅ (en valencià)</p>
+</blockquote>
+<h3 id="c1-integracio-externa-oauth2-dwes">🔗 C1 — Integració externa (OAuth2) (DWES)<a class="headerlink" href="#c1-integracio-externa-oauth2-dwes" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Integració amb <strong>1 servei extern</strong> amb OAuth2 (mínim)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Endpoints implementats:</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>GET /api/oauth/.../redirect</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>GET /api/oauth/.../callback</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tokens gestionats de forma segura (sense <code>client_secret</code> al front)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Migració en la BBDD amb nous camps de Google en la taula Users</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Evidències: <strong>captures</strong> + explicació del flux + proves</li>
+</ul>
+<hr />
+<h3 id="c2-documentacio-api-amb-swagger-openapi-dwes">📚 C2 — Documentació API amb Swagger / OpenAPI (DWES)<a class="headerlink" href="#c2-documentacio-api-amb-swagger-openapi-dwes" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Swagger/OpenAPI accessible (ex: <code>/api/documentation</code> o <code>/docs</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Documentació amb:</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Endpoints principals (CRUD + auth)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Esquemes/models + exemples JSON</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Codis d’estat (200/201/400/401/403/404/422/500)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Autenticació Bearer (Sanctum/JWT o equivalent)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Es poden provar peticions des de la UI</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Captures + com autoritzar (on posar el token) + com regenerar la doc</li>
+</ul>
+<hr />
+<h3 id="c3-millores-avancades-vue-dwec">✨ C3 — Millores avançades Vue (DWEC)<a class="headerlink" href="#c3-millores-avancades-vue-dwec" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Llistats amb <strong>filtres + paginació</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Watchers aplicats (refresc automàtic quan canvien filtres/estat)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Formularis amb <strong>Vee-Validate + Yup</strong> i validació en temps real</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (Si cal) Backend amb filtres/paginació (<code>when()</code> + <code>paginate()</code>)</li>
+</ul>
+<hr />
+<h3 id="c4-disseny-final-i-accessibilitat-diw">🎨 C4 — Disseny final i accessibilitat (DIW)<a class="headerlink" href="#c4-disseny-final-i-accessibilitat-diw" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> UI coherent i professional en totes les vistes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CSS estructurat (variables, components reutilitzables, responsive)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Accessibilitat bàsica (WCAG):</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>alt</code> en imatges</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>label</code> correctes en formularis</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Focus visible i navegació amb teclat</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Bon contrast</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Estructura semàntica (<code>h1/h2</code>, <code>nav/main/footer</code>, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Imatges optimitzades (WebP/AVIF, pes reduït, lazy loading)</li>
+</ul>
+<hr />
+<h2 id="c5-millora-digital-intelligent-dig">🤖 C5 — Millora digital / “intel·ligent” (DIG)<a class="headerlink" href="#c5-millora-digital-intelligent-dig" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 1 millora digital implementada (tria 1):</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Recomanador (relacionats)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Productes destacats per dades</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Mini-analytics admin</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cerca intel·ligent (autocomplete bàsic)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Endpoint(s) creat(s) + integració al front</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Justificació breu (què aporta i com funciona)</li>
+</ul>
+<hr />
+<h2 id="c6-sostenibilitat-asg-ecodisseny-sost">🌱 C6 — Sostenibilitat (ASG + ecodisseny) (SOST)<a class="headerlink" href="#c6-sostenibilitat-asg-ecodisseny-sost" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Optimització sostenible aplicada:</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Menys pes d’assets / minify / compressió (gzip/brotli si hi ha Nginx)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Imatges modernes + lazy load</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Reducció de peticions (quan siga possible)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Element visible “eco” (ex: etiqueta eco, embalatge reciclat, proveïdor local…)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pàgina o secció de sostenibilitat / criteris ASG (mínim explicació)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Evidències + justificació en documentació</li>
+</ul>
+<hr />
+<h2 id="c7-docker-dns-cloud-i-cicd-ddaw-nuv">🐳☁️ C7 — Docker, DNS, Cloud i CI/CD (DDAW + NUV)<a class="headerlink" href="#c7-docker-dns-cloud-i-cicd-ddaw-nuv" title="Permanent link">&para;</a></h2>
+<h3 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zona <code>projecteXX.ddaw.es</code> creada</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Registres mínims per publicar apps (A/CNAME, etc.)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Dades entregades per a la <strong>delegació</strong> al DNS pare</li>
+</ul>
+<h3 id="docker-desenvolupament">Docker (desenvolupament)<a class="headerlink" href="#docker-desenvolupament" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Dockerfile</code> per a <strong>frontend</strong> i <strong>backend</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>docker-compose</code> per arrancar-ho en local</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Variables d’entorn (<code>.env.example</code>) i configuració</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Persistència DB (volums) on toque</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> README amb instruccions (com arrancar i parar)</li>
+</ul>
+<h3 id="produccio-cicd">Producció + CI/CD<a class="headerlink" href="#produccio-cicd" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pipelines <strong>separats</strong> (repos independents)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Front: install → build → deploy automàtic</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Back: install → test → deploy automàtic</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Back: <strong>migracions obligatòries</strong> després del deploy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Front i back aïllats (serveis/containers/VM separats)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> HTTPS amb Let’s Encrypt en les 2 aplicacions</li>
+</ul>
+<h3 id="arquitectura-aws-documentada">Arquitectura AWS (documentada)<a class="headerlink" href="#arquitectura-aws-documentada" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VPC + subxarxes públiques/privades (app i dades)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Edge únic (ALB o Nginx reverse proxy) + terminació HTTPS</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Capa app escalable (ASG/ECS o equivalent)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Capa dades privada (RDS Multi-AZ / backups / recuperació)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Seguretat amb Security Groups (aïllament entre capes)</li>
+</ul>
+<hr />
+<h2 id="c8-documentacio-final-manual-presentacio">📚 C8 — Documentació final + manual + presentació<a class="headerlink" href="#c8-documentacio-final-manual-presentacio" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> README global amb Documentació tècnica completa (arquitectura, CI/CD, entorns, accés)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Manual d’usuari (ús bàsic + FAQ) + ajuda contextual dins l’app</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Proves en navegadors i dispositius (evidències)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Tag/Release estable al repositori</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Gantt/planificació</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Demo al client (mostrant Sprints 1–6)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/aitormedrano" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<i.gomismullor@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.56.56 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["header.autohide", "toc.integrate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
