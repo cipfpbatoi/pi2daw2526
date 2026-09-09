@@ -173,4 +173,4 @@ Abans d'iniciar el bloc cal preparar:
 
 El [material de consulta del bloc 1](bloc1-consulta.md) reunix les definicions, exemples i fonts externes que es poden assignar selectivament en cada sessió. No és necessari que l'alumnat el llija complet abans de començar.
 
-Els guions de les tres sessions i la plantilla del Dossier 0 estan preparats com a documents de treball per a l'alumnat. Les dades que s'han de revelar progressivament, les incidències i els instruments d'observació es troben en l'annex `professorat/bloc1-material-docent.md`, fora del lloc MkDocs de l'alumnat.
+Els guions de les tres sessions i la plantilla del Dossier 0 estan preparats com a documents de treball per a l'alumnat. Les dades que s'han de revelar progressivament, les incidències i els instruments d'observació es conserven en el repositori privat del professorat.
