@@ -1,5 +1,5 @@
 site_name: Projecte Intermodular 2DAW
-site_url: https://cipfpbatoi.github.io/pi2daw2526/
+site_url: https://cipfpbatoi.github.io/pi2627/
 use_directory_urls: false
 
 nav:
@@ -80,4 +80,4 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-copyright: 2025-2026  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
+copyright: 2026-2027  Ignasi Gomis,Andrés Martos - Licencia CC BY-NC-SA
