@@ -6,6 +6,11 @@ nav:
   - "Planificació del curs": "planning.md"
   - "Bloc 1. Reactivació":
       - "Guia de l'alumnat": "bloc1-alumnat.md"
+      - "Material de consulta": "bloc1-consulta.md"
+      - "Sessió 1. Del problema al projecte": "bloc1-sessio1.md"
+      - "Sessió 2. De l'abast al pla": "bloc1-sessio2.md"
+      - "Sessió 3. Preparar-se per executar": "bloc1-sessio3.md"
+      - "Plantilla del Dossier 0": "bloc1-dossier0.md"
       - "Guia del professorat": "bloc1-professorat.md"
 theme:
   language: ca

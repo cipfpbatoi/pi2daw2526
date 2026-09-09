@@ -8,9 +8,9 @@ No es tracta de repetir teoria ni de començar a programar immediatament. Trebal
 
 Al llarg del bloc haureu de prendre decisions, justificar-les i revisar-les quan apareguen noves restriccions. És el mateix procés que després aplicareu al vostre projecte.
 
-## El repte
+## El repte: Som Barri
 
-Una associació local gestiona les activitats, les inscripcions i les comunicacions mitjançant formularis, correus i fulls de càlcul. Esta manera de treballar provoca informació duplicada, oblits i dificultats per saber quines places queden disponibles.
+L'Associació Som Barri gestiona les activitats, les inscripcions i les comunicacions mitjançant formularis, correus i fulls de càlcul. Esta manera de treballar provoca informació duplicada, oblits i dificultats per saber quines places queden disponibles.
 
 L'associació vol estudiar si una aplicació web podria millorar el procés. Disposa de poc pressupost i necessita una primera versió abans de quatre mesos.
 
@@ -47,6 +47,15 @@ El bloc té una duració de **9 hores**, distribuïdes en tres sessions:
 | 3. Preparar-se per executar | Què podria fallar i com controlarem el treball? | Riscos, metodologia, fonts i reflexió individual |
 
 Treballareu de manera individual i en equips provisionals. Algunes activitats serviran perquè el professorat conega els vostres interessos, fortaleses i necessitats abans de proposar els equips del projecte.
+
+Durant les activitats podeu consultar el [material de consulta del bloc 1](bloc1-consulta.md), que inclou recordatoris, exemples, models de taules i referències per ampliar la informació.
+
+Els guions de treball i la plantilla estan disponibles en:
+
+- [Sessió 1: del problema al projecte](bloc1-sessio1.md);
+- [Sessió 2: de l'abast al pla](bloc1-sessio2.md);
+- [Sessió 3: preparar-se per executar](bloc1-sessio3.md);
+- [Plantilla del Dossier 0](bloc1-dossier0.md).
 
 ## El Dossier 0
 
