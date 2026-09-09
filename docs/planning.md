@@ -1,122 +1,273 @@
-# Planificació setmanal del Projecte Integrador (2n DAW)
+# Planificació del Projecte Intermodular de 2n DAW
 
-La duració del mòdul és de 99 hores, amb una sessió setmanal de 3h per grup.  
-Els **grups A i B** realitzen el mateix contingut, però en dies diferents:
-- **Grup A** → dimarts
-- **Grup B** → divendres
+## Enfocament del curs
 
----
+El projecte de segon curs se centra en el **disseny, la planificació, l'execució controlada i la validació** d'una proposta vinculada a les competències del cicle.
 
-## 📅 Primera Avaluació
+Cada equip proposarà un projecte que responga a una necessitat, un problema o un repte concret. La proposta haurà de ser acceptada per l'equip educatiu, però no existirà un producte únic ni una solució tecnològica prefixada per a tot l'alumnat.
 
-### Setmana 1   – Iteració 1
-- [ ] 101.- Introducció al mòdul. Metodologia Scrum/Kanban.
-- [ ] 102.- Configuració entorn local (IDE, Git, servidor PHP).
+La implementació tindrà un pes important i es materialitzarà en un prototip funcional. Tanmateix, el valor del treball no dependrà només de la quantitat de funcionalitats desenvolupades, sinó de la capacitat de:
 
-### Setmana 2  
-- [ ] 103.- Configuració entorn remot i repositori GitHub.
-- [ ] 104.- Creació del tauler de tasques (GitHub Projects / Trello).
+- justificar les decisions adoptades;
+- establir un abast viable;
+- planificar activitats, recursos, temps, costos i riscos;
+- comprovar l'evolució real respecte del pla;
+- validar el prototip mitjançant proves i evidències;
+- documentar el procés i l'aportació de cada membre.
 
-### Setmana 3 
-- [ ] 105.- Introducció a GanttProject. Cronograma inicial.
-- [ ] 106.- Assignació de rols i repartiment de tasques.
+La duració prevista és de **99 hores**, distribuïdes habitualment en sessions de tres hores. La concreció de dates s'adaptarà al calendari escolar i a l'inici de la formació en empresa.
 
-### Setmana 4  
-- [ ] 107.- Identificació de riscos laborals i pla de prevenció inicial.
-- [ ] 108.- Maquetació pàgina inicial (HTML + CSS bàsic).
+## Distribució temporal
 
-### Setmana 5  
-- [ ] 109.- Formulari de contacte (HTML + validació JS).
-- [ ] 110.- Revisió i desplegament de la primera versió en remot.
+| Fase | Hores | Sessions orientatives | Producte principal |
+| --- | ---: | ---: | --- |
+| 1. Reactivació i formació d'equips | 9 h | 3 | Diagnòstic i miniplanificació |
+| 2. Elecció i validació del projecte | 9 h | 3 | Proposta de projecte aprovada |
+| 3. Disseny i viabilitat | 15 h | 5 | Avantprojecte |
+| 4. Planificació de l'execució | 12 h | 4 | Pla del projecte |
+| 5. Desenvolupament i validació del prototip | 42 h | 14 | Prototip funcional validat |
+| 6. Tancament i defensa | 12 h | 4 | Memòria i defensa final |
+| **Total** | **99 h** | **33** | |
 
----
+Les fases descriuen el recorregut general, però no són compartiments tancats. La documentació, els riscos, les estimacions i la planificació s'actualitzaran durant tot el projecte.
 
-## 📅 Segona Avaluació
+## Fase 1. Reactivació i formació d'equips — 9 hores
 
-### Setmana 6   – Iteració 2
-- [ ] 201.- Importació inicial de productes (Excel/JSON → BD).
+### Finalitat
 
-### Setmana 7  
-- [ ] 202.- Registre i login d’usuaris.
+Recuperar les ferramentes treballades en primer curs, detectar necessitats de reforç i preparar equips amb perfils complementaris.
 
-### Setmana 8  
-- [ ] 203.- Comentaris i valoracions de productes.
+El repàs serà breu i aplicat. No es tornaran a explicar totes les ferramentes des de zero: l'alumnat les utilitzarà per resoldre un cas reduït i identificar què necessita revisar.
 
-### Setmana 9  
-- [ ] 204.- Desplegament remot i còpies de seguretat.
+### Continguts que es reactiven
 
-### Setmana 10  
-- [ ] 205.- Revisió iteració i actualització del Gantt.
+- definició de necessitats, problemes i objectius;
+- cerca, selecció i citació de fonts;
+- DAFO i viabilitat;
+- descomposició del treball;
+- cronogrames i diagrama de Gantt;
+- metodologies de treball i taulers de seguiment;
+- estimació de temps, recursos i costos;
+- identificació i tractament de riscos;
+- documentació tècnica;
+- ús responsable i declarat de la intel·ligència artificial.
 
----
+### Evidències
 
-## 📅 Tercera Avaluació
+- activitat diagnòstica individual;
+- miniplanificació elaborada a partir d'un cas;
+- reflexió sobre fortaleses i necessitats de millora;
+- informació sobre interessos i perfil tècnic per facilitar la formació dels equips.
 
-### Setmana 11   – Iteració 3
-- [ ] 301.- Introducció a Laravel i configuració del projecte.
+### Punt de control
 
-### Setmana 12  
-- [ ] 302.- Models, rutes i controladors bàsics.
+L'alumnat identifica quines ferramentes domina, quines ha de reforçar i com pot contribuir al treball de l'equip.
 
-### Setmana 13  
-- [ ] 303.- API REST: productes i usuaris.
+## Fase 2. Elecció i validació del projecte — 9 hores
 
-### Setmana 14  
-- [ ] 304.- Disseny responsiu i adaptació mòbil.
+### Finalitat
 
-### Setmana 15  
-- [ ] 305.- Proves bàsiques i documentació tècnica.
+Passar d'una idea inicial a una proposta fonamentada en una necessitat real o versemblant.
 
----
+### Activitats
 
-### Setmana 16  – Iteració 4
-- [ ] 401.- Introducció a Vue.js i entorn.
+1. Explorar problemes, necessitats o oportunitats d'un sector, una organització o un col·lectiu.
+2. Identificar persones usuàries i altres parts interessades.
+3. Recollir i contrastar informació.
+4. Generar diferents alternatives de solució.
+5. Comparar-les segons el seu valor, complexitat, riscos i viabilitat.
+6. Seleccionar una proposta i delimitar-ne l'abast inicial.
+7. Presentar-la a l'equip educatiu i incorporar les modificacions necessàries.
 
-### Setmana 17  
-- [ ] 402.- Creació d’una SPA amb components i rutes.
+### Condicions mínimes de la proposta
 
-### Setmana 18  
-- [ ] 403.- Autenticació amb API Laravel (Axios, tokens).
+- respondre a una necessitat, problema o repte identificable;
+- estar relacionada amb les competències del cicle DAW;
+- tindre un abast assumible dins del temps disponible;
+- permetre construir i validar un prototip;
+- integrar diferents àmbits del desenvolupament web;
+- permetre obtindre evidències grupals i individuals.
 
-### Setmana 19  
-- [ ] 404.- Gestió de rols i permisos.
+### Evidències
 
-### Setmana 20  
-- [ ] 405.- Documentació funcional i guia d’usuari inicial.
+- fitxa del problema o necessitat;
+- identificació de les parts interessades;
+- fonts consultades;
+- comparació d'alternatives;
+- proposta breu de projecte;
+- registre de l'acceptació i dels ajustos sol·licitats.
 
----
+### Punt de control
 
-### Setmana 21   – Iteració 5
-- [ ] 501.- Integració amb API externa (OAuth2).
+**El projecte respon a una necessitat i resulta viable per continuar?**
 
-### Setmana 22  
-- [ ] 502.- Documentació de l’API pròpia amb Swagger.
+## Fase 3. Disseny i viabilitat — 15 hores
 
-### Setmana 23  
-- [ ] 503.- Processos asíncrons amb cues Laravel.
+### Finalitat
 
-### Setmana 24  
-- [ ] 504.- Configuració de l'entorn de desenvolupament Dockerització i contenidors.
+Definir la solució abans de desenvolupar-la i justificar que és adequada per al repte plantejat.
 
-### Setmana 25  
-- [ ] 505.- Desplegament final en producció (Desplegament automàtic)
-      
-### Setmana 26  
-- [ ] 506.- Configuració del DNS - Certificat SSL i connexió HTTPS.
-      
-### Setmana 27   – Iteració 6
-- [ ] 601.- CI/CD bàsic amb GitHub Actions.
-      
-### Setmana 28  
-- [ ] 602.- Millores front-end (paginació, validació avançada).
+### Activitats
 
-### Setmana 29  
-- [ ] 603.- Revisió de qualitat i documentació tècnica.
+- concretar els objectius i els criteris d'èxit;
+- analitzar les persones usuàries i el context d'ús;
+- definir i prioritzar requisits funcionals i no funcionals;
+- establir l'abast i les exclusions;
+- descriure històries d'usuari, casos d'ús o processos principals;
+- elaborar el model de dades quan siga necessari;
+- proposar l'arquitectura general i les integracions;
+- preparar esbossos, wireframes o prototips de baixa fidelitat;
+- considerar usabilitat, accessibilitat, seguretat i protecció de dades;
+- comparar alternatives tecnològiques;
+- analitzar la viabilitat tècnica, temporal i econòmica.
 
-### Setmana 30  
-- [ ] 604.- Elaboració manual d’usuari i proves d’accessibilitat.
+### Evidència principal: avantprojecte
 
-### Setmana 31  
-- [ ] 605.- Presentació final del projecte i defensa.
+L'avantprojecte reunirà, almenys:
 
----
+- problema, context i persones destinatàries;
+- objectius i criteris d'èxit;
+- abast, exclusions i requisits prioritzats;
+- disseny funcional;
+- model de dades i arquitectura preliminar, si pertoquen;
+- proposta d'interfície;
+- alternatives considerades i decisions justificades;
+- anàlisi inicial de viabilitat i riscos.
+
+### Punt de control
+
+**La solució proposada és coherent amb la necessitat i es pot abordar amb els recursos disponibles?**
+
+## Fase 4. Planificació de l'execució — 12 hores
+
+### Finalitat
+
+Convertir l'avantprojecte en un pla executable, mesurable i adaptable.
+
+### Activitats
+
+- descompondre el projecte en fases, lliurables i tasques;
+- identificar dependències i prioritats;
+- estimar hores, recursos i costos;
+- assignar responsabilitats;
+- establir fites i dates de revisió;
+- crear el cronograma i el tauler de treball;
+- definir les iteracions de desenvolupament;
+- acordar què significa que una tasca està acabada;
+- preparar els plans de proves i de desplegament;
+- definir el control de versions i la gestió documental;
+- completar el registre de riscos;
+- establir com es gestionaran els canvis i les incidències;
+- seleccionar indicadors i instruments de seguiment.
+
+### Evidència principal: pla del projecte
+
+El pla haurà de permetre relacionar cada necessitat o requisit amb les tasques, les persones responsables, les evidències esperades, els riscos i les proves corresponents.
+
+### Punt de control
+
+**Una altra persona podria entendre i executar el projecte a partir del pla elaborat?**
+
+## Fase 5. Desenvolupament i validació del prototip — 42 hores
+
+### Finalitat
+
+Construir un prototip funcional que valide les decisions principals i, al mateix temps, aplicar els procediments de seguiment i control definits en el pla.
+
+No serà imprescindible completar totes les funcionalitats imaginades. Es prioritzarà un recorregut funcional coherent, provat i demostrable sobre una acumulació de funcionalitats inconnexes.
+
+### Iteracions de treball
+
+| Iteració | Hores | Finalitat |
+| --- | ---: | --- |
+| 5.1. Prova tècnica inicial | 6 h | Validar les tecnologies i els riscos tècnics principals |
+| 5.2. Prototip mínim viable | 12 h | Implementar un recorregut funcional complet |
+| 5.3. Desenvolupament incremental | 15 h | Incorporar les funcionalitats de més valor |
+| 5.4. Proves, millores i desplegament | 9 h | Validar, corregir i preparar la demostració |
+| **Total** | **42 h** | |
+
+Cada iteració inclourà:
+
+1. selecció i estimació de les tasques;
+2. assignació de responsabilitats;
+3. implementació;
+4. proves i recollida d'evidències;
+5. revisió del resultat;
+6. actualització del pla, els riscos i les estimacions.
+
+### Abast mínim del prototip
+
+Segons la naturalesa del projecte, el prototip haurà de:
+
+- cobrir un recorregut principal de principi a fi;
+- integrar client, servidor i dades quan siguen necessaris;
+- ser executable o desplegable de manera documentada;
+- permetre proves amb persones usuàries o casos representatius;
+- demostrar les decisions tècniques amb major risc o impacte;
+- deixar identificat el treball pendent per arribar a una versió de producció.
+
+### Evidències de seguiment i control
+
+- tauler de treball actualitzat;
+- historial del repositori;
+- registre de l'aportació individual;
+- decisions i canvis d'abast;
+- estimacions inicials i dades reals;
+- desviacions i mesures correctores;
+- incidències i riscos materialitzats;
+- proves i resultats;
+- versions executables del prototip;
+- actualització del cronograma, els costos i els riscos.
+
+### Punt de control de cada iteració
+
+**Què hem validat, què s'ha desviat i com afecta això el pla següent?**
+
+## Fase 6. Tancament i defensa — 12 hores
+
+### Finalitat
+
+Consolidar les evidències del projecte, valorar-ne els resultats i comunicar de manera professional tant el producte com el procés seguit.
+
+### Productes finals
+
+- memòria tècnica revisada;
+- pla final actualitzat;
+- comparació entre la previsió i l'execució real;
+- prototip o prova de concepte;
+- informe de proves i validació;
+- conclusions, limitacions i possibles continuacions;
+- instruccions d'instal·lació o desplegament;
+- registre d'autoria, fonts i ús d'IA;
+- presentació i demostració.
+
+### Defensa
+
+La defensa combinarà:
+
+- una part grupal sobre el problema, la solució, la planificació i els resultats;
+- una part individual sobre les aportacions pròpies i les decisions principals del projecte.
+
+La qüestió central de la defensa serà:
+
+> Quines decisions heu pres, en quines evidències vos heu basat, què ha canviat durant el projecte i com sabeu que la proposta és viable?
+
+## Estructura habitual d'una sessió
+
+Com a orientació, una sessió de tres hores podrà distribuir-se així:
+
+- entre 20 i 30 minuts de conceptes, exemples o repàs;
+- entre 90 i 120 minuts de treball guiat sobre el projecte;
+- entre 20 i 30 minuts per revisar l'evolució, registrar evidències i acordar els passos següents.
+
+Cada tres o quatre sessions es realitzarà una revisió més formal amb l'equip docent.
+
+## Criteris pendents de concretar
+
+Esta planificació fixa l'estructura i la distribució temporal del curs. Abans de redactar definitivament els apunts i els instruments d'avaluació, caldrà concretar:
+
+- la correspondència exacta de cada evidència amb els resultats d'aprenentatge i els criteris d'avaluació;
+- els lliuraments obligatoris i opcionals;
+- les rúbriques grupals i individuals;
+- el calendari real segons la formació en empresa;
+- les plantilles que utilitzarà l'alumnat.

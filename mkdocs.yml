@@ -3,13 +3,10 @@ site_url: https://cipfpbatoi.github.io/pi2daw2526/
 use_directory_urls: false
 
 nav:
-  - "Inici": "index.md"
-  - "Enunciat": "projecte.md"
-  - "Iteració: Entorn, aparador i contacte": "sprint1.md"
-  - "Iteració: Catàleg de productes": "sprint2.md"
-  - "Iteració: Migració a Laravel": "sprint3.md"
-  - "Iteració: Client SPA amb Vue i control de rols": "sprint4.md"
-  - "Interació: Integrament i desplegament": "sprint5.md"
+  - "Planificació del curs": "planning.md"
+  - "Bloc 1. Reactivació":
+      - "Guia de l'alumnat": "bloc1-alumnat.md"
+      - "Guia del professorat": "bloc1-professorat.md"
 theme:
   language: ca
   favicon: imagenes/favicon.png
