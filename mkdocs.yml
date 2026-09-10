@@ -3,6 +3,7 @@ site_url: https://cipfpbatoi.github.io/pi2627/
 use_directory_urls: false
 
 nav:
+  - "Inici": "index.md"
   - "Planificació del curs": "planning.md"
   - "Bloc 1. Reactivació":
       - "Guia de l'alumnat": "bloc1-alumnat.md"
@@ -12,6 +13,12 @@ nav:
       - "Sessió 3. Preparar-se per executar": "bloc1-sessio3.md"
       - "Plantilla del Dossier 0": "bloc1-dossier0.md"
       - "Guia del professorat": "bloc1-professorat.md"
+  - "Bloc 2. Elecció del projecte":
+      - "Guia de l'alumnat": "bloc2-alumnat.md"
+      - "Sessió 1. Investigar necessitats": "bloc2-sessio1.md"
+      - "Sessió 2. Comparar alternatives": "bloc2-sessio2.md"
+      - "Sessió 3. Validar la proposta": "bloc2-sessio3.md"
+      - "Plantilla del Dossier 1": "bloc2-dossier1.md"
 theme:
   language: ca
   favicon: imagenes/favicon.png

@@ -1,80 +1,38 @@
-# Projecte Intermodular de Desenvolupament d’Aplicacions Web (Segon)
+# Projecte Intermodular de Desenvolupament d'Aplicacions Web
 
-Ací pots trobar les anotacions del mòdul de *Projecte Integrador*, que s'imparteix en el segon curs del cicle formatiu de grau superior de Desenvolupament d'Aplicacions Web.
+En este mòdul dissenyareu, planificareu i validareu en equip una solució web per a una **necessitat, un problema o un repte concret**. Cada equip podrà proposar un projecte diferent, que haurà de ser acceptat per l'equip educatiu.
 
-La duració del mòdul és de **99 hores lectives**, a raó de **3 hores setmanals**, i es desenvolupa al llarg del **segon curs complet** del cicle. S'ha [planificat](planning.md) basant-se en les diferents iteracions (*sprints*) del projecte d’E-commerce.
+La implementació servirà per construir un prototip funcional i comprovar les decisions importants. No es valorarà només la quantitat de codi: haureu de justificar l'abast, els recursos, els riscos, les proves, els canvis i l'aportació de cada membre.
 
 ## Què aprendré?
 
-* A **planificar i executar un projecte real** de desenvolupament web en equip.
-* A treballar amb **metodologies àgils** (Scrum/Kanban) i eines de gestió de projectes.
-* A **documentar, provar i desplegar** aplicacions web.
-* A identificar i prevenir **riscos laborals i tècnics** durant el procés.
+- A investigar una necessitat i convertir-la en una proposta viable.
+- A dissenyar una solució coherent amb les persones usuàries i el context.
+- A planificar tasques, dependències, recursos, temps, costos i riscos.
+- A seguir l'execució, registrar canvis i prendre decisions a partir d'evidències.
+- A construir i validar un prototip d'abast assumible.
+- A comunicar el procés, els resultats i l'aportació individual.
 
-## Resultats d'aprenentatge
+## Recorregut del curs
 
-1. **Planifica l’execució del projecte**, determinant el pla d’intervenció i la documentació associada.
-2. **Defineix els procediments de seguiment i control**, seleccionant les variables i instruments adequats.
+El mòdul té una duració prevista de **99 hores**, distribuïdes en sis fases:
 
-## Iteracions / Temporalització
+1. reactivació i formació d'equips;
+2. elecció i validació del projecte;
+3. disseny i viabilitat;
+4. planificació de l'execució;
+5. desenvolupament i validació del prototip;
+6. tancament i defensa.
 
-El projecte es desenvolupa en 6 iteracions, alineades amb els continguts del curs.
+Consulta la [planificació completa](planning.md) per conéixer les evidències i els punts de control de cada fase.
 
-### Iteració 1: Entorn, aparador i contacte (18h)
+## Primers blocs
 
-* Configuració d’entorns (local i remot).
-* Tauler de projectes (GitHub Projects / Trello).
-* Cronograma inicial amb GanttProject.
-* Assignació de rols i tasques.
-* Pla de riscos laborals i prevenció.
-* Pàgina inicial amb formulari de contacte validat.
+- [Bloc 1. Reactivació: del problema al pla](bloc1-alumnat.md)
+- [Bloc 2. Elecció i validació del projecte](bloc2-alumnat.md)
 
-### Iteració 2: Autenticació i gestió de productes (15h)
+## Evidències i autoria
 
-* Importació inicial de productes.
-* Sistema de registre i login d’usuaris.
-* Comentaris i valoracions.
-* Còpies de seguretat i desplegament remot.
+El treball combinarà evidències d'equip i individuals. Haureu de conservar la traça de les tasques, les decisions, les fonts i les revisions, i declarar l'ús d'intel·ligència artificial amb la finalitat i la verificació humana realitzada.
 
-### Iteració 3: Backend Laravel + disseny responsiu (15h)
-
-* Reimplementació del servidor amb Laravel (MVC).
-* API REST per a productes i usuaris.
-* Adaptació responsiva de la interfície.
-* Proves i documentació del backend.
-
-### Iteració 4: Frontend amb Vue + rols (15h)
-
-* Creació d’una SPA amb Vue.js.
-* Gestió d’autenticació via API i sessions.
-* Gestió de rols i permisos.
-* Documentació i guia d’usuari inicial.
-
-### Iteració 5: Integracions externes i processos asíncrons (18h)
-
-* Integració amb API externa (OAuth2).
-* Documentació de l’API pròpia amb Swagger.
-* Processos asíncrons amb cues de treball.
-* Dockerització i CI/CD bàsic.
-
-### Iteració 6: Desplegament final i lliurament (18h)
-
-* Desplegament en producció amb Docker.
-* Connexió segura HTTPS.
-* Documentació tècnica i manual d’usuari.
-* Validació final amb el client i presentació.
-
-## Instruments de qualificació
-
-La nota del curs es calcula mitjançant:
-
-- **50% Planificació del projecte (RA3)**
-    * Cronogrames, documentació i planificació de recursos.
-- **50% Seguiment i control (RA4)**
-    * Control de versions, gestió de tasques, qualitat del producte i avaluació final.
-
-Avaluació contínua amb:
-
-- **Projectes i entregues d’iteració.**
-- **Revisions de codi i documentació.**
-- **Presentació i defensa final del producte.**  
+Els instruments i les regles de qualificació seran els establits en la programació didàctica; estos materials no hi afegixen percentatges.
