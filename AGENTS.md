@@ -2,6 +2,8 @@
 
 Este repositori conté el lloc públic i els materials destinats a l'alumnat. S'hi apliquen també totes les instruccions compartides de `../AGENTS.md`.
 
+Després de modificar qualsevol fitxer d'este repositori, cal verificar-lo, crear un commit descriptiu i fer push a la branca remota abans de donar la tasca per acabada.
+
 ## Adaptació a l'alumnat
 
 - Redactar instruccions accionables, preguntes guia, exemples i criteris observables que afavorisquen l'autonomia.
