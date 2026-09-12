@@ -4,6 +4,8 @@
 
 Cada proposta tindrà un únic repositori, creat a partir de la plantilla del curs. El repositori pertany al **projecte**, no a una parella: quan hi haja un relleu, canviarà la custòdia, però es conservaran l'historial i les autories.
 
+Cada projecte tindrà un nom descriptiu i un identificador estable. Els dos es registren en `project.json`; el nom pot afinar-se durant la proposta, però qualsevol canvi ha de quedar versionat i comunicar-se al professorat.
+
 Utilitzeu [`cipfpbatoi/pi2627-plantilla-projecte`](https://github.com/cipfpbatoi/pi2627-plantilla-projecte). Podeu crear un repositori nou amb **Use this template** o clonar-lo si així ho indica el professorat.
 
 ```bash
