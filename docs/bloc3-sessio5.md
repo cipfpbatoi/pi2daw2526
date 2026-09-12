@@ -43,6 +43,12 @@ En cinc minuts, expliqueu:
 
 La decisió docent serà **apta per planificar**, **apta amb ajustos** o **revisar el disseny**. Cada condició tindrà responsable, evidència i data.
 
+## Preparar el traspàs
+
+Tanqueu una versió identificable del Dossier 2 i completeu l'acta del [protocol de traspàs](forma-treball.md). Separeu les decisions confirmades, les hipòtesis i riscos pendents, els materials accessibles i les preguntes obertes.
+
+La nova parella podrà acceptar, acceptar amb reserves o retornar temporalment el dossier si falta un element imprescindible. Després de l'acceptació, passarà a ser-ne custòdia per a la planificació; vosaltres en conserveu l'autoria.
+
 ## Evidència individual i curricular
 
 Cada membre explicarà una cadena completa i una decisió en què haja participat. El Dossier 2 aporta evidències de RA2.a–i amb abast desigual: consulteu en la plantilla quines són parcials o suficients per al bloc. No implica l'assoliment automàtic de cap criteri per totes les persones de l'equip.

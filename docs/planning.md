@@ -4,7 +4,9 @@
 
 El projecte de segon curs se centra en el **disseny, la planificació, l'execució controlada i la validació** d'una proposta vinculada a les competències del cicle.
 
-Cada equip proposarà un projecte que responga a una necessitat, un problema o un repte concret. La proposta haurà de ser acceptada per l'equip educatiu, però no existirà un producte únic ni una solució tecnològica prefixada per a tot l'alumnat.
+Cada parella proposarà un projecte que responga a una necessitat, un problema o un repte concret. La proposta haurà de ser acceptada per l'equip educatiu, però no existirà un producte únic ni una solució tecnològica prefixada per a tot l'alumnat.
+
+El curs s'organitza com un **relleu entre projectes**. Cada parella dissenyarà la seua proposta durant les fases 2 i 3, planificarà en la fase 4 la proposta d'una altra parella i desenvoluparà en la fase 5 el prototip planificat per una tercera. En la fase 6 participarà en la validació de la proposta que va originar i defensarà les seues aportacions als diferents projectes. Els traspassos seguiran el [protocol d'entrega, revisió, consultes, acceptació i custòdia](forma-treball.md).
 
 La implementació tindrà un pes important i es materialitzarà en un prototip funcional. Tanmateix, el valor del treball no dependrà només de la quantitat de funcionalitats desenvolupades, sinó de la capacitat de:
 
@@ -28,6 +30,17 @@ La duració prevista és de **99 hores**, distribuïdes habitualment en sessions
 | 5. Desenvolupament i validació del prototip | 42 h | 14 | Prototip funcional validat |
 | 6. Tancament i defensa | 12 h | 4 | Memòria i defensa final |
 | **Total** | **99 h** | **33** | |
+
+## Rotació de projectes i responsabilitats
+
+| Fases | Funció | Document rebut | Responsabilitat principal | Entrega |
+| --- | --- | --- | --- | --- |
+| 2–3 | Equip autor | Investigació pròpia | Proposar i dissenyar | Dossiers 1 i 2 |
+| 4 | Equip planificador | Dossier 2 alié acceptat | Auditar i convertir en pla | Pla del projecte |
+| 5 | Equip desenvolupador | Pla d'un tercer projecte | Prototipar, provar i controlar | Prototip i evidències |
+| 6 | Responsabilitat compartida | Resultats dels tres recorreguts | Tancar, validar i defensar aportacions | Memòria i defensa |
+
+L'assignació evitarà, quan siga possible, que una parella planifique el projecte propi o prototipe el que ha planificat. La rotació i qualsevol excepció quedaran registrades. Els defectes heretats no es confondran amb les decisions del receptor: s'observarà com els detecta, comunica i gestiona.
 
 Les fases descriuen el recorregut general, però no són compartiments tancats. La documentació, els riscos, les estimacions i la planificació s'actualitzaran durant tot el projecte.
 
@@ -138,11 +151,15 @@ L'avantprojecte reunirà, almenys:
 
 **La solució proposada és coherent amb la necessitat i es pot abordar amb els recursos disponibles?**
 
+### Traspàs a la planificació
+
+La parella autora entregarà el Dossier 2 versionat, les evidències, les condicions pendents i els riscos coneguts. La parella planificadora realitzarà una revisió d'entrada i registrarà preguntes, reserves i acceptació abans d'iniciar la fase 4.
+
 ## Fase 4. Planificació de l'execució — 12 hores
 
 ### Finalitat
 
-Convertir l'avantprojecte en un pla executable, mesurable i adaptable.
+Convertir l'avantprojecte rebut d'una altra parella en un pla executable, mesurable i adaptable. L'equip planificador respectarà l'autoria prèvia, però podrà proposar canvis justificats quan detecte incoherències o riscos.
 
 ### Activitats
 
@@ -168,11 +185,15 @@ El pla haurà de permetre relacionar cada necessitat o requisit amb les tasques,
 
 **Una altra persona podria entendre i executar el projecte a partir del pla elaborat?**
 
+### Traspàs al desenvolupament
+
+Una tercera parella auditarà el pla abans d'acceptar-ne la custòdia. Les mancances, consultes i canvis necessaris quedaran en l'acta; l'equip planificador respondrà els aclariments, però no assumirà l'execució.
+
 ## Fase 5. Desenvolupament i validació del prototip — 42 hores
 
 ### Finalitat
 
-Construir un prototip funcional que valide les decisions principals i, al mateix temps, aplicar els procediments de seguiment i control definits en el pla.
+Construir un prototip funcional a partir de la planificació rebuda, validar les decisions principals i aplicar els procediments de seguiment i control definits. L'equip desenvolupador registrarà les desviacions i podrà adaptar el pla amb una justificació traçable.
 
 No serà imprescindible completar totes les funcionalitats imaginades. Es prioritzarà un recorregut funcional coherent, provat i demostrable sobre una acumulació de funcionalitats inconnexes.
 
@@ -245,8 +266,9 @@ Consolidar les evidències del projecte, valorar-ne els resultats i comunicar de
 
 La defensa combinarà:
 
-- una part grupal sobre el problema, la solució, la planificació i els resultats;
-- una part individual sobre les aportacions pròpies i les decisions principals del projecte.
+- una part compartida sobre el problema, la solució, la planificació, els traspassos i els resultats;
+- una part de cada parella sobre la funció assumida en cada projecte;
+- una part individual sobre les aportacions pròpies i les decisions en què ha intervingut.
 
 La qüestió central de la defensa serà:
 

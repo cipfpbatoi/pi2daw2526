@@ -121,6 +121,22 @@ Cada membre adjuntarà la seua defensa d'una cadena de traçabilitat i d'una dec
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
+### Acta de traspàs
+
+| Dada | Registre |
+| --- | --- |
+| Versió entregada i data |  |
+| Parella autora/emissora |  |
+| Parella planificadora/receptora |  |
+| Evidències i recursos accessibles |  |
+| Qüestions obertes i riscos coneguts |  |
+| Acceptat / amb reserves / retornat |  |
+| Reserves o elements per completar |  |
+
+| Pregunta del receptor | Resposta de l'autor | Evidència o decisió afectada | Data |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
 ## 15. Revisió final
 
 - [ ] Els objectius i requisits deriven d'evidències o hipòtesis identificades.

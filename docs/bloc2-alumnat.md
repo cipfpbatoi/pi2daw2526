@@ -2,9 +2,11 @@
 
 ## De les idees a una proposta fonamentada
 
-En este bloc formareu l'equip de projecte i decidireu quin repte voleu abordar. No heu de començar per una aplicació que vos agradaria programar, sinó per una necessitat que pugueu investigar i per a la qual una solució web aporte valor.
+En este bloc formareu la parella de treball i decidireu quin repte voleu abordar. No heu de començar per una aplicació que vos agradaria programar, sinó per una necessitat que pugueu investigar i per a la qual una solució web aporte valor.
 
 Disposareu de **9 hores, en tres sessions**, per explorar, contrastar i comparar opcions. El resultat serà una proposta inicial, no un contracte immutable: en els blocs següents comprovareu la viabilitat i ajustareu l'abast.
+
+La parella conservarà la custòdia fins a completar l'avantprojecte del bloc 3. Després, una altra parella el planificarà. Redacteu pensant que haurà de continuar el treball sense dependre de converses no registrades.
 
 ## Resultat del bloc
 

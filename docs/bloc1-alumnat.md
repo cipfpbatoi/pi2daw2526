@@ -48,6 +48,8 @@ El bloc té una duració de **9 hores**, distribuïdes en tres sessions:
 
 Treballareu de manera individual i en equips provisionals. Algunes activitats serviran perquè el professorat conega els vostres interessos, fortaleses i necessitats abans de proposar els equips del projecte.
 
+Els equips definitius seran normalment parelles. Treballareu amb [projectes en relleu](forma-treball.md): creareu un avantprojecte, planificareu el d'una altra parella i prototipareu un tercer. Per això, documentar amb claredat i conservar l'autoria serà una necessitat real.
+
 Durant les activitats podeu consultar el [material de consulta del bloc 1](bloc1-consulta.md), que inclou recordatoris, exemples, models de taules i referències per ampliar la informació.
 
 Els guions de treball i la plantilla estan disponibles en:

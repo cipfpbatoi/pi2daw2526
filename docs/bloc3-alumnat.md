@@ -4,6 +4,8 @@
 
 En este bloc convertireu el Dossier 1 en un **avantprojecte**. Dissenyar no és afegir totes les funcionalitats imaginables: és concretar què ha de resoldre el prototip, per a qui, amb quins límits i com comprovareu que les decisions són adequades.
 
+Este és l'últim bloc en què tindreu la custòdia de la proposta que heu creat. Una altra parella rebrà el Dossier 2 per planificar-la; per això ha de ser comprensible, verificable i explícit sobre les qüestions pendents.
+
 Disposareu de **15 hores, en cinc sessions**. Les decisions continuen sent revisables; cada canvi haurà de conservar la relació amb la necessitat i quedar registrat.
 
 ## Resultat del bloc
@@ -39,3 +41,5 @@ Qualsevol afirmació important s'ha d'acompanyar d'una font, una evidència o la
 ## Punt de control
 
 Al final, l'equip educatiu comprovarà si la solució és coherent amb la necessitat i si es pot planificar amb els recursos disponibles. El resultat podrà ser **apta per planificar**, **apta amb ajustos** o **revisar el disseny**.
+
+Quan siga apta, fareu el primer [traspàs formal](forma-treball.md): entrega versionada, revisió de la parella receptora, consultes registrades i acceptació de la nova custòdia.

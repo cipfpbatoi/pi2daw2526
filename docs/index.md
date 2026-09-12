@@ -1,6 +1,8 @@
 # Projecte Intermodular de Desenvolupament d'Aplicacions Web
 
-En este mòdul dissenyareu, planificareu i validareu en equip una solució web per a una **necessitat, un problema o un repte concret**. Cada equip podrà proposar un projecte diferent, que haurà de ser acceptat per l'equip educatiu.
+En este mòdul dissenyareu, planificareu i validareu en equip solucions web per a **necessitats, problemes o reptes concrets**. Cada parella proposarà un projecte diferent, que haurà de ser acceptat per l'equip educatiu.
+
+Treballareu amb [projectes en relleu](forma-treball.md): elaborareu la proposta i l'avantprojecte propis, planificareu el projecte d'una altra parella i prototipareu un tercer projecte a partir de la planificació rebuda.
 
 La implementació servirà per construir un prototip funcional i comprovar les decisions importants. No es valorarà només la quantitat de codi: haureu de justificar l'abast, els recursos, els riscos, les proves, els canvis i l'aportació de cada membre.
 
@@ -30,6 +32,7 @@ Consulta la [planificació completa](planning.md) per conéixer les evidències 
 
 - [Bloc 1. Reactivació: del problema al pla](bloc1-alumnat.md)
 - [Bloc 2. Elecció i validació del projecte](bloc2-alumnat.md)
+- [Bloc 3. Disseny i viabilitat](bloc3-alumnat.md)
 
 ## Evidències i autoria
 
