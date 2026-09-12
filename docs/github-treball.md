@@ -95,6 +95,12 @@ La *release* indicarà equip custodi, contingut, limitacions, riscos i enllaç a
 - No reescriviu l'historial compartit per ocultar errors; corregiu-los amb una nova versió.
 - Els acords externs que afecten el projecte s'han de registrar al repositori.
 
+## Instruccions per als assistents d'IA
+
+La plantilla incorpora `AGENTS.md` com a política comuna i fitxers adaptats per a Claude Code, Gemini CLI, GitHub Copilot i Cursor. Els assistents han d'actuar com a tutors i revisors: poden formular preguntes, explicar, comparar alternatives, revisar o ajudar a provar, però no substituir les decisions ni produir silenciosament una entrega avaluable.
+
+Cap agent ha de redactar la vostra reflexió individual, inventar evidències o publicar canvis sense revisió humana. Les instruccions no eliminen la vostra responsabilitat: heu de llegir, entendre, verificar i declarar l'ajuda rebuda en `docs/00-control/fonts-ia.md`.
+
 ## Traspàs de custòdia
 
 L'equip emissor crea la release i l'acta. L'equip receptor revisa eixa versió exacta, obri les consultes necessàries i registra si accepta, accepta amb reserves o retorna temporalment el producte. Després de l'acceptació, les noves decisions corresponen al receptor; l'autoria anterior es conserva.

@@ -161,4 +161,6 @@ Lliureu el [Dossier 0](bloc1-dossier0.md) complet i les reflexions individuals s
 
 Publiqueu també la versió `dossier-0-v1.0` en el repositori temporal i entregueu en Aules l'enllaç a eixa versió. El dossier i l'activitat individual tenen una finalitat diagnòstica i formativa; no impliquen una qualificació automàtica dels RA o CA observats.
 
+La reflexió individual l'heu de redactar vosaltres. Un assistent d'IA pot ajudar-vos a entendre una pregunta o revisar la claredat d'una resposta ja raonada, però no pot respondre en primera persona ni decidir quines aportacions heu fet.
+
 Per preparar esta sessió, consulteu els apartats 8–10 del [material de consulta](bloc1-consulta.md).
