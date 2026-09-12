@@ -19,6 +19,14 @@ nav:
       - "Sessió 2. Comparar alternatives": "bloc2-sessio2.md"
       - "Sessió 3. Validar la proposta": "bloc2-sessio3.md"
       - "Plantilla del Dossier 1": "bloc2-dossier1.md"
+  - "Bloc 3. Disseny i viabilitat":
+      - "Guia de l'alumnat": "bloc3-alumnat.md"
+      - "Sessió 1. Objectius i requisits": "bloc3-sessio1.md"
+      - "Sessió 2. Disseny funcional i dades": "bloc3-sessio2.md"
+      - "Sessió 3. Interfície i validació": "bloc3-sessio3.md"
+      - "Sessió 4. Arquitectura i alternatives": "bloc3-sessio4.md"
+      - "Sessió 5. Viabilitat i revisió": "bloc3-sessio5.md"
+      - "Plantilla del Dossier 2": "bloc3-dossier2.md"
 theme:
   language: ca
   favicon: imagenes/favicon.png
