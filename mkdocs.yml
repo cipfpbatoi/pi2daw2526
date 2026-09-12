@@ -28,6 +28,13 @@ nav:
       - "Sessió 4. Arquitectura i alternatives": "bloc3-sessio4.md"
       - "Sessió 5. Viabilitat i revisió": "bloc3-sessio5.md"
       - "Plantilla del Dossier 2": "bloc3-dossier2.md"
+  - "Bloc 4. Planificació de l'execució":
+      - "Guia de l'alumnat": "bloc4-alumnat.md"
+      - "Sessió 1. Rebre i descompondre": "bloc4-sessio1.md"
+      - "Sessió 2. Ordenar i estimar": "bloc4-sessio2.md"
+      - "Sessió 3. Organitzar l'execució": "bloc4-sessio3.md"
+      - "Sessió 4. Controlar i traspassar": "bloc4-sessio4.md"
+      - "Plantilla del Pla del projecte": "bloc4-pla-projecte.md"
 theme:
   language: ca
   favicon: imagenes/favicon.png

@@ -30,11 +30,12 @@ El mòdul té una duració prevista de **99 hores**, distribuïdes en sis fases:
 
 Consulta la [planificació completa](planning.md) per conéixer les evidències i els punts de control de cada fase.
 
-## Primers blocs
+## Blocs disponibles
 
 - [Bloc 1. Reactivació: del problema al pla](bloc1-alumnat.md)
 - [Bloc 2. Elecció i validació del projecte](bloc2-alumnat.md)
 - [Bloc 3. Disseny i viabilitat](bloc3-alumnat.md)
+- [Bloc 4. Planificació de l'execució](bloc4-alumnat.md)
 
 ## Evidències i autoria
 
