@@ -34,6 +34,10 @@ GitHub serà l'espai de treball habitual per a documentació, tasques, decisions
 
 ## Flux mínim d'una tasca
 
+La plantilla conté **formularis per crear issues**, però no una llista de tasques resolta per endavant. Definir què cal fer, quin resultat s'espera, de què depén i com es comprovarà forma part del vostre treball i de les evidències del projecte.
+
+En el bloc 1, el professorat podrà crear una única issue de **posada en marxa** per comprovar l'accés i mostrar el procediment. A partir d'ací, cada parella crearà les issues necessàries per analitzar, planificar i revisar el cas. En els projectes reals s'aplicarà el mateix criteri.
+
 1. Creeu una issue amb resultat esperat, responsable, dependències i evidència.
 2. Assigneu-la abans de començar.
 3. Treballeu en una branca curta.

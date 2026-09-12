@@ -83,6 +83,12 @@ No s'espera que la primera versió siga perfecta. Es valorarà especialment que 
 - per què heu pres cada decisió;
 - què heu canviat després de revisar el treball.
 
+## Caràcter diagnòstic i formatiu
+
+El bloc 1 servix per saber què recordeu, practicar el circuit de GitHub i acordar quins aspectes necessiteu reforçar. Les activitats i el Dossier 0 aporten evidències relacionades amb diversos RA i CA, però **no es convertixen automàticament en una qualificació**.
+
+El professorat registrarà si cada evidència és diagnòstica, parcial o suficient i vos donarà una acció de millora. Els aprenentatges es tornaran a observar en els projectes reals. Només s'aplicaran qualificacions o ponderacions previstes expressament en la programació didàctica.
+
 ## Autoria i ús d'IA
 
 Podeu utilitzar fonts digitals i ferramentes d'intel·ligència artificial quan el professorat ho permeta, però haureu de declarar-ne l'ús i verificar la informació obtinguda.

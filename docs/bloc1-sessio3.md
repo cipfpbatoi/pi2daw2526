@@ -159,4 +159,6 @@ La resta del grup o el professorat formularà una pregunta crítica. Registreu-l
 
 Lliureu el [Dossier 0](bloc1-dossier0.md) complet i les reflexions individuals segons les indicacions del professorat.
 
+Publiqueu també la versió `dossier-0-v1.0` en el repositori temporal i entregueu en Aules l'enllaç a eixa versió. El dossier i l'activitat individual tenen una finalitat diagnòstica i formativa; no impliquen una qualificació automàtica dels RA o CA observats.
+
 Per preparar esta sessió, consulteu els apartats 8–10 del [material de consulta](bloc1-consulta.md).
