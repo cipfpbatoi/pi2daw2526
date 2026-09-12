@@ -67,3 +67,5 @@ S'avaluarà allò que cada parella i cada membre faça realment. La qualitat fin
 Cada membre haurà de poder explicar les decisions globals del projecte en custòdia, les aportacions pròpies, les mancances rebudes, els canvis gestionats i què ha aprés en comparar la proposta inicial amb el resultat final.
 
 Els projectes individuals excepcionals o les adaptacions necessàries pel nombre d'alumnes seran autoritzats i documentats per l'equip educatiu.
+
+Consulteu també el [procediment de treball i evidències en GitHub](github-treball.md), que concreta com registrar tasques, versions, revisions i aportacions.

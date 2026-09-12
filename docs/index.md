@@ -4,6 +4,8 @@ En este mòdul dissenyareu, planificareu i validareu en equip solucions web per 
 
 Treballareu amb [projectes en relleu](forma-treball.md): elaborareu la proposta i l'avantprojecte propis, planificareu el projecte d'una altra parella i prototipareu un tercer projecte a partir de la planificació rebuda.
 
+El projecte, les tasques i les evidències es conservaran en [un repositori de GitHub](github-treball.md) creat a partir de la plantilla del curs.
+
 La implementació servirà per construir un prototip funcional i comprovar les decisions importants. No es valorarà només la quantitat de codi: haureu de justificar l'abast, els recursos, els riscos, les proves, els canvis i l'aportació de cada membre.
 
 ## Què aprendré?

@@ -6,6 +6,7 @@ nav:
   - "Inici": "index.md"
   - "Planificació del curs": "planning.md"
   - "Forma de treball: projectes en relleu": "forma-treball.md"
+  - "Treball i evidències en GitHub": "github-treball.md"
   - "Bloc 1. Reactivació":
       - "Guia de l'alumnat": "bloc1-alumnat.md"
       - "Material de consulta": "bloc1-consulta.md"
